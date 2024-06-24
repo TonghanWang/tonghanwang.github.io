@@ -1,11 +1,11 @@
 ---
 #preview
-title: '5 Steps to Create an Outstanding Marketing Plan'
+title: 'Auction (Differentiable Economics)'
 date: '2022-04-02'
-image: "/img/blog/3.jpg"
+image: "/img/portfolio/project-3/u33_compare_plus.png"
 category:
     - Marketing
-short: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos.
+short: For Mechanism Design; With Deep Learning.
 
 #params
 fullWidth: true

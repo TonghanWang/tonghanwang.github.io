@@ -1,61 +1,70 @@
 ---
 #preview
 title: Computational Economics (Discontinuous Neural Networks)
-image: /img/portfolio/2.jpg
+image: /img/portfolio/project-2/pwnl-high.png
 category: With New Deep Learning Models 
 
 #params
-fullWidth: true
+#fullWidth: true
 
 #full details
 details:
-    - label: "Coauthors:"
-      value: "xyz"
-
-    - label: "Date:"
-      value: "April 2022"
 
     - label: "$category"
 
 description:
     enabled: 1
     content: "
-        <p>Our pieces, ranging from sophisticated office chairs to versatile home furniture, embody a unique blend of style, functionality, and ergonomic excellence. Venture into the Aevoe universe and experience how our furniture transforms your daily living and working spaces into realms of elegance and comfort.</p>
+        <p>Economics problems assume that agents are best responding. When best responses change, utilities change discontinuously. Therefore, we develop discontinuous networks to deal with economics problems.</p>
     "
 
 gallery: 
-    enabled: 1
+    enabled: 0
     items:
-        - image: /img/portfolio/project-1/5.jpg
+        - image: /disenabled
           alt: "image"
 
-        - image: /img/portfolio/project-1/6.jpg
-          alt: "image"
-
-        - image: /img/portfolio/project-1/7.jpg
-          alt: "image"
 
 description2:
     enabled: 1
-    heading: "Visual identity design"
+    heading: "Piecewise Linear, Discontinuous Network"
     content: "
-        <p>Embrace the extraordinary with Aevoe - a premium furnishing brand that fuses modern design with supreme comfort.</p>
-        <p>Our pieces, ranging from sophisticated office chairs to versatile home furniture, embody a unique blend of style, functionality, and ergonomic excellence. Venture into the Aevoe universe and experience how our furniture transforms your daily living and working spaces into realms of elegance and comfort.</p>
+        <p>Designed for contract design, where the utility function is piecewise linear but discontinuous. [NeurIPS 2023] </p>
+        <p>&nbsp; </p>
+        <p>For the figure below: (a) The exact surface of the principal’s utility function. (b) A learned ReLU network cannot model the discontinuity of the function
+and yields an incorrect contract as shown in (a). (c) A learned DeLU network represents a discontinuous
+function and can well-approximate the ground-truth.</p>
     "
     button:
-        label: Visit website
-        link: "https://aklilumandefro.com/"
+        label: Paper
+        link: "https://openreview.net/forum?id=q8mH2d6uw2"
         target: "_blank"
 
 gallery2: 
     enabled: 1
     items:
-        - image: /img/portfolio/project-1/2.jpg
+        - image: /img/portfolio/project-2/pwl.png
+          alt: "image"
+          
+description3:
+    enabled: 1
+    heading: "Piecewise Non-Linear, Discontinuous Network"
+    content: "
+        <p>Designed for multi-sender persuasion, where the utility function is piecewise non-linear and discontinuous. [ICML 2024] </p>
+        <p>&nbsp; </p>
+        <p>In each column below, we show the ground-truth principal's utility, and
+the approximation results achieved by our method, ReLU, and piecewise linear discontinuous networks, respectively.</p>
+    "
+    button:
+        label: Paper
+        link: "https://openreview.net/forum?id=8JFIKpzumn"
+        target: "_blank"
+
+gallery3: 
+    enabled: 1
+    items:
+        - image: /img/portfolio/project-2/pwnl.png
           alt: "image"
 
-        - image: /img/portfolio/project-1/3.jpg
-          alt: "image"
 
-        - image: /img/portfolio/project-1/4.jpg
-          alt: "image"
 ---

@@ -56,7 +56,7 @@ const Story = ( props ) => {
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICML 2024
                               </p>
-                              <a href="https://arxiv.org/abs/2402.04971"> PDF </a>
+                              <a href="https://openreview.net/forum?id=8JFIKpzumn"> PDF </a>
                           </li>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
@@ -85,7 +85,7 @@ const Story = ( props ) => {
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   NeurIPS 2023
                               </p>
-                              <a href="https://arxiv.org/abs/2307.02318"> PDF </a>
+                              <a href="https://openreview.net/forum?id=q8mH2d6uw2"> PDF </a>
                           </li>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
@@ -113,7 +113,7 @@ const Story = ( props ) => {
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   NeurIPS 2022
                               </p>
-                              <a href="https://arxiv.org/abs/2210.15479"> PDF </a> ｜ <a
+                              <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/7da6005a8d6942e8b328357da2872aed-Abstract-Conference.html"> PDF </a> ｜ <a
                               href="https://github.com/drdh/Synergy-RL"> Code </a>
                           </li>
                           <li className="mil-up">

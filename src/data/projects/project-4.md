@@ -1,61 +1,66 @@
 ---
 #preview
-title: Robotics (Modular Reinforcement Learning)
-image: /img/portfolio/4.jpg
+title: Multi-Joint Robots (Modular Reinforcement Learning)
+image: /img/portfolio/project-4/sard.png
 category: With Multi-Agent Learning
 
 #params
-fullWidth: true
+#fullWidth: true
 
 #full details
 details:
-    - label: "Client:"
-      value: "xyz"
-
-    - label: "Date:"
-      value: "May 2022"
 
     - label: "$category"
 
 description:
     enabled: 1
     content: "
-        <p>Our pieces, ranging from sophisticated office chairs to versatile home furniture, embody a unique blend of style, functionality, and ergonomic excellence. Venture into the Aevoe universe and experience how our furniture transforms your daily living and working spaces into realms of elegance and comfort.</p>
+        <p>One joint can be an agent, so that a robot is a multi-agent system.</p>
     "
 
 gallery: 
-    enabled: 1
+    enabled: 0
     items:
         - image: /img/portfolio/project-1/2.jpg
           alt: "image"
 
-        - image: /img/portfolio/project-1/3.jpg
-          alt: "image"
-
-        - image: /img/portfolio/project-1/4.jpg
-          alt: "image"
-
 description2:
     enabled: 1
-    heading: "Visual identity design"
+    heading: "Muscle Synergy"
     content: "
-        <p>Embrace the extraordinary with Aevoe - a premium furnishing brand that fuses modern design with supreme comfort.</p>
-        <p>Our pieces, ranging from sophisticated office chairs to versatile home furniture, embody a unique blend of style, functionality, and ergonomic excellence. Venture into the Aevoe universe and experience how our furniture transforms your daily living and working spaces into realms of elegance and comfort.</p>
+        <p>A human central nervous system decreases the control complexity by producing a small number of electrical signals and activating muscles in groups. We achieve this in robots. [NeurIPS 2022] </p>
+        <p>&nbsp; </p>
+        <p>The following figure: synergy structure evolution enabled by our method. Phases are divided according to
+changes in synergy clusters. Synergy clusters are masked with colored shapes.</p>
     "
     button:
-        label: Visit website
-        link: "https://aklilumandefro.com/"
+        label: Paper
+        link: "https://proceedings.neurips.cc/paper_files/paper/2022/hash/7da6005a8d6942e8b328357da2872aed-Abstract-Conference.html"
         target: "_blank"
 
 gallery2: 
     enabled: 1
     items:
-        - image: /img/portfolio/project-1/5.jpg
+        - image: /img/portfolio/project-4/synergy.png
           alt: "image"
 
-        - image: /img/portfolio/project-1/6.jpg
+description3:
+    enabled: 1
+    heading: "Morphology Learning"
+    content: "
+        <p>How to learn an effective morphology that is symmetric? [ICML 2023] </p>
+        <p>&nbsp; </p>
+        <p>The following figure shows the morphology evolution enabled by our method.</p>
+    "
+    button:
+        label: Paper
+        link: "https://arxiv.org/abs/2306.00036"
+        target: "_blank"
+
+gallery3: 
+    enabled: 1
+    items:
+        - image: /img/portfolio/project-4/sard.png
           alt: "image"
 
-        - image: /img/portfolio/project-1/7.jpg
-          alt: "image"
 ---
