@@ -36,11 +36,11 @@ const TestimonialSlider = () => {
                                       <div className="mil-review-top">
                                           {/*<img src={item.image} alt={item.name} className="mil-avatar mil-up"/>*/}
                                           <div className="mil-name">
-                                              <p className="mil-upper mil-up">{item.role}</p>
-                                              <h4 className="mil-up mil-mb-5">{highlightText(item.name, 'Best Paper in AI Track')}</h4>
+                                              <p className="mil-upper mil-up" style={{fontSize: "22px"}}>{item.role}</p>
+                                              <h4 className="mil-up mil-mb-5" style={{fontSize: "22px"}}>{highlightText(item.name, 'Best Paper in AI Track')}</h4>
                                           </div>
                                       </div>
-                                      <p className="mil-up">{item.text}</p>
+                                      <p className="mil-up" style={{fontSize: "20px"}}>{item.text}</p>
                                   </div>
 
                               </SwiperSlide>
