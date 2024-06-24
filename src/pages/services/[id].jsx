@@ -58,7 +58,7 @@ const ServiceDetail = ( { postData } ) => {
                     {postData.list.items.map((item, key) => (
                     <div className="mil-accordion-group mil-up" key={`service-list-${key}`}>
                         <div className="mil-accordion-menu">
-                            <p className="mil-accordion-head">{item.label}</p>
+                            <p className="mil-accordion-head" style={{fontSize: "22px"}}>{item.label}</p>
                             <div className="mil-symbol mil-h3">
                                 <div className="mil-plus">+</div>
                                 <div className="mil-minus">-</div>

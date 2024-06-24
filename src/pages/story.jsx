@@ -36,10 +36,10 @@ const Story = ( props ) => {
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
                                   Tonghan Wang*, Yanchen Jiang*, David C. Parkes
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ACM EC 2024
                               </p>
-                              <p style={{color: '#0d6efd', fontSize: '18px'}}>
+                              <p style={{color: 'blue', fontSize: '18px'}}>
                                   Exemplary Paper in AI Track
                               </p>
                               <a href="https://arxiv.org/abs/2406.07428"> PDF </a>
@@ -53,7 +53,7 @@ const Story = ( props ) => {
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
                                   Tonghan Wang*, Safwan Hossian*, Tao Lin*, Yiling Chen, David C. Parkes, Haifeng Xu
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICML 2024
                               </p>
                               <a href="https://arxiv.org/abs/2402.04971"> PDF </a>
@@ -68,7 +68,7 @@ const Story = ( props ) => {
                                   Edwin Zhang, Sadie Zhao, Tonghan Wang, Safwan Hossain, Henry Gasztowtt, Stephan Zheng,
                                   David C. Parkes, Milind Tambe, Yiling Chen
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICML 2024
                               </p>
                               <a href="https://openreview.net/forum?id=S6a6gHvMWx"> PDF </a>
@@ -82,7 +82,7 @@ const Story = ( props ) => {
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
                                   Tonghan Wang, Paul Dütting, Dmitry Ivanov, Inbal Talgam-Cohen, David C. Parkes
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   NeurIPS 2023
                               </p>
                               <a href="https://arxiv.org/abs/2307.02318"> PDF </a>
@@ -96,7 +96,7 @@ const Story = ( props ) => {
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
                                   Heng Dong, Junyu Zhang, Tonghan Wang, Chongjie Zhang
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICML 2023
                               </p>
                               <a href="https://arxiv.org/abs/2306.00036"> PDF </a>
@@ -110,7 +110,7 @@ const Story = ( props ) => {
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
                                   Tonghan Wang*, Heng Dong*, Jiayuan Liu, Chongjie Zhang
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   NeurIPS 2022
                               </p>
                               <a href="https://arxiv.org/abs/2210.15479"> PDF </a> ｜ <a
@@ -124,10 +124,10 @@ const Story = ( props ) => {
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
                                   Tonghan Wang*, Yipeng Kang*, Qianlan Yang, Xiaoran Wu, Chongjie Zhang
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   NeurIPS 2022
                               </p>
-                              <p style={{color: '#0d6efd', fontSize: '18px'}}>
+                              <p style={{color: 'blue', fontSize: '18px'}}>
                                   Spotlight Paper
                               </p>
                               <a href="https://openreview.net/forum?id=OcNoF7qA4t"> PDF </a>
@@ -141,7 +141,7 @@ const Story = ( props ) => {
                                   Qianlan Yang, Weijun Dong, Zhizhou Ren, Jianhao Wang, <span className="underline">Tonghan Wang</span>,
                                   Chongjie Zhang
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICML 2022
                               </p>
                               <a href="https://proceedings.mlr.press/v162/yang22a"> PDF </a> | <a
@@ -157,10 +157,10 @@ const Story = ( props ) => {
                                   Yang,
                                   Chongjie Zhang
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICLR 2022
                               </p>
-                              <p style={{color: '#0d6efd', fontSize: '18px'}}>
+                              <p style={{color: 'blue', fontSize: '18px'}}>
                                   Spotlight Paper
                               </p>
                               <a href="https://arxiv.org/abs/2106.02886"> PDF </a> | <a
@@ -176,7 +176,7 @@ const Story = ( props ) => {
                                   Chenghao Li*, <span className="underline">Tonghan Wang*</span>, Chengjie Wu, Qianchuan
                                   Zhao, Jun Yang, Chongjie Zhang <br/>
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   NeurIPS 2021
                               </p>
                               <a href="https://arxiv.org/abs/2106.02195"> PDF </a> | <a
@@ -193,7 +193,7 @@ const Story = ( props ) => {
                                   <span className="underline">Tonghan Wang</span>, Tarun Gupta, Anuj Mahajan, Bei Peng,
                                   Shimon Whiteson, and Chongjie Zhang
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICLR 2021
                               </p>
                               <a href="https://arxiv.org/abs/2010.01523"> PDF </a> | <a
@@ -210,7 +210,7 @@ const Story = ( props ) => {
                                   <span className="underline">Tonghan Wang</span>*, Yihan Wang*, Beining Han*, Heng
                                   Dong, and Chongjie Zhang <br/>
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICLR 2021
                               </p>
                               <a href="https://arxiv.org/abs/2007.12322"> PDF </a> | <a
@@ -226,10 +226,10 @@ const Story = ( props ) => {
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
                                   Yipeng Kang, <span className="underline">Tonghan Wang</span>, Gerard de Melo <br/>
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   NeurIPS 2020
                               </p>
-                              <p style={{color: '#0d6efd', fontSize: '18px'}}>
+                              <p style={{color: 'blue', fontSize: '18px'}}>
                                   Spotlight Paper
                               </p>
                               <a href="https://arxiv.org/abs/2006.04109"> PDF </a>
@@ -244,7 +244,7 @@ const Story = ( props ) => {
                                   <span className="underline">Tonghan Wang</span>, Heng Dong, Victor Lesser, and
                                   Chongjie Zhang <br/>
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICML 2020
                               </p>
                               <a href="https://arxiv.org/abs/2003.08039"> PDF </a> | <a
@@ -260,10 +260,10 @@ const Story = ( props ) => {
                                   <span className="underline">Tonghan Wang</span>*, Jianhao Wang*, Yi Wu, and Chongjie
                                   Zhang <br/>
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICLR 2020
                               </p>
-                              <p style={{color: '#0d6efd', fontSize: '18px'}}>
+                              <p style={{color: 'blue', fontSize: '18px'}}>
                                   Spotlight Paper
                               </p>
                               <a href="https://openreview.net/forum?id=BJgy96EYvr&noteId=BJgy96EYvr"> PDF </a> | <a
@@ -280,7 +280,7 @@ const Story = ( props ) => {
                                   <span className="underline">Tonghan Wang</span>*, Jianhao Wang*, Chongyi Zheng, and
                                   Chongjie Zhang <br/>
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICLR 2020
                               </p>
                               <a href="https://openreview.net/forum?id=HJx-3grYDB&noteId=HJx-3grYDB"> PDF </a> | <a
@@ -296,7 +296,7 @@ const Story = ( props ) => {
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
                                   Xinliang Song, <span className="underline">Tonghan Wang</span>, and Chongjie Zhang
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   AAMAS 2019
                               </p>
                               <a href="https://dl.acm.org/doi/10.5555/3306127.3331788"> PDF </a>
@@ -311,7 +311,7 @@ const Story = ( props ) => {
                                   <span className="underline">Tonghan Wang</span>, Xueying Qin, Fan Zhong, Baoquan Chen,
                                   and Ming C. Lin <br/>
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ISMAR 2018
                               </p>
                               <a href="https://ieeexplore.ieee.org/abstract/document/8699328"> PDF </a> | <a
@@ -343,7 +343,7 @@ const Story = ( props ) => {
                                   Chenghao Li, Tonghan Wang, Chengjie Wu, Qianchuan Zhao, Jun Yang, Chongjie
                                   Zhang
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   IEEE Transactions on Neural Networks and Learning Systems
                               </p>
                               <a href="https://ieeexplore.ieee.org/abstract/document/10310295"> Article </a>
@@ -372,7 +372,7 @@ const Story = ( props ) => {
                                   Tonghan Wang*, Rongjun Qin*, Feng Chen*, Lei Yuan, Xiaoran Wu, Zongzhang Zhang,
                                   Chongjie Zhang, Yang Yu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   NeurIPS 2022 Deep Reinforcement Learning Workshop
                               </p>
                               <a href="https://openreview.net/forum?id=5pWNx-LZ8D"> PDF </a>
@@ -385,7 +385,7 @@ const Story = ( props ) => {
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
                                   Tonghan Wang*, Siyang Wu*, Xiaoran Wu, Jingfeng Zhang, Yujing Hu, Changjie Fan, Chongjie Zhang
                               </p>
-                              <p style={{color: 'black', fontSize: '18px'}}>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   NeurIPS 2022 Deep Reinforcement Learning Workshop
                               </p>
                               <a href="https://openreview.net/forum?id=cZSNk8veQW7"> PDF </a>
