@@ -1,0 +1,23 @@
+{
+    "title": "",
+    "items": [
+        {
+            "name": "Honored to announce that our paper has been awarded the 'Best Paper in AI Track' at ACM EC 2024!",
+            "image": "/img/customers/ec24_logo.png",
+            "role": "ACM EC 2024: The exemplary paper in the AI track",
+            "text": "Working with Yanchen Jiang and David Parkes, we tackled a long-standing (40 years) problem in microeconomics. We developed the first strategy-proof, multi-bidder, and general auction design algorithm using deep learning."
+        },
+        {
+            "name": "Discontinuous deep learning is gaining attention!",
+            "image": "/img/customers/2.jpg",
+            "role": "ICML 2024",
+            "text": "Our new paper is accepted by ICML 2024. In this paper, we extend discontinuous networks to handle discontinuous, piecewise non-linear utility functions in Bayesian persuasion problem."
+        },
+        {
+            "name": "Discontinuous deep learning for contract design!",
+            "image": "/img/customers/3.jpg",
+            "role": "NeurIPS 2023",
+            "text": "We proposed the first deep learning approach for contract design. The function that needs approximation in the contract setting is discontinuous, so we study how to introduce discontinuity into neural networks in a differentiable way."
+        }
+    ]
+}
