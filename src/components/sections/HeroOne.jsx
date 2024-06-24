@@ -1,6 +1,18 @@
 import Data from "@data/sections/hero-1.json";
 import AboutData from "@data/sections/about.json";
 
+function highlightText(text, highlights) {
+    // Join the highlights array into a regular expression that matches any of the words
+    const regex = new RegExp(`(${highlights.join('|')})`, 'gi');
+    const parts = text.split(regex);
+    return parts.map((part, index) =>
+        highlights.some(highlight => part.toLowerCase() === highlight.toLowerCase())
+        ? <span key={index} style={{ color: 'cornflowerblue' }}>{part}</span>
+        : part
+    );
+}
+
+
 const HeroOne = () => {
     return (
         <>
@@ -13,7 +25,8 @@ const HeroOne = () => {
                     <h1 className="mil-up mil-mb-30" dangerouslySetInnerHTML={{__html: Data.title}}/>
                     <p className="mil-upper mil-dark mil-up">{Data.description}</p>
                     <p className="mil-up mil-mb-30">{}</p>
-                    <p className="mil-up mil-mb-30">{AboutData.description}</p>
+                    <p className="mil-up mil-mb-30" style={{ fontSize: '24px' }}>{
+                        highlightText(AboutData.description, ['David Parkes', 'Milind Tambe', 'machine learning for problems involving multiple agents'])}</p>
                 </div>
                 <div className="mil-up mil-oval-frame">
                     <div className="mil-circle-text">

@@ -10,7 +10,8 @@ export const anchorSscroll = () => {
         var offset = 90;
   
         window.scrollTo({
-            top: target.offsetTop - offset,
+            // top: target.offsetTop - offset,
+            top: 600,
             behavior: "smooth"
         });
       });
