@@ -12,7 +12,7 @@ details:
 description:
     enabled: 1
     content: "
-        <p>I am interested in many aspects of multi-agent systems.</p>
+        <p>I am interested in the following aspects of multi-agent systems.</p>
     "
 
 gallery: 
@@ -30,7 +30,7 @@ description2:
         <p> </p>
         <p>We developed role-based learning, where agents learn their roles to decompose a complex task.</p>
         <p> </p>
-        <p>In the figure below, we show changes in roles of different agents in an episode. The role will decide the behavior of an agent.</p>
+        <p>In the figure below, we show changes in roles of different agents in an episode. The role will decide the agent's behavior.</p>
     "
     button:
         label: Example Paper
@@ -51,9 +51,9 @@ description3:
         <p> </p>
         <p>We studied sparse, concise, but informative communication.</p>
         <p> </p>
-        <p>In the following figure, two agents start at a_4 and b_3, respectively, and they want to reach g simultaneously but can only observe its own state. To finish the task, they need to communicate their locations to each other.</p>
+        <p>In the following figure, two agents start at a_4 and b_3, respectively, and they want to reach g simultaneously but can only observe its own state. To finish the task, they need to communicate their location to each other.</p>
         <p> </p>
-        <p>The second row shows our communication strategy. 0 means no communication. Agents only send a bit when they are one step away from the goal state.</p>
+        <p>The second row shows our communication strategy. 0 means no communication. Agents learn to only send a bit when they are one step away from the goal state.</p>
     "
     button:
         label: Example Paper
@@ -93,7 +93,7 @@ description5:
     content: "
         <p>Related publications: [NLCG, NeurIPS 2022; SOP-CG, ICML 2022; CASEC, ICLR 2022] </p>
         <p> </p>
-        <p>Coordination graphs.</p>
+        <p>Coordination graphs: sparse, non-linear, and self-organized.</p>
         <p> </p>
         <p>The following figure shows how the coordination structure could be adaptive: (a) Self-organized grouping at initialization; (b) Connecting to agent with rich observation for better information sharing; (c) Concentrated collaboration structure around an enclosed adversary. </p>
     "
@@ -146,7 +146,7 @@ first gradient-ascent algorithm with a finite learning rate that
 provides convergence guarantee in general-sum games. Second, GA-SPP provides convergence guarantee in larger games than existing
 gradient-ascent algorithms, which include m × n positive
 semi-definite games, a class of 2 × n general-sum games, and 2 × 2
-general-sum games. Finally, GA-SPP guarantees to converge to a Nash Equilibrium when converging in anym×n general-sum game.</p>
+general-sum games. Finally, GA-SPP guarantees to converge to a Nash Equilibrium when converging in any m×n general-sum game.</p>
     "
     button:
         label: Example Paper
@@ -163,7 +163,7 @@ description9:
     enabled: 1
     heading: "Robustness"
     content: "
-        <p>Related publications: [TRAM, NeurIPS Workshop 2020] </p>
+        <p>Related publications: [TRAM, NeurIPS Workshop 2022] </p>
         <p> </p>
         <p>We study how to improve the robustness of multi-agent learning algorithms by attacking them during training time.</p>
     "
@@ -176,7 +176,7 @@ description10:
     enabled: 1
     heading: "Transfer"
     content: "
-        <p>Related publications: [MATTAR, NeurIPS Workshop 2020] </p>
+        <p>Related publications: [MATTAR, NeurIPS Workshop 2022] </p>
         <p> </p>
         <p>How to transfer the policy learned by one multi-agent team to another?.</p>
     "

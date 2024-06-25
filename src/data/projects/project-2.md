@@ -15,7 +15,7 @@ details:
 description:
     enabled: 1
     content: "
-        <p>Economics problems assume that agents are best responding. When best responses change, utilities change discontinuously. Therefore, we develop discontinuous networks to deal with economics problems.</p>
+        <p>Economics assumes that agents are best responding. When best responses change, utilities may change discontinuously. Therefore, we develop discontinuous networks to deal with these problems.</p>
     "
 
 gallery: 
@@ -52,7 +52,7 @@ description3:
     content: "
         <p>Designed for multi-sender persuasion, where the utility function is piecewise non-linear and discontinuous. [ICML 2024] </p>
         <p>&nbsp; </p>
-        <p>In each column below, we show the ground-truth principal's utility, and
+        <p>In each column below, we show the ground-truth principal's utility and
 the approximation results achieved by our method, ReLU, and piecewise linear discontinuous networks, respectively.</p>
     "
     button:

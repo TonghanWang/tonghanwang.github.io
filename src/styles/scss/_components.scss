@@ -877,10 +877,9 @@ about
     display: flex;
     justify-content: center;
     background-color: $dt-10;
-    width: 170px;
-    height: 230px;
-    border-top-right-radius: 200px;
-    border-top-left-radius: 200px;
+    width: 180px;
+    height: 180px;
+    border-radius: 200px;
 
     @media screen and (max-height: 750px) {
         display: none;

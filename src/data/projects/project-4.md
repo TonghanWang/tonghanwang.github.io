@@ -30,7 +30,7 @@ description2:
     content: "
         <p>A human central nervous system decreases the control complexity by producing a small number of electrical signals and activating muscles in groups. We achieve this in robots. [NeurIPS 2022] </p>
         <p>&nbsp; </p>
-        <p>The following figure: synergy structure evolution enabled by our method. Phases are divided according to
+        <p>The following figure shows the synergy structure evolution enabled by our method. Phases are divided according to
 changes in synergy clusters. Synergy clusters are masked with colored shapes.</p>
     "
     button:
@@ -48,7 +48,7 @@ description3:
     enabled: 1
     heading: "Morphology Learning"
     content: "
-        <p>How to learn an effective morphology that is symmetric? [ICML 2023] </p>
+        <p>How to learn an effective morphology for a specific task that is symmetric? [ICML 2023] </p>
         <p>&nbsp; </p>
         <p>The following figure shows the morphology evolution enabled by our method.</p>
     "
