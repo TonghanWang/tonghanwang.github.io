@@ -22,7 +22,14 @@ const HeroOne = () => {
                 <div></div>
                 <div className="mil-banner-title">
                     <div className="mil-upper mil-dark mil-up mil-mb-30">{Data.subtitle}</div>
-                    <h1 className="mil-up mil-mb-30" dangerouslySetInnerHTML={{__html: Data.title}}/>
+                    <h1 className="mil-up mil-mb-30">
+                        <span dangerouslySetInnerHTML={{__html: Data.title}}/>
+                        <span className="tooltip">
+                            <i className="fas fa-info-circle"></i>
+                            <span className="tooltiptext">Pronunciation of Tonghan: the first syllable is pronounced like 'tongue,' and the second syllable sounds like 'hahn.' Feel free to use any close approximation that's comfortable for you!</span>
+                        </span>
+                    </h1>
+
                     <p className="mil-upper mil-dark mil-up">{Data.description}</p>
                     <p className="mil-up mil-mb-30">{}</p>
                     <p className="mil-up mil-mb-15" style={{fontSize: '22px'}}>{
@@ -33,7 +40,7 @@ const HeroOne = () => {
                         highlightText(AboutData.description3, ['Prof. David Parkes', 'Prof. Milind Tambe', 'machine learning for problems involving multiple agents'])}</p>
                 </div>
                 <div className="mil-up mil-oval-frame">
-                    <div className="mil-circle-text">
+                <div className="mil-circle-text">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
                              x="0px" y="0px" viewBox="0 0 300 300" enableBackground="new 0 0 300 300"
                              xmlSpace="preserve" className="mil-ct-svg mil-rotate" data-value="360">
