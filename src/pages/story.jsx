@@ -334,6 +334,20 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
+                                  <h4 style={{fontSize: '20px'}}>Multi-agent policy transfer via task relationship modeling </h4>
+                                  <div className="mil-text-sm">2024</div>
+                              </div>
+                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+                                  Tonghan Wang, Rongjun Qin, Feng Chen, Lei Yuan, Xiaoran Wu, Zongzhang Zhang,
+                                  Chongjie Zhang, Yang Yu
+                              </p>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
+                                  Science China Information Sciences
+                              </p>
+                              <a href="https://link.springer.com/article/10.1007/s11432-023-3862-1"> Article </a>
+                          </li>
+                          <li className="mil-up">
+                              <div className="mil-item-head mil-mb-5">
                                   <h4 style={{fontSize: '20px'}}>Celebrating Diversity With Subtask Specialization in
                                       Shared Multiagent Reinforcement
                                       Learning&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
@@ -370,7 +384,8 @@ const Story = ( props ) => {
                               </div>
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
                                   Tonghan Wang*, Rongjun Qin*, Feng Chen*, Lei Yuan, Xiaoran Wu, Zongzhang Zhang,
-                                  Chongjie Zhang, Yang Yu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Chongjie Zhang, Yang
+                                  Yu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                               </p>
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   NeurIPS 2022 Deep Reinforcement Learning Workshop
