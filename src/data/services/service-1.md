@@ -21,9 +21,10 @@ list:
 
     - label: "Reviewer"
       value: "
-      <p>ICLR 2022-24: International Conference on Learning Representations</p>
+      <p>ICLR 2022-24: International Conference on Learning Representations.</p>
       <p>NeurIPS 2021-24: Conference on Neural Information Processing Systems.</p>
       <p>ICML 2021-24: International Conference on Machine Learning.</p>
+      <p>AAAI 2020-24: The AAAI Conference on Artificial Intelligence.</p>
       <p>IJCAI 2020-24: International Joint Conference on Artificial Intelligence.</p>
       <p>ICLR 2021 Outstanding Reviewer Award: 9th International Conference on Learning Representations.</p>
       "
