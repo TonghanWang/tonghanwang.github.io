@@ -21,6 +21,30 @@ const Story = ( props ) => {
 
                   <div className="mil-section-title mil-up mil-left mil-mb-90">
                       <div className="mil-divider"></div>
+                      <h3>Preprint Papers</h3>
+                  </div>
+
+                  <div className="mil-timeline mil-mb-90">
+                      <div className="mil-timeline-track"></div>
+                      <ul>
+                          <li className="mil-up">
+                              <div className="mil-item-head mil-mb-5">
+                                  <h4 style={{fontSize: '20px'}}>On Diffusion Models for Multi-Agent Partial Observability: Shared Attractors, Error Bounds, and Composite Flow</h4>
+                                  <div className="mil-text-sm">2024</div>
+                              </div>
+                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+                                  Tonghan Wang*, Heng Dong*, Yanchen Jiang, David C. Parkes, Milind Tambe
+                              </p>
+                              <a href="https://arxiv.org/pdf/2410.13953"> PDF </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+
+              <div className="col-xl-12">
+
+                  <div className="mil-section-title mil-up mil-left mil-mb-90">
+                      <div className="mil-divider"></div>
                       <h3>Conference Papers</h3>
                   </div>
 
@@ -29,7 +53,8 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>GemNet: Menu-Based, Strategy-Proof Multi-Bidder Auctions
+                                  <h4 style={{fontSize: '20px'}}>GemNet: Menu-Based, Strategy-Proof Multi-Bidder
+                                      Auctions
                                       Through Deep Learning</h4>
                                   <div className="mil-text-sm">2024</div>
                               </div>
@@ -334,7 +359,8 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>Multi-agent policy transfer via task relationship modeling </h4>
+                                  <h4 style={{fontSize: '20px'}}>Multi-agent policy transfer via task relationship
+                                      modeling </h4>
                                   <div className="mil-text-sm">2024</div>
                               </div>
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
@@ -394,11 +420,13 @@ const Story = ( props ) => {
                           </li>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>Model and Method: Training-Time Attack for Cooperative Multi-Agent Reinforcement Learning</h4>
+                                  <h4 style={{fontSize: '20px'}}>Model and Method: Training-Time Attack for Cooperative
+                                      Multi-Agent Reinforcement Learning</h4>
                                   <div className="mil-text-sm">2022</div>
                               </div>
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
-                                  Tonghan Wang*, Siyang Wu*, Xiaoran Wu, Jingfeng Zhang, Yujing Hu, Changjie Fan, Chongjie Zhang
+                                  Tonghan Wang*, Siyang Wu*, Xiaoran Wu, Jingfeng Zhang, Yujing Hu, Changjie Fan,
+                                  Chongjie Zhang
                               </p>
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   NeurIPS 2022 Deep Reinforcement Learning Workshop
