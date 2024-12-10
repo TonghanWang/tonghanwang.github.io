@@ -53,6 +53,19 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
+                                  <h4 style={{fontSize: '20px'}}>The Bandit Whisperer: Communication Learning for Restless Bandits</h4>
+                                  <div className="mil-text-sm">2024</div>
+                              </div>
+                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+                                  Tonghan Wang*, Yunfan Zhao*, Dheeraj Mysore Nagaraj, Aparna Taneja, Milind Tambe
+                              </p>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
+                                  AAAI 2024
+                              </p>
+                              <a href="https://arxiv.org/abs/2408.05686"> PDF </a>
+                          </li>
+                          <li className="mil-up">
+                              <div className="mil-item-head mil-mb-5">
                                   <h4 style={{fontSize: '20px'}}>GemNet: Menu-Based, Strategy-Proof Multi-Bidder
                                       Auctions
                                       Through Deep Learning</h4>
