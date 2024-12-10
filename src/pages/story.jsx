@@ -60,7 +60,7 @@ const Story = ( props ) => {
                                   Tonghan Wang*, Yunfan Zhao*, Dheeraj Mysore Nagaraj, Aparna Taneja, Milind Tambe
                               </p>
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
-                                  AAAI 2024
+                                  AAAI 2025
                               </p>
                               <a href="https://arxiv.org/abs/2408.05686"> PDF </a>
                           </li>
