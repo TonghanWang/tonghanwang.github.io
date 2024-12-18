@@ -80,7 +80,8 @@ const Story = ( props ) => {
                               <p style={{color: 'blue', fontSize: '18px'}}>
                                   Exemplary Paper in AI Track, presented in the Best Papers plenary session
                               </p>
-                              <a href="https://arxiv.org/abs/2406.07428"> PDF </a>
+                              <a href="https://arxiv.org/abs/2406.07428"> PDF </a> ｜ <a
+                              href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3670865"> Press </a>
                           </li>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
