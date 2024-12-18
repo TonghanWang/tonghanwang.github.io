@@ -38,6 +38,11 @@ const TestimonialSlider = () => {
                                           <div className="mil-name">
                                               <p className="mil-upper mil-up" style={{fontSize: "22px"}}>{item.role}</p>
                                               <h4 className="mil-up mil-mb-5" style={{fontSize: "22px"}}>{highlightText(item.name, 'Best Paper in AI Track')}</h4>
+                                          {item.link && (
+                                <a href={item.link.href} target="_blank" rel="noopener noreferrer" style={{fontSize: "18px"}}>
+                                    {item.link.text}
+                                </a>
+                            )}
                                           </div>
                                       </div>
                                       <p className="mil-up" style={{fontSize: "20px"}}>{item.text}</p>
