@@ -2,7 +2,7 @@
     "title": "",
     "items": [
         {
-            "name": "Honored to announce that our paper has been awarded the 'Best Paper in AI Track' at ACM EC 2024! <a href=\\\"https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3670865\\\" target=\\\"_blank\\\">[Press]</a>",
+            "name": "Honored to announce that our paper has been awarded the 'Best Paper in AI Track' at ACM EC 2024!",
             "image": "/img/customers/ec24_logo.png",
             "role": "ACM EC 2024: The exemplary paper in the AI track",
             "text": "Working with Yanchen Jiang and David Parkes, we tackled a long-standing problem in microeconomics. We developed the first strategy-proof, multi-bidder, and general auction design algorithm using deep learning.",
