@@ -53,7 +53,8 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>The Bandit Whisperer: Communication Learning for Restless Bandits</h4>
+                                  <h4 style={{fontSize: '20px'}}>The Bandit Whisperer: Communication Learning for
+                                      Restless Bandits</h4>
                                   <div className="mil-text-sm">2024</div>
                               </div>
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
@@ -61,6 +62,9 @@ const Story = ( props ) => {
                               </p>
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   AAAI 2025
+                              </p>
+                              <p style={{color: 'blue', fontSize: '18px'}}>
+                                  Oral
                               </p>
                               <a href="https://arxiv.org/abs/2408.05686"> PDF </a>
                           </li>
