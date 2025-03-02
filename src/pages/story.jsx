@@ -29,13 +29,30 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>On Diffusion Models for Multi-Agent Partial Observability: Shared Attractors, Error Bounds, and Composite Flow</h4>
+                                  <h4 style={{fontSize: '20px'}}>On Diffusion Models for Multi-Agent Partial
+                                      Observability: Shared Attractors, Error Bounds, and Composite Flow</h4>
                                   <div className="mil-text-sm">2024</div>
                               </div>
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
                                   Tonghan Wang*, Heng Dong*, Yanchen Jiang, David C. Parkes, Milind Tambe
                               </p>
                               <a href="https://arxiv.org/pdf/2410.13953"> PDF </a>
+                          </li>
+                      </ul>
+                  </div>
+
+                  <div className="mil-timeline mil-mb-90">
+                      <div className="mil-timeline-track"></div>
+                      <ul>
+                          <li className="mil-up">
+                              <div className="mil-item-head mil-mb-5">
+                                  <h4 style={{fontSize: '20px'}}>BundleFlow: Deep Menus for Combinatorial Auctions by Diffusion-Based Optimization</h4>
+                                  <div className="mil-text-sm">2025</div>
+                              </div>
+                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+                                  Tonghan Wang, Yanchen Jiang, David C. Parkes
+                              </p>
+                              <a href="https://arxiv.org/abs/2502.15283"> PDF </a>
                           </li>
                       </ul>
                   </div>
