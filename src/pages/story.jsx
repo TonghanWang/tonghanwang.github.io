@@ -38,12 +38,7 @@ const Story = ( props ) => {
                               </p>
                               <a href="https://arxiv.org/pdf/2410.13953"> PDF </a>
                           </li>
-                      </ul>
-                  </div>
 
-                  <div className="mil-timeline mil-mb-90">
-                      <div className="mil-timeline-track"></div>
-                      <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
                                   <h4 style={{fontSize: '20px'}}>BundleFlow: Deep Menus for Combinatorial Auctions by
@@ -56,24 +51,22 @@ const Story = ( props ) => {
                               </p>
                               <a href="https://arxiv.org/abs/2502.15283"> PDF </a>
                           </li>
-                      </ul>
-                  </div>
 
-                  <div className="mil-timeline mil-mb-90">
-                      <div className="mil-timeline-track"></div>
-                      <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>Policy-to-Language: Train LLMs to Explain Decisions with Flow-Matching Generated Rewards</h4>
+                                  <h4 style={{fontSize: '20px'}}>Policy-to-Language: Train LLMs to Explain Decisions
+                                      with Flow-Matching Generated Rewards</h4>
                                   <div className="mil-text-sm">2025</div>
                               </div>
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
-                                  Xinyi Yang, Liang Zeng, Heng Dong, Chao Yu, Xiaoran Wu, Huazhong Yang, Yu Wang, Milind Tambe, Tonghan Wang
+                                  Xinyi Yang, Liang Zeng, Heng Dong, Chao Yu, Xiaoran Wu, Huazhong Yang, Yu Wang, Milind
+                                  Tambe, Tonghan Wang
                               </p>
                               <a href="https://arxiv.org/abs/2502.12530"> PDF </a>
                           </li>
                       </ul>
                   </div>
+
               </div>
 
               <div className="col-xl-12">
