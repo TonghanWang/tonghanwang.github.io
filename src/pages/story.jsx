@@ -417,7 +417,7 @@ const Story = ( props ) => {
                                   <div className="mil-text-sm">2024</div>
                               </div>
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
-                                  Tonghan Wang, Rongjun Qin, Feng Chen, Lei Yuan, Xiaoran Wu, Zongzhang Zhang,
+                                  Tonghan Wang*, Rongjun Qin*, Feng Chen*, Lei Yuan, Xiaoran Wu, Zongzhang Zhang,
                                   Chongjie Zhang, Yang Yu
                               </p>
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
