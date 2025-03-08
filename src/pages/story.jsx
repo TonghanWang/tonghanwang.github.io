@@ -38,7 +38,6 @@ const Story = ( props ) => {
                               </p>
                               <a href="https://arxiv.org/pdf/2410.13953"> PDF </a>
                           </li>
-
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
                                   <h4 style={{fontSize: '20px'}}>BundleFlow: Deep Menus for Combinatorial Auctions by
@@ -51,7 +50,6 @@ const Story = ( props ) => {
                               </p>
                               <a href="https://arxiv.org/abs/2502.15283"> PDF </a>
                           </li>
-
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
                                   <h4 style={{fontSize: '20px'}}>Policy-to-Language: Train LLMs to Explain Decisions
@@ -66,7 +64,6 @@ const Story = ( props ) => {
                           </li>
                       </ul>
                   </div>
-
               </div>
 
               <div className="col-xl-12">
