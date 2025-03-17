@@ -402,8 +402,7 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>Multi-agent policy transfer via task relationship
-                                      modeling </h4>
+                                  <h4 style={{fontSize: '20px'}}>Multi-Agent Policy Transfer via Task Relationship Modeling </h4>
                                   <div className="mil-text-sm">2024</div>
                               </div>
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
@@ -447,8 +446,7 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>Multi-agent policy transfer via task relationship
-                                      modeling</h4>
+                                  <h4 style={{fontSize: '20px'}}>Multi-Agent Policy Transfer via Task Relationship Modeling</h4>
                                   <div className="mil-text-sm">2022</div>
                               </div>
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
