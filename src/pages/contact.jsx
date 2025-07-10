@@ -6,8 +6,8 @@ import appData from "@data/app.json";
 const Contact = () => {
   return (
     <Layouts
-      rightPanelBackground={"/img/person/avatar2.jpg"}
-      rightPanelImg={"/img/person/avatar1.png"}
+      rightPanelBackground={"/img/person/avatar4.jpg"}
+      rightPanelImg={"/img/person/avatar4.jpg"}
     >
         <PageBanner pageTitle={"Get in touch!"} align={"center"} />
       
