@@ -33,11 +33,11 @@ const HeroOne = () => {
                     <p className="mil-upper mil-dark mil-up">{Data.description}</p>
                     <p className="mil-up mil-mb-30">{}</p>
                     <p className="mil-up mil-mb-15" style={{fontSize: '22px'}}>{
-                        highlightText(AboutData.description, ['Prof. David Parkes', 'Prof. Milind Tambe', 'machine learning for problems involving multiple agents'])}</p>
+                        highlightText(AboutData.description, ['Prof. David Parkes', 'Prof. Milind Tambe', 'aligned and scalable machine learning for problems involving multiple agents'])}</p>
                     <p className="mil-up mil-mb-15" style={{fontSize: '22px'}}>{
-                        highlightText(AboutData.description2, ['Prof. David Parkes', 'Prof. Milind Tambe', 'machine learning for problems involving multiple agents'])}</p>
+                        highlightText(AboutData.description2, ['Prof. David Parkes', 'Prof. Milind Tambe', 'aligned and scalable machine learning for problems involving multiple agents'])}</p>
                     <p className="mil-up mil-mb-15" style={{fontSize: '22px'}}>{
-                        highlightText(AboutData.description3, ['Prof. David Parkes', 'Prof. Milind Tambe', 'machine learning for problems involving multiple agents'])}</p>
+                        highlightText(AboutData.description3, ['Prof. David Parkes', 'Prof. Milind Tambe', 'aligned and scalable machine learning for problems involving multiple agents'])}</p>
                 </div>
                 <div className="mil-up mil-oval-frame">
                 <div className="mil-circle-text">
