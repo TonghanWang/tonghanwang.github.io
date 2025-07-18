@@ -112,9 +112,10 @@ const Story = ( props ) => {
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ACM EC 2024
                               </p>
-                              <p style={{color: 'blue', fontSize: '18px'}}>
-                                  Best Paper
-                              </p>AI Track
+                              <p style={{display: 'flex', gap: '10px', fontSize: '18px'}}>
+                                  <span style={{color: 'blue'}}>Best Paper</span>
+                                  <span style={{color: 'black'}}>AI Track</span>
+                              </p>
                               <a href="https://arxiv.org/abs/2406.07428"> PDF </a> ｜ <a
                               href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3670865"> Press </a>
                           </li>
