@@ -434,7 +434,7 @@ const Story = ( props ) => {
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ACM SIGecom Exchanges
                               </p>
-                              <a href="https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf"> Article </a>
+                              <a href="https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf"> PDF </a>
                           </li>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
@@ -449,7 +449,7 @@ const Story = ( props ) => {
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   Science China Information Sciences
                               </p>
-                              <a href="https://link.springer.com/article/10.1007/s11432-023-3862-1"> Article </a>
+                              <a href="https://link.springer.com/article/10.1007/s11432-023-3862-1"> PDF </a>
                           </li>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
@@ -465,7 +465,7 @@ const Story = ( props ) => {
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   IEEE Transactions on Neural Networks and Learning Systems
                               </p>
-                              <a href="https://ieeexplore.ieee.org/abstract/document/10310295"> Article </a>
+                              <a href="https://ieeexplore.ieee.org/abstract/document/10310295"> PDF </a>
                           </li>
                       </ul>
                   </div>
