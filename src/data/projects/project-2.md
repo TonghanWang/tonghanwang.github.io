@@ -1,8 +1,8 @@
 ---
 #preview
-title: Computational Economics (Discontinuous Neural Networks)
-image: /img/portfolio/project-2/pwnl-high.png
-category: With New Deep Learning Models 
+title: Multi-Joint Robots (Modular Reinforcement Learning)
+image: /img/portfolio/project-4/sard.png
+category: With Multi-Agent Learning
 
 #params
 #fullWidth: true
@@ -15,56 +15,52 @@ details:
 description:
     enabled: 1
     content: "
-        <p>Economics assumes that agents are best responding. When best responses change, utilities may change discontinuously. Therefore, we develop discontinuous networks to deal with these problems.</p>
+        <p>One joint can be an agent, so that a robot is a multi-agent system.</p>
     "
 
 gallery: 
     enabled: 0
     items:
-        - image: /disenabled
+        - image: /img/portfolio/project-1/2.jpg
           alt: "image"
-
 
 description2:
     enabled: 1
-    heading: "Piecewise Linear, Discontinuous Network"
+    heading: "Muscle Synergy"
     content: "
-        <p>Designed for contract design, where the utility function is piecewise linear but discontinuous. [NeurIPS 2023] </p>
+        <p>A human central nervous system decreases the control complexity by producing a small number of electrical signals and activating muscles in groups. We achieve this in robots. [NeurIPS 2022] </p>
         <p>&nbsp; </p>
-        <p>For the figure below: (a) The exact surface of the principal’s utility function. (b) A learned ReLU network cannot model the discontinuity of the function
-and yields an incorrect contract as shown in (a). (c) A learned DeLU network represents a discontinuous
-function and can well-approximate the ground-truth.</p>
+        <p>The following figure shows the synergy structure evolution enabled by our method. Phases are divided according to
+changes in synergy clusters. Synergy clusters are masked with colored shapes.</p>
     "
     button:
         label: Paper
-        link: "https://openreview.net/forum?id=q8mH2d6uw2"
+        link: "https://proceedings.neurips.cc/paper_files/paper/2022/hash/7da6005a8d6942e8b328357da2872aed-Abstract-Conference.html"
         target: "_blank"
 
 gallery2: 
     enabled: 1
     items:
-        - image: /img/portfolio/project-2/pwl.png
+        - image: /img/portfolio/project-4/synergy.png
           alt: "image"
-          
+
 description3:
     enabled: 1
-    heading: "Piecewise Non-Linear, Discontinuous Network"
+    heading: "Morphology Learning"
     content: "
-        <p>Designed for multi-sender persuasion, where the utility function is piecewise non-linear and discontinuous. [ICML 2024] </p>
+        <p>How to learn an effective morphology for a specific task that is symmetric? [ICML 2023] </p>
         <p>&nbsp; </p>
-        <p>In each column below, we show the ground-truth principal's utility and
-the approximation results achieved by our method, ReLU, and piecewise linear discontinuous networks, respectively.</p>
+        <p>The following figure shows the morphology evolution enabled by our method.</p>
     "
     button:
         label: Paper
-        link: "https://openreview.net/forum?id=8JFIKpzumn"
+        link: "https://arxiv.org/abs/2306.00036"
         target: "_blank"
 
 gallery3: 
     enabled: 1
     items:
-        - image: /img/portfolio/project-2/pwnl.png
+        - image: /img/portfolio/project-4/sard.png
           alt: "image"
-
 
 ---
