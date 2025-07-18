@@ -29,6 +29,22 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
+                                  <h4 style={{fontSize: '20px'}}>Robust Optimization with Diffusion Models for Green
+                                      Security</h4>
+                                  <div className="mil-text-sm">2025</div>
+                              </div>
+                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+                                  Lingkai Kong, Haichuan Wang, Yuqi Pan, Cheol Woo Kim, Mingxiao Song, Alayna Nguyen,
+                                  Tonghan Wang, Haifeng Xu, Milind Tambe
+                              </p>
+                              <p style={{display: 'flex', gap: '10px', fontSize: '18px'}}>
+                                  <span style={{color: 'cornflowerblue'}}>UAI 2025</span>
+                                  <span style={{color: 'black'}}>To Appear</span>
+                              </p>
+                              <a href="https://openreview.net/forum?id=lLdal3hZtz&noteId=lLdal3hZtz"> PDF </a>
+                          </li>
+                          <li className="mil-up">
+                              <div className="mil-item-head mil-mb-5">
                                   <h4 style={{fontSize: '20px'}}>BundleFlow: Deep Menus for Combinatorial Auctions by
                                       Diffusion-Based
                                       Optimization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
@@ -409,6 +425,19 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
+                                  <h4 style={{fontSize: '20px'}}>Automated Mechanism Design: A Survey  </h4>
+                                  <div className="mil-text-sm">2025</div>
+                              </div>
+                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+                                  Michael J. Curry, Zhou Fan, Yanchen Jiang, Sai Srivatsa Ravindranath, Tonghan Wang, David C. Parkes
+                              </p>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
+                                  ACM SIGecom Exchanges
+                              </p>
+                              <a href="https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf"> Article </a>
+                          </li>
+                          <li className="mil-up">
+                              <div className="mil-item-head mil-mb-5">
                                   <h4 style={{fontSize: '20px'}}>Multi-Agent Policy Transfer via Task Relationship
                                       Modeling </h4>
                                   <div className="mil-text-sm">2024</div>
@@ -454,7 +483,8 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>Multi-Agent Policy Transfer via Task Relationship Modeling</h4>
+                                  <h4 style={{fontSize: '20px'}}>Multi-Agent Policy Transfer via Task Relationship
+                                      Modeling</h4>
                                   <div className="mil-text-sm">2022</div>
                               </div>
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
