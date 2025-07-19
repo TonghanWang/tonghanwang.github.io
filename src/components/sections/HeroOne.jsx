@@ -23,14 +23,14 @@ const HeroOne = () => {
                 <div className="mil-banner-title left-align">
                     <div className="mil-upper mil-dark mil-up mil-mb-10">{Data.subtitle}</div>
                     <h1 className="mil-up mil-mb-30">
-                        <span dangerouslySetInnerHTML={{__html: Data.title}} style={{fontSize: '50px'}}/>
+                        <span dangerouslySetInnerHTML={{__html: Data.title}} style={{fontSize: '55px'}}/>
                         <span className="tooltip">
                             <i className="fas fa-info-circle" style={{ fontSize: '16px', verticalAlign: 'middle' }}></i>
                             <span className="tooltiptext">Pronunciation of Tonghan: the first syllable is pronounced like 'tongue,' and the second syllable sounds like 'hahn.' Feel free to use any close approximation that's comfortable for you!</span>
                         </span>
                     </h1>
 
-                    <p className="mil-upper mil-dark mil-up">{Data.description}</p>
+                    <p className="mil-wide mil-dark mil-up">{Data.description}</p>
                     <p className="mil-up mil-mb-30">{}</p>
                     <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left" }}>{
                         highlightText(AboutData.description, ['Prof. David Parkes', 'Prof. Milind Tambe', 'aligned and scalable machine learning for problems involving multiple agents'])}</p>
