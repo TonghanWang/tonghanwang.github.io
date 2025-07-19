@@ -222,6 +222,19 @@ a {
     font-weight: 600;
     letter-spacing: 2px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap');
+
+.academic-font {
+  font-family: 'Cormorant Garamond', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+    color: $dark;
+  line-height: 1.5;
+}
+
+.left-align {
+  text-align: left;
+}
 /* -------------------------------------------
 
 button
