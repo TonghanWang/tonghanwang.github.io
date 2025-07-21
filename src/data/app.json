@@ -37,6 +37,11 @@
         "children": 0
       },
       {
+        "label": "Awards",
+        "link": "/awards",
+        "children": 0
+      },
+      {
         "label": "Contact",
         "link": "/contact",
         "children": 0
