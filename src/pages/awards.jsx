@@ -43,7 +43,7 @@ export default function Awards({ posts }) {
                         >
                             <div className="mil-accordion-menu">
                                 <p
-                                    className="mil-wide mil-dark mil-up"
+                                    className="mil-wide mil-dark mil-up "
                                     style={{fontSize: "22px"}}
                                 >
                                     {item.label}

@@ -1,7 +1,7 @@
 ---
 #preview details
 image: "/img/icons/1.svg"
-title: "Awards & Honors"
+title: ""
 short: "Elevate your online presence with captivating user interfaces and seamless experiences"
 
 #full details
