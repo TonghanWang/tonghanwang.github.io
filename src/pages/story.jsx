@@ -152,7 +152,7 @@ const Story = ( props ) => {
                                   <div className="mil-text-sm">2024</div>
                               </div>
                               <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
-                                  Tonghan Wang*, Safwan Hossian*, Tao Lin*, Yiling Chen, David C. Parkes, Haifeng Xu
+                                  Tonghan Wang*, Safwan Hossain*, Tao Lin*, Yiling Chen, David C. Parkes, Haifeng Xu
                               </p>
                               <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
                                   ICML 2024
@@ -176,7 +176,7 @@ const Story = ( props ) => {
                           </li>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>Deep Contract Design via Discontinuos Neural
+                                  <h4 style={{fontSize: '20px'}}>Deep Contract Design via Discontinuous Neural
                                       Networks</h4>
                                   <div className="mil-text-sm">2023</div>
                               </div>
