@@ -29,44 +29,6 @@ const Story = ( props ) => {
                       <ul>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>Robust Optimization with Diffusion Models for Green
-                                      Security</h4>
-                                  <div className="mil-text-sm">2025</div>
-                              </div>
-                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
-                                  Lingkai Kong, Haichuan Wang, Yuqi Pan, Cheol Woo Kim, Mingxiao Song, Alayna Nguyen,
-                                  Tonghan Wang, Haifeng Xu, Milind Tambe
-                              </p>
-                              <p style={{display: 'flex', gap: '10px', fontSize: '18px'}}>
-                                  <span style={{color: 'cornflowerblue'}}>UAI 2025</span>
-                                  <span style={{color: 'black'}}>To Appear</span>
-                              </p>
-                              <a href="https://openreview.net/forum?id=lLdal3hZtz&noteId=lLdal3hZtz"> PDF </a>
-                          </li>
-                          <li className="mil-up">
-                              <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>Composite Flow Matching for Reinforcement Learning with Shifted-Dynamics Data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
-                                  <div className="mil-text-sm">2025</div>
-                              </div>
-                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
-                                  Lingkai Kong*, Haichuan Wang*, Tonghan Wang*, Guojun Xiong, Milind Tambe
-                              </p>
-                              <a href="https://arxiv.org/pdf/2505.23062?"> PDF </a>
-                          </li>
-                          <li className="mil-up">
-                              <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>BundleFlow: Deep Menus for Combinatorial Auctions by
-                                      Diffusion-Based
-                                      Optimization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
-                                  <div className="mil-text-sm">2025</div>
-                              </div>
-                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
-                                  Tonghan Wang, Yanchen Jiang, David C. Parkes
-                              </p>
-                              <a href="https://arxiv.org/abs/2502.15283"> PDF </a>
-                          </li>
-                          <li className="mil-up">
-                              <div className="mil-item-head mil-mb-5">
                                   <h4 style={{fontSize: '20px'}}>Policy-to-Language: Train LLMs to Explain Decisions
                                       with Flow-Matching Generated Rewards</h4>
                                   <div className="mil-text-sm">2025</div>
@@ -91,6 +53,68 @@ const Story = ( props ) => {
                   <div className="mil-timeline mil-mb-90">
                       <div className="mil-timeline-track"></div>
                       <ul>
+                          <li className="mil-up">
+                              <div className="mil-item-head mil-mb-5">
+                                  <h4 style={{fontSize: '20px'}}>Composite Flow Matching for Reinforcement Learning with
+                                      Shifted-Dynamics Data</h4>
+                                  <div className="mil-text-sm">2025</div>
+                              </div>
+                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+                                  Lingkai Kong*, Haichuan Wang*, Tonghan Wang*, Guojun Xiong, Milind Tambe
+                              </p>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
+                                  NeurIPS 2025
+                              </p>
+                              <p style={{color: 'blue', fontSize: '18px'}}>
+                                  Spotlight Paper
+                              </p>
+                              <a href="https://arxiv.org/pdf/2505.23062"> PDF </a>
+                          </li>
+                          <li className="mil-up">
+                              <div className="mil-item-head mil-mb-5">
+                                  <h4 style={{fontSize: '20px'}}>BundleFlow: Deep Menus for Combinatorial Auctions by
+                                      Diffusion-Based Optimization</h4>
+                                  <div className="mil-text-sm">2025</div>
+                              </div>
+                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+                                  Tonghan Wang, Yanchen Jiang, David C. Parkes
+                              </p>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
+                                  NeurIPS 2025
+                              </p>
+                              <a href="https://arxiv.org/abs/2502.15283"> PDF </a>
+                          </li>
+                          <li className="mil-up">
+                              <div className="mil-item-head mil-mb-5">
+                                  <h4 style={{fontSize: '20px'}}>Adaptive Frontier Exploration on Graphs with
+                                      Applications to Network-Based Disease Testing</h4>
+                                  <div className="mil-text-sm">2025</div>
+                              </div>
+                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+                                  Davin Choo*, Yuqi Pan*, Tonghan Wang, Milind Tambe, Alastair van Heerden, Cheryl
+                                  Johnson
+
+                              </p>
+                              <p style={{color: 'cornflowerblue', fontSize: '18px'}}>
+                                  NeurIPS 2025
+                              </p>
+                              <a href="https://arxiv.org/abs/2505.21671"> PDF </a>
+                          </li>
+                          <li className="mil-up">
+                              <div className="mil-item-head mil-mb-5">
+                                  <h4 style={{fontSize: '20px'}}>Robust Optimization with Diffusion Models for Green
+                                      Security</h4>
+                                  <div className="mil-text-sm">2025</div>
+                              </div>
+                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+                                  Lingkai Kong, Haichuan Wang, Yuqi Pan, Cheol Woo Kim, Mingxiao Song, Alayna Nguyen,
+                                  Tonghan Wang, Haifeng Xu, Milind Tambe
+                              </p>
+                              <p style={{display: 'flex', gap: '10px', fontSize: '18px'}}>
+                                  <span style={{color: 'cornflowerblue'}}>UAI 2025</span>
+                              </p>
+                              <a href="https://openreview.net/forum?id=lLdal3hZtz&noteId=lLdal3hZtz"> PDF </a>
+                          </li>
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5">
                                   <h4 style={{fontSize: '20px'}}>On Diffusion Models for Multi-Agent Partial
