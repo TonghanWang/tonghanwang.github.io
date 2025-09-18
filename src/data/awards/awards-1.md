@@ -10,6 +10,9 @@ subtitle: "What is UI/UX Design"
 list:
   heading: ""
   items:
+    - label: "NeurIPS 2025 Spotlight"
+      value: "<p>Spotlight paper, Conference on Neural Information Processing Systems, 2025</p>
+      <p> </br> </p>"
     - label: "AAAI 2025 Oral"
       value: "<p>Oral presentation, AAAI Conference on Artificial Intelligence, 2025</p>
       <p> </br> </p>"
