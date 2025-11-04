@@ -1,16 +1,43 @@
 import Data from "@data/sections/hero-1.json";
 import AboutData from "@data/sections/about.json";
 
-function highlightText(text, highlights) {
-    // Join the highlights array into a regular expression that matches any of the words
-    const regex = new RegExp(`(${highlights.join('|')})`, 'gi');
-    const parts = text.split(regex);
-    return parts.map((part, index) =>
-        highlights.some(highlight => part.toLowerCase() === highlight.toLowerCase())
-        ? <span key={index} style={{ color: 'cornflowerblue' }}>{part}</span>
-        : part
-    );
+// at the top if needed:
+// import React from "react";
+
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
+
+function highlightText(text, { links = {}, highlights = [] } = {}) {
+  const tokens = [...Object.keys(links), ...highlights];
+  if (!tokens.length) return text;
+
+  const regex = new RegExp(`(${tokens.map(escapeRegExp).join("|")})`, "gi");
+
+  return text.split(regex).map((part, i) => {
+    const linkKey = Object.keys(links).find(k => part.toLowerCase() === k.toLowerCase());
+    if (linkKey) {
+      return (
+        <a
+          key={i}
+          href={links[linkKey]}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "cornflowerblue"}}
+        >
+          {part}
+        </a>
+      );
+    }
+
+    const isHighlight = highlights.some(h => part.toLowerCase() === h.toLowerCase());
+    if (isHighlight) return <span key={i} style={{ color: "cornflowerblue" }}>{part}</span>;
+
+    // was <React.Fragment key={i}>{part}</React.Fragment>
+    return <>{part}</>;
+  });
+}
+
 
 
 const HeroOne = () => {
@@ -35,9 +62,9 @@ const HeroOne = () => {
                     <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left" }}>{
                         highlightText(AboutData.description, ['Prof. David Parkes', 'Prof. Milind Tambe', 'aligned and scalable machine learning for problems involving multiple agents'])}</p>
                     <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left" }}>{
-                        highlightText(AboutData.description2, ['Prof. David Parkes', 'Prof. Milind Tambe', 'aligned and scalable machine learning for problems involving multiple agents'])}</p>
-                    <p className="mil-up mil-mb-15" style={{fontSize: '22px'}}>{
-                        highlightText(AboutData.description3, ['Prof. David Parkes', 'Prof. Milind Tambe', 'aligned and scalable machine learning for problems involving multiple agents'])}</p>
+                        highlightText(AboutData.description2, {links: AboutData.link2})}</p>
+                    <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left" }}>{
+                        highlightText(AboutData.description3, {links: AboutData.link2})}</p>
                 </div>
                 <div className="mil-up mil-oval-frame">
                 <div className="mil-circle-text">

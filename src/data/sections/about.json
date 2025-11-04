@@ -4,8 +4,12 @@
         "alt": "avatar"
     },
     "title": "Machine Learning for Multi-Agent Problems",
-    "description": "I am a PhD student working with Professor David Parkes and Professor Milind Tambe in the EconCS Group and the Teamcore Group at Harvard University. My primary research interest is aligned and scalable machine learning for problems involving multiple agents, including computational economics and multi-agent coordination in games or complex systems like robotics.",
-    "description2": "Before Harvard, I completed my M.E. at the Institute for Interdisciplinary Information Sciences (IIIS) at Tsinghua University headed by Professor Andrew Chi-Chih Yao. During my time there, I was advised by Assistant Professor Chongjie Zhang.",
+    "description": "In 2026, I will join the College of AI at Tsinghua University as a tenure-track assistant professor. I am recruiting highly motivated students and research interns (undergrad and graduate). Contact me by email if you’re interested.",
+    "description2": "I completed my PhD at Harvard University, advised by Prof. David Parkes and Prof. Milind Tambe, and my M.E. at the Institute for Interdisciplinary Information Sciences, Tsinghua University.",
+    "link2": {
+    "Prof. David Parkes": "https://parkes.seas.harvard.edu/",
+    "Prof. Milind Tambe": "https://teamcore.seas.harvard.edu/tambe/"
+    },
     "description3": "",
     "signature": {
         "image": "/img/person/sign.png",
