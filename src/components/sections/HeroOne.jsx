@@ -60,7 +60,7 @@ const HeroOne = () => {
                     <p className="mil-wide mil-dark mil-up">{Data.description}</p>
                     <p className="mil-up mil-mb-30">{}</p>
                     <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left" }}>{
-                        highlightText(AboutData.description, ['Prof. David Parkes', 'Prof. Milind Tambe', 'aligned and scalable machine learning for problems involving multiple agents'])}</p>
+                        highlightText(AboutData.description, {links: AboutData.link1})}</p>
                     <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left" }}>{
                         highlightText(AboutData.description2, {links: AboutData.link2})}</p>
                     <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left" }}>{
