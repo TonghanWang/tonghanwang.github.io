@@ -2,10 +2,10 @@
 #preview
 title: '清华大学王同翰课题组博士及实习机会'
 date: '2025-11-24'
-image: "/img/blog/6.jpg"
+image: "/img/person/avatar.jpg"
 category:
     - Recruitment
-short: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos.
+short: 计算经济学
 
 #full details
 author:

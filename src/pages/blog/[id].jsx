@@ -14,7 +14,10 @@ const PostsDetail = (props) => {
     const slug = props.slug; // we’ll pass this from getStaticProps
     const pageUrl = `${SITE_URL}/blog/${slug}`;
     const makeAbs = (u) => (u?.startsWith('http') ? u : `${SITE_URL}${u || ''}`);
-    const title = `${postData.title} – ${SITE_NAME}`;
+    const isRecruitment = props.slug === 'recruitment';
+    const title = `${postData.title} ${isRecruitment ? '|' : '–'} ${SITE_NAME}${isRecruitment ? '.' : ''}`;
+
+    // const title = `${postData.title} – ${SITE_NAME}`;
     const description = postData.short || '';
     const ogImage = makeAbs(postData.image) || `${SITE_URL}/static/og/default.jpg`;
 
