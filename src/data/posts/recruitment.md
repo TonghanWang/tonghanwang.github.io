@@ -2,7 +2,7 @@
 #preview
 title: '清华大学王同翰课题组博士及实习机会'
 date: '2025-11-24'
-image: "/img/person/avatar.jpg"
+image: "/img/person/favicon.heic"
 category:
     - Recruitment
 short: 计算经济学
