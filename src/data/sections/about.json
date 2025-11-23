@@ -1,22 +1,32 @@
 {
-    "avatar": {
-        "image": "/img/person/avatar.jpg",
-        "alt": "avatar"
-    },
-    "title": "Machine Learning for Multi-Agent Problems",
-    "description": "In 2026, I will join the College of AI at Tsinghua University as a tenure-track assistant professor. I am recruiting highly motivated students and research interns (undergrad and graduate). Contact me by email if you’re interested.",
-    "link1": {
+  "avatar": {
+    "image": "/img/person/avatar.jpg",
+    "alt": "avatar"
+  },
+  "title": "Machine Learning for Multi-Agent Problems",
+  "description": "In 2026, I will join the College of AI at Tsinghua University as a tenure-track assistant professor. I am recruiting highly motivated students and research interns (undergrad and graduate). Contact me by email if you’re interested in the questions listed below.",
+  "link1": {
     "College of AI": "https://collegeai.tsinghua.edu.cn/en/",
     "Tsinghua University": "https://www.tsinghua.edu.cn/en/"
-    },
-    "description2": "I completed my PhD at Harvard University, advised by Prof. David Parkes and Prof. Milind Tambe, and my M.E. at the Institute for Interdisciplinary Information Sciences, Tsinghua University.",
-    "link2": {
+  },
+  "description2": "I completed my PhD at Harvard University, advised by Prof. David Parkes and Prof. Milind Tambe, and my M.E. at the Institute for Interdisciplinary Information Sciences, Tsinghua University.",
+  "link2": {
     "Prof. David Parkes": "https://parkes.seas.harvard.edu/",
     "Prof. Milind Tambe": "https://teamcore.seas.harvard.edu/tambe/"
-    },
-    "description3": "",
-    "signature": {
-        "image": "/img/person/sign.png",
-        "alt": "signature"
-    }
+  },
+  "description3": "中文简介",
+  "link3": {
+    "中文简介": "https://collegeai.tsinghua.edu.cn/rydw/qzpi/wt.htm"
+  },
+  "signature": {
+    "image": "/img/person/sign.png",
+    "alt": "signature"
+  },
+  "problemsTitle": "Problems of interest",
+  "problems": [
+    "Economics of generative models--for example, how LLMs sell advertisements and how tokens are priced.",
+    "Multi-agent problems in generative AI.",
+    "Principled deep learning methods for solving fundamental problems in microeconomics.",
+    "Modular control of a robot, treating each joint as an agent."
+  ]
 }
