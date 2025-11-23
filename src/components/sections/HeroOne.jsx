@@ -10,6 +10,7 @@ function escapeRegExp(str) {
 
 function highlightText(text, {links = {}, highlights = []} = {}) {
     const tokens = [...Object.keys(links), ...highlights];
+    const ACCENT = "rgb(174, 49, 54)"; // #AE3136
     if (!tokens.length) return text;
 
     const regex = new RegExp(`(${tokens.map(escapeRegExp).join("|")})`, "gi");
@@ -23,7 +24,7 @@ function highlightText(text, {links = {}, highlights = []} = {}) {
                     href={links[linkKey]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{color: "cornflowerblue"}}
+                    style={{color: ACCENT}}
                 >
                     {part}
                 </a>
@@ -31,7 +32,8 @@ function highlightText(text, {links = {}, highlights = []} = {}) {
         }
 
         const isHighlight = highlights.some(h => part.toLowerCase() === h.toLowerCase());
-        if (isHighlight) return <span key={i} style={{color: "cornflowerblue"}}>{part}</span>;
+        // if (isHighlight) return <span key={i} style={{color: "cornflowerblue"}}>{part}</span>;
+        if (isHighlight) return <span key={i} style={{color: ACCENT}}>{part}</span>;
 
         // was <React.Fragment key={i}>{part}</React.Fragment>
         return <>{part}</>;

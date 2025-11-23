@@ -506,6 +506,13 @@ spaces
         }
     }
 }
+.mil-text a[href="/story"] {
+  color: rgb(174, 49, 54);
+}
+.mil-text a[href="/story"]:visited {
+  color: rgb(174, 49, 54);
+}
+
 
 .mil-portfolio-carousel {
     overflow: visible !important;
