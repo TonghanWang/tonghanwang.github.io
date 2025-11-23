@@ -75,7 +75,7 @@ const PostsDetail = (props) => {
                          className="mil-up mil-mb-90"/>
                 }
 
-                <div className="mil-text mil-up mil-mb-30 academic-font"
+                <div className="mil-text mil-up mil-mb-30 academic-body-font"
                      dangerouslySetInnerHTML={{__html: postData.contentHtml}}/>
 
                 {typeof postData.gallery != "undefined" &&

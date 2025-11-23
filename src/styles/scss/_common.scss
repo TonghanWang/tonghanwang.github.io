@@ -251,6 +251,20 @@ a {
   line-height: 1.5;
 }
 
+.academic-body-font {
+  font-family:
+    /* Chinese glyph source first */
+    "Kaiti SC", "STKaiti", "KaiTi", "KaiTi_GB2312", "楷体", "楷体-简",
+    /* Then your Latin stack */
+    'Cormorant Garamond', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial,
+    /* Extra Chinese fallbacks */
+    "Noto Serif SC", "Songti SC",
+    sans-serif;
+  font-size: 22px;
+  color: $dark;
+  line-height: 1.5;
+}
+
 
 .left-align {
   text-align: left;
