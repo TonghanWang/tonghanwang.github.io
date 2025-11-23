@@ -27,9 +27,18 @@
         "children": 0
       },
       {
-        "label": "Projects",
+        "label": "Posts",
         "link": "/projects-5",
-        "children": 0
+        "children": [
+          {
+            "label": "Projects",
+            "link": "/projects"
+          },
+           {
+            "label": "Recruitment",
+            "link": "/blog/recruitment"
+          }
+        ]
       },
       {
         "label": "Teaching & Service",

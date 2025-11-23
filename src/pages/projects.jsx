@@ -16,7 +16,7 @@ const Projects = (props) => {
       // rightPanelImg={"/img/person/5.png"}
       fullWidth={true}
     >
-      <PageBanner pageTitle={"Designing a <br>Better World Today"} breadTitle={"Projects"} align={"center"} />
+      <PageBanner pageTitle={"Designing a Better World"} breadTitle={"Projects"} align={"center"} />
 
       <ProjectsGrid projects={props.projects} columns={1} />
       

@@ -21,18 +21,18 @@ const PostsDetail = ( props ) => {
         <div className="mil-banner-top mil-up" />
         <div className="mil-banner-title">
             <ul className="mil-puplication-details mil-up mil-mb-60">
-                <li className="mil-puplication-author">
-                  <img src={postData.author.avatar} alt={postData.author.name} />
-                  <span className="mil-upper mil-dark">{postData.author.name}</span>
-                </li>
+                {/*<li className="mil-puplication-author">*/}
+                {/*  <img src={postData.author.avatar} alt={postData.author.name} />*/}
+                {/*  <span className="mil-upper mil-dark">{postData.author.name}</span>*/}
+                {/*</li>*/}
                 <li><span className="mil-upper mil-dark">Date:</span>&nbsp;&nbsp;<span className="mil-upper"><Date dateString={postData.date} /></span></li>
                 <li className="mil-upper mil-accent">{postData.category}</li>
             </ul>
-            <h1 className="mil-h1-sm mil-up mil-mb-60">{postData.title}</h1>
+            <h1 className="mil-h1-sm mil-up mil-mb-60" style={{ fontSize: '40px', lineHeight: 1.1 }}>{postData.title}</h1>
             <ul className="mil-breadcrumbs mil-up">
                 <li><Link href="/">Homepage</Link></li>
                 <li><Link href="/blog">Blog</Link></li>
-                <li>Publication</li>
+                {/*<li>Publication</li>*/}
             </ul>
 
         </div>
@@ -45,8 +45,8 @@ const PostsDetail = ( props ) => {
           {postData.fullWidth == true &&
           <img src={postData.image} alt={postData.title} style={{"width": "100%"}} className="mil-up mil-mb-90" />
           }
-          
-          <div className="mil-text mil-up mil-mb-30" dangerouslySetInnerHTML={{__html : postData.contentHtml}} />
+
+          <div className="mil-text mil-up mil-mb-30 academic-font" dangerouslySetInnerHTML={{__html : postData.contentHtml}} />
 
           {typeof postData.gallery != "undefined" &&
             <>
@@ -75,9 +75,9 @@ const PostsDetail = ( props ) => {
       </section>
       {/* publication end */}
 
-      <RelatedPostsSection items={props.related} />
+      {/*<RelatedPostsSection items={props.related} />*/}
       
-      <SubscribeSection />
+      {/*<SubscribeSection />*/}
     </Layouts>
   );
 };
