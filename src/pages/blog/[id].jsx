@@ -51,15 +51,19 @@ const PostsDetail = (props) => {
                         {/*  <img src={postData.author.avatar} alt={postData.author.name} />*/}
                         {/*  <span className="mil-upper mil-dark">{postData.author.name}</span>*/}
                         {/*</li>*/}
-                        <li><span className="mil-upper mil-dark">Date:</span>&nbsp;&nbsp;<span
-                            className="mil-upper"><Date dateString={postData.date}/></span></li>
-                        <li className="mil-upper mil-accent">{postData.category}</li>
+                        {!isRecruitment && (
+                            <li><span className="mil-upper mil-dark">Date:</span>&nbsp;&nbsp;<span
+                                className="mil-upper"><Date dateString={postData.date}/></span></li>
+                        )}
+                        {!isRecruitment && (
+                            <li className="mil-upper mil-accent">{postData.category}</li>
+                        )}
                     </ul>
                     <h1 className="mil-h1-sm mil-up mil-mb-60"
                         style={{fontSize: '40px', lineHeight: 1.1}}>{postData.title}</h1>
                     <ul className="mil-breadcrumbs mil-up">
                         <li><Link href="/">Homepage</Link></li>
-                        <li><Link href="/blog">Blog</Link></li>
+                        <li><Link href="/blog">Recruitment</Link></li>
                         {/*<li>Publication</li>*/}
                     </ul>
 
