@@ -51,31 +51,32 @@ const HeroOne = () => {
                 <div className="mil-banner-title left-align">
                     <div className="mil-upper mil-dark mil-up mil-mb-10">{Data.subtitle}</div>
                     <h1 className="mil-up mil-mb-30">
-                        <span dangerouslySetInnerHTML={{__html: Data.title}} style={{fontSize: '55px'}}/>
+                        <span dangerouslySetInnerHTML={{__html: Data.title}} style={{fontSize: '45px'}}/>
                         <span className="tooltip">
-                            <i className="fas fa-info-circle" style={{fontSize: '16px', verticalAlign: 'middle'}}></i>
-                            <span className="tooltiptext">Pronunciation of Tonghan: the first syllable is pronounced like 'tongue,' and the second syllable sounds like 'hahn.' Feel free to use any close approximation that's comfortable for you!</span>
+                            <i className="fas fa-info-circle" style={{fontSize: '10px', verticalAlign: 'low'}}></i>
+                            <span className="tooltiptext">Pronunciation of Tonghan: the two syllables sound like 'tongue' and 'hahn.' Feel free to use any close approximation!</span>
                         </span>
                     </h1>
 
-                    <p className="mil-wide mil-dark mil-up">{Data.description}</p>
+                    <p className="mil-wide mil-dark mil-up">{highlightText(Data.description, {links: AboutData.link1})}</p>
                     <p className="mil-up mil-mb-30">{}</p>
 
                     <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left"}}>{
                         highlightText(AboutData.description, {links: AboutData.link1})}</p>
                     <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left"}}>{
-                        highlightText(AboutData.description2, {links: AboutData.link2})}</p>
-                    <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left"}}>{
                         highlightText(AboutData.description3, {links: AboutData.link3})}</p>
+                    <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left"}}>{
+                        highlightText(AboutData.description2, {links: AboutData.link2})}</p>
+
 
                     {Array.isArray(AboutData.problems) && AboutData.problems.length > 0 && (
                         <div id="problems-of-interest" className="mil-up mil-mt-20">
-                            <h3
-                                className="mil-mb-10 academic-font"
-                                style={{fontSize: "22px", textAlign: "left"}}
-                            >
-                                {AboutData.problemsTitle || "Problems of interest"}
-                            </h3>
+                            {/*<h3*/}
+                            {/*    className="mil-mb-10 academic-font"*/}
+                            {/*    style={{fontSize: "22px", textAlign: "left"}}*/}
+                            {/*>*/}
+                            {/*    {AboutData.problemsTitle || "Problems of interest"}*/}
+                            {/*</h3>*/}
 
                             <ol style={{paddingLeft: "1.25rem", listStyleType: "decimal"}}>
                                 {AboutData.problems.map((item, idx) => (
