@@ -17,20 +17,29 @@ const Story = ( props ) => {
       {/* story */}
       <section>
           <div className="row">
-              {/*<div className="col-xl-12">*/}
+              <div className="col-xl-12">
 
-              {/*    <div className="mil-section-title mil-up mil-left mil-mb-90">*/}
-              {/*        <div className="mil-divider"></div>*/}
-              {/*        <h3>Preprint Papers</h3>*/}
-              {/*    </div>*/}
+                  <div className="mil-section-title mil-up mil-left mil-mb-90">
+                      <div className="mil-divider"></div>
+                      <h3>Preprint Papers</h3>
+                  </div>
 
-              {/*    <div className="mil-timeline mil-mb-90">*/}
-              {/*        <div className="mil-timeline-track"></div>*/}
-              {/*        <ul>*/}
-
-              {/*        </ul>*/}
-              {/*    </div>*/}
-              {/*</div>*/}
+                  <div className="mil-timeline mil-mb-90">
+                      <div className="mil-timeline-track"></div>
+                      <ul>
+                          <li className="mil-up">
+                              <div className="mil-item-head mil-mb-5">
+                                  <h4 style={{fontSize: '20px'}}>LLM Active Alignment: A Nash Equilibrium Perspective</h4>
+                                  <div className="mil-text-sm">2026</div>
+                              </div>
+                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+                                  Tonghan Wang*, Yuqi Pan*, Xinyi Yang*, Yanchen Jiang, Milind Tambe, David C. Parkes
+                              </p>
+                              <a href="https://arxiv.org/abs/2602.06836"> PDF </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
 
               <div className="col-xl-12">
 
