@@ -30,7 +30,7 @@ const Story = ( props ) => {
                           <li className="mil-up">
                               <div className="mil-item-head mil-mb-5 mil-item-head--row">
                                   <h4 className="mil-item-title">
-                                      LLM Active Alignment: A Nash Equilibrium Perspective &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                      LLM Active Alignment: A Nash Equilibrium Perspective &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                                   </h4>
 
                                   <span className="mil-year-pill">2026</span>
