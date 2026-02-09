@@ -28,15 +28,21 @@ const Story = ( props ) => {
                       <div className="mil-timeline-track"></div>
                       <ul>
                           <li className="mil-up">
-                              <div className="mil-item-head mil-mb-5">
-                                  <h4 style={{fontSize: '20px'}}>LLM Active Alignment: A Nash Equilibrium Perspective</h4>
-                                  <div className="mil-text-sm">2026</div>
+                              <div className="mil-item-head mil-mb-5 mil-item-head--row">
+                                  <h4 className="mil-item-title">
+                                      LLM Active Alignment: A Nash Equilibrium Perspective
+                                  </h4>
+
+                                  <span className="mil-year-pill">2026</span>
                               </div>
-                              <p className="mil-text-award mil-mb-15" style={{fontSize: '18px'}}>
+
+                              <p className="mil-text-award mil-mb-15 mil-item-authors">
                                   Tonghan Wang*, Yuqi Pan*, Xinyi Yang*, Yanchen Jiang, Milind Tambe, David C. Parkes
                               </p>
-                              <a href="https://arxiv.org/abs/2602.06836"> PDF </a>
+
+                              <a href="https://arxiv.org/abs/2602.06836" className="mil-item-link">PDF</a>
                           </li>
+
                       </ul>
                   </div>
               </div>
