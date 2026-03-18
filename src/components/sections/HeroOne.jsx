@@ -8,9 +8,9 @@ function escapeRegExp(str) {
     return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-function highlightText(text, {links = {}, highlights = []} = {}) {
+function highlightText(text, {links = {}, highlights = [], linkColor} = {}) {
     const tokens = [...Object.keys(links), ...highlights];
-    const ACCENT = "rgb(174, 49, 54)"; // #AE3136
+    const ACCENT = "#2563eb";
     if (!tokens.length) return text;
 
     const regex = new RegExp(`(${tokens.map(escapeRegExp).join("|")})`, "gi");
@@ -24,7 +24,7 @@ function highlightText(text, {links = {}, highlights = []} = {}) {
                     href={links[linkKey]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{color: ACCENT}}
+                    style={{color: linkColor || ACCENT}}
                 >
                     {part}
                 </a>
@@ -58,32 +58,26 @@ const HeroOne = () => {
                         </span>
                     </h1>
 
-                    <p className="mil-wide mil-dark mil-up">{highlightText(Data.description, {links: AboutData.link1})}</p>
+                    <p className="mil-wide mil-dark mil-up">{highlightText(Data.description, {links: AboutData.link1, linkColor: 'inherit'})}</p>
                     <p className="mil-up mil-mb-30">{}</p>
 
-                    <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left"}}>{
-                        highlightText(AboutData.description, {links: AboutData.link1})}</p>
-                    <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left"}}>{
-                        highlightText(AboutData.description3, {links: AboutData.link3})}</p>
-                    <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left"}}>{
-                        highlightText(AboutData.description2, {links: AboutData.link2})}</p>
-
-
+                    <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left"}}>{highlightText(AboutData.description, {links: AboutData.link1, linkColor: 'inherit'})}</p>
+                    <p className="mil-up mil-mb-15 academic-font" style={{fontSize: '20px', textAlign: "left"}}>{highlightText(AboutData.description3, {links: AboutData.link3, linkColor: 'inherit'})}</p>
                     {Array.isArray(AboutData.problems) && AboutData.problems.length > 0 && (
-                        <div id="problems-of-interest" className="mil-up mil-mt-20">
-                            {/*<h3*/}
-                            {/*    className="mil-mb-10 academic-font"*/}
-                            {/*    style={{fontSize: "22px", textAlign: "left"}}*/}
-                            {/*>*/}
-                            {/*    {AboutData.problemsTitle || "Problems of interest"}*/}
-                            {/*</h3>*/}
-
-                            <ol style={{paddingLeft: "1.25rem", listStyleType: "decimal"}}>
+                        <div className="mil-up mil-mt-20" style={{
+                            borderLeft: "4px solid #9ca3af",
+                            borderRadius: "0 8px 8px 0",
+                            padding: "16px 20px",
+                        }}>
+                            <p className="academic-font" style={{fontSize: '18px', textAlign: "left", marginBottom: "10px"}}>
+                                {highlightText(AboutData.description2, {links: AboutData.link2})}
+                            </p>
+                            <ol style={{paddingLeft: "1.25rem", listStyleType: "decimal", display: "flex", flexDirection: "column", gap: "6px", marginBottom: 0}}>
                                 {AboutData.problems.map((item, idx) => (
                                     <li
                                         key={idx}
-                                        className="mil-mb-5 academic-font"
-                                        style={{fontSize: "20px", textAlign: "left"}}
+                                        className="academic-font"
+                                        style={{fontSize: "18px", textAlign: "left"}}
                                     >
                                         {typeof item === "string"
                                             ? item
@@ -117,15 +111,9 @@ const HeroOne = () => {
                                 </text>
                             </g>
                         </svg>
-                        <a href="#about" className="mil-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-                                 strokeLinejoin="round" className="feather feather-arrow-down">
-                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                <polyline points="19 12 12 19 5 12"></polyline>
-                            </svg>
-                            {/*<img src={AboutData.avatar.image} alt={AboutData.avatar.alt}/>*/}
-                            {/*<img src={AboutData.avatar.image} alt={AboutData.avatar.alt} className="mil-up mil-sign"/>*/}
+                        <a href="#news" className="mil-button">
+                            <img src={AboutData.avatar.image} alt={AboutData.avatar.alt}
+                                 style={{width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%"}}/>
                         </a>
                     </div>
                 </div>

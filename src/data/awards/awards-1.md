@@ -10,6 +10,9 @@ subtitle: "What is UI/UX Design"
 list:
   heading: ""
   items:
+    - label: "Victor Lesser Distinguished Dissertation Award"
+      value: "<p><i class=\"fa fa-trophy\"></i> Autonomous Agents and Multiagent Systems (AAMAS)</p>
+      <p> </br> </p>"
     - label: "NeurIPS 2025 Spotlight"
       value: "<p>Spotlight paper, Conference on Neural Information Processing Systems, 2025</p>
       <p> </br> </p>"
