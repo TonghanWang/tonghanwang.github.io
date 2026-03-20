@@ -1,14 +1,21 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import appData from "@data/app.json";
 import { useRouter } from 'next/router';
 
 const DefaultHeader = ({ extraClass }) => {
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navItems = [];
 
   const { asPath } = useRouter();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   appData.header.menu.forEach((item, index) => {
     let s_class1 = '';
@@ -25,13 +32,14 @@ const DefaultHeader = ({ extraClass }) => {
 
   return (
     <>
-    
-    {/* top bar */}
-    <div className="mil-top-panel">
 
-        {/* You need to remove the "mil-dot" class if you don't need a dot */}
-        <Link href="#" className="mil-logo1">
-          {/* <span>{appData.header.logo.symbol}</span> */}
+    {/* top bar */}
+    <div className={`mil-top-panel${scrolled ? ' nav-scrolled' : ''}`}>
+      <div className="nav-pill">
+
+        <Link href="/" className="nav-logo">
+          <span className="nav-logo-initials">TW</span>
+          <span className="nav-logo-name">Tonghan Wang</span>
         </Link>
 
         <div className={`mil-navigation ${toggle ? "mil-active" : ""}`}>
@@ -54,14 +62,7 @@ const DefaultHeader = ({ extraClass }) => {
         </div>
 
         <div className="mil-top-panel-btns">
-            <Link href={appData.header.button.link} className="mil-contact-btn1">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-mail">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                    <polyline points="22,6 12,13 2,6" />
-                </svg>
-            </Link>
-
-            <div 
+            <div
               className={`mil-menu-btn ${toggle ? "mil-active" : ""}`}
               onClick={() => setToggle(!toggle)}
             >
@@ -69,6 +70,7 @@ const DefaultHeader = ({ extraClass }) => {
             </div>
         </div>
 
+      </div>
     </div>
     {/* top bar end */}
 

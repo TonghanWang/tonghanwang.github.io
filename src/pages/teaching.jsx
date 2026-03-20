@@ -1,0 +1,81 @@
+import Layouts from "@layouts/Layouts";
+import PageBanner from "@components/PageBanner";
+import TeachingData from "@data/sections/teaching.json";
+
+const StarIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"
+         fill="currentColor" stroke="none">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </svg>
+);
+
+const SectionHeader = ({ title, count }) => (
+    <div className="mil-section-title mil-up mil-left mil-mb-90"
+         style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+        <div>
+            <div className="mil-divider"></div>
+            <h3 style={{ display: 'inline' }}>{title}</h3>
+        </div>
+        <span className="pub-section-count">{count}</span>
+    </div>
+);
+
+const Teaching = () => (
+    <Layouts fullWidth={true}>
+        <PageBanner pageTitle="Teaching & Service" />
+
+        <section style={{ paddingBottom: '60px' }}>
+            <div className="row">
+                <div className="col-xl-12">
+
+                    {/* Teaching */}
+                    <SectionHeader title="Teaching" count={TeachingData.teaching.length} />
+                    <ul className="mil-mb-90" style={{ paddingLeft: '35px', listStyle: 'none' }}>
+                        {TeachingData.teaching.map((item, i) => (
+                            <li key={i} className="mil-up pub-paper-item">
+                                <div className="pub-year-group">
+                                    <p className="pub-title">{item.course}</p>
+                                    <span className="pub-year-badge">{item.term}</span>
+                                </div>
+                                <p className="pub-authors">{item.institution}</p>
+                                <div style={{ marginTop: '4px' }}>
+                                    <span className="pub-venue-badge">{item.role}</span>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {/* Academic Service */}
+                    <SectionHeader title="Academic Service" count={TeachingData.reviewing.length} />
+                    <ul className="mil-mb-90" style={{ paddingLeft: '35px', listStyle: 'none' }}>
+                        {TeachingData.reviewing.map((item, i) => (
+                            <li key={i} className="mil-up pub-paper-item">
+                                <div className="pub-year-group">
+                                    <p className="pub-title">{item.full}</p>
+                                    <span className="pub-year-badge">{item.years}</span>
+                                </div>
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '6px' }}>
+                                    <span className="pub-venue-badge">{item.short}</span>
+                                    <span className="pub-venue-badge">Reviewer</span>
+                                    {item.award && (
+                                        <span className="pub-award-badge">
+                                            <StarIcon />
+                                            {item.award}
+                                        </span>
+                                    )}
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+    </Layouts>
+);
+
+export default Teaching;
+
+export async function getStaticProps() {
+    return { props: {} };
+}

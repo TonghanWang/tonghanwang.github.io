@@ -1,0 +1,520 @@
+/* ─── Floating pill top bar ─────────────────────────────────────────────────── */
+.mil-top-panel {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    pointer-events: none;
+    justify-content: center !important;
+}
+
+/* ─── The pill ───────────────────────────────────────────────────────────────── */
+.nav-pill {
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    height: 52px;
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 8px 0 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    box-shadow: 0 2px 16px rgba(37, 99, 235, 0.07), 0 1px 4px rgba(0, 0, 0, 0.04);
+    transition: height 0.25s ease, box-shadow 0.25s ease;
+}
+.nav-scrolled .nav-pill {
+    height: 44px;
+    box-shadow: 0 6px 32px rgba(37, 99, 235, 0.14), 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+/* ─── Nav logo ───────────────────────────────────────────────────────────────── */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 0 16px 0 8px;
+    flex-shrink: 0;
+}
+.nav-logo-initials {
+    width: 30px;
+    height: 30px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    transition: opacity $t-sm;
+    .nav-logo:hover & { opacity: 0.85; }
+}
+.nav-logo-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 0.1px;
+    white-space: nowrap;
+}
+
+/* ─── Nav links: pill-highlight ──────────────────────────────────────────────── */
+.mil-navigation ul li > a {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.2px !important;
+    color: #374151 !important;
+    padding: 6px 12px !important;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease !important;
+    position: relative;
+    &::after { display: none !important; }
+    &:hover {
+        background: rgba(37, 99, 235, 0.07);
+        color: #1a1a1a !important;
+    }
+}
+.mil-navigation ul li.mil-active > a::before { display: none !important; }
+.mil-navigation ul li.mil-active > a {
+    background: rgba(37, 99, 235, 0.12) !important;
+    color: #2563eb !important;
+    font-weight: 600 !important;
+}
+
+/* ─── Desktop submenu dropdown ───────────────────────────────────────────────── */
+.mil-top-panel .mil-navigation ul li.mil-has-children ul {
+    background-color: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    li a {
+        color: #374151;
+        border-radius: 8px;
+        &:hover { color: #2563eb; background: rgba(37, 99, 235, 0.06); }
+    }
+}
+
+/* ─── Mobile nav ─────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 1200px) {
+    .nav-pill {
+        max-width: calc(100% - 32px);
+        margin: 0 16px;
+        border-radius: 16px;
+        padding: 0 8px;
+    }
+    .nav-logo { padding: 0 12px 0 8px; }
+    .nav-logo-name { display: none; }
+
+    .mil-top-panel .mil-navigation {
+        top: 74px;
+        background-color: rgba(255, 255, 255, 0.97) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border-bottom: 1px solid rgba(37, 99, 235, 0.1) !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07) !important;
+        border-radius: 0 0 16px 16px;
+    }
+    .mil-top-panel .mil-navigation nav ul li a { color: #1a1a1a !important; }
+    .mil-top-panel .mil-navigation nav ul li a:hover { color: #2563eb !important; }
+    .mil-top-panel .mil-navigation nav ul li.mil-active > a {
+        color: #2563eb !important;
+        background: none !important;
+        font-weight: 600 !important;
+    }
+    .mil-top-panel .mil-top-panel-btns {
+        padding-right: 0 !important;
+        margin-left: auto;
+    }
+}
+
+/* ─── Hero section ─────────────────────────────────────────────────────────── */
+.hero-glass-panel {
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(14px) saturate(1.5);
+    -webkit-backdrop-filter: blur(14px) saturate(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(37, 99, 235, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    padding: 36px 40px;
+    margin-bottom: 8px;
+
+    @media screen and (max-width: 768px) {
+        padding: 24px 20px;
+    }
+}
+
+.hero-tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.07);
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    border-radius: 999px;
+    padding: 5px 14px;
+    margin-bottom: 18px;
+}
+
+.hero-tagline-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #2563eb;
+    display: inline-block;
+}
+
+/* ─── Tooltip ───────────────────────────────────────────────────────────────── */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    margin-left: 6px;
+    color: #9ca3af;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 280px;
+    background: rgba(32, 33, 36, 0.88);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px 14px;
+    position: absolute;
+    z-index: 9;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(100% + 10px);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ─── Social icons ──────────────────────────────────────────────────────────── */
+.social-icon {
+    position: relative;
+    transition: color $t-sm, transform $t-sm !important;
+
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+/* ─── News illustrated background ───────────────────────────────────────────── */
+.news-bg-wrap {
+    position: relative;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 36px;
+    overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+        padding: 20px 16px;
+        border-radius: 16px;
+    }
+}
+
+.news-bg-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* ─── News / Testimonial ───────────────────────────────────────────────────── */
+@keyframes cardFadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.news-card {
+    animation: cardFadeUp 0.5s ease both;
+}
+
+.news-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+}
+
+.news-date-chip {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #9ca3af;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+    letter-spacing: 0.3px;
+}
+
+/* ─── Hero layout ────────────────────────────────────────────────────────────── */
+.mil-side-banner.mil-center {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    position: relative;
+    height: auto !important;
+    min-height: calc(100vh - 90px);
+    padding: 40px 0;
+    gap: 0;
+
+    .mil-banner-title {
+        flex: unset;
+        min-width: unset;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* ─── Hero photo — absolute, behind content ──────────────────────────────────── */
+.hero-photo-wrap {
+    position: absolute !important;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+    flex-shrink: unset;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -40px;
+        background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.08) 0%, transparent 68%);
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+}
+
+.hero-photo {
+    position: relative;
+    z-index: 1;
+    width: 270px;
+    border-radius: 14px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+    display: block;
+}
+
+/* ─── Publications page ────────────────────────────────────────────────────── */
+.pub-paper-item {
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: background $t-sm;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.pub-venue-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    border-radius: 6px;
+    padding: 3px 10px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.pub-award-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #92400e;
+    border-radius: 6px;
+    padding: 3px 10px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    border: 1px solid rgba(146, 64, 14, 0.15);
+}
+
+.pub-toggle-btn {
+    background: none;
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background $t-sm, border-color $t-sm;
+    margin-top: 10px;
+    margin-right: 6px;
+    font-family: $font-1;
+    letter-spacing: 0.3px;
+
+    &:hover {
+        background: rgba(37, 99, 235, 0.07);
+        border-color: #2563eb;
+    }
+
+    &.active {
+        background: rgba(37, 99, 235, 0.1);
+        border-color: #2563eb;
+    }
+}
+
+.pub-copy-btn {
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: #555;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background $t-sm, border-color $t-sm, color $t-sm;
+    margin-top: 10px;
+    margin-right: 6px;
+    font-family: $font-1;
+    letter-spacing: 0.3px;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.05);
+        border-color: #888;
+    }
+
+    &.copied {
+        border-color: #16a34a;
+        color: #16a34a;
+        background: rgba(22, 163, 74, 0.06);
+    }
+}
+
+.pub-abstract-box {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: rgba(37, 99, 235, 0.04);
+    border-radius: 10px;
+    border-left: 3px solid rgba(37, 99, 235, 0.3);
+    font-size: 15px;
+    color: #444;
+    line-height: 1.75;
+}
+
+.pub-bibtex-box {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f8fafc;
+    border-radius: 10px;
+    font-size: 12.5px;
+    color: #374151;
+    line-height: 1.65;
+    white-space: pre;
+    overflow-x: auto;
+    border: 1px solid #e5e7eb;
+    font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, monospace;
+
+    @media screen and (max-width: 768px) {
+        font-size: 11px;
+    }
+}
+
+.pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.pub-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    padding: 3px 0;
+    border-bottom: 1px solid transparent;
+    transition: border-color $t-sm;
+    letter-spacing: 0.2px;
+
+    &:hover {
+        border-bottom-color: #2563eb;
+    }
+}
+
+.pub-link-sep {
+    color: #d1d5db;
+    font-size: 13px;
+}
+
+.pub-year-group {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 4px;
+}
+
+.pub-year-badge {
+    font-size: 13px;
+    font-weight: 700;
+    color: #9ca3af;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.pub-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.pub-authors {
+    font-size: 15px;
+    color: #555;
+    margin: 6px 0 8px;
+    line-height: 1.5;
+}
+
+.pub-section-count {
+    font-size: 13px;
+    font-weight: 600;
+    color: #9ca3af;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 3px 10px;
+    border-radius: 999px;
+    display: inline-block;
+}

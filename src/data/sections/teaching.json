@@ -1,0 +1,62 @@
+{
+  "teaching": [
+    {
+      "course": "AM 220: Geometric Methods for Machine Learning",
+      "term": "Spring 2024",
+      "institution": "Harvard University",
+      "role": "Teaching Fellow"
+    },
+    {
+      "course": "Deep Reinforcement Learning",
+      "term": "Spring 2020",
+      "institution": "Tsinghua University",
+      "role": "Teaching Assistant"
+    },
+    {
+      "course": "Artificial Intelligence: Principles and Techniques",
+      "term": "Fall 2020",
+      "institution": "Tsinghua University",
+      "role": "Teaching Assistant"
+    },
+    {
+      "course": "Artificial Intelligence: Principles and Techniques",
+      "term": "Fall 2019",
+      "institution": "Tsinghua University",
+      "role": "Teaching Assistant"
+    },
+    {
+      "course": "Linear Algebra",
+      "term": "Fall 2016",
+      "institution": "Shandong University",
+      "role": "Teaching Assistant"
+    }
+  ],
+  "reviewing": [
+    {
+      "short": "ICLR",
+      "full": "International Conference on Learning Representations",
+      "years": "2022–2024",
+      "award": "Outstanding Reviewer 2021"
+    },
+    {
+      "short": "NeurIPS",
+      "full": "Conference on Neural Information Processing Systems",
+      "years": "2021–2024"
+    },
+    {
+      "short": "ICML",
+      "full": "International Conference on Machine Learning",
+      "years": "2021–2024"
+    },
+    {
+      "short": "AAAI",
+      "full": "The AAAI Conference on Artificial Intelligence",
+      "years": "2020–2024"
+    },
+    {
+      "short": "IJCAI",
+      "full": "International Joint Conference on Artificial Intelligence",
+      "years": "2020–2024"
+    }
+  ]
+}

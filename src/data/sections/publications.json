@@ -1,0 +1,479 @@
+{
+  "categories": [
+    {
+      "id": "preprint",
+      "title": "Preprint Papers",
+      "papers": [
+        {
+          "title": "LLM Active Alignment: A Nash Equilibrium Perspective",
+          "authors": "Tonghan Wang*, Yuqi Pan*, Xinyi Yang*, Yanchen Jiang, Milind Tambe, David C. Parkes",
+          "year": 2026,
+          "venueShort": "arXiv",
+          "venueFull": "arXiv preprint",
+          "venueColor": "#6b7280",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2602.06836" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{wang2026llm,\n  title={LLM Active Alignment: A Nash Equilibrium Perspective},\n  author={Wang, Tonghan and Pan, Yuqi and Yang, Xinyi and Jiang, Yanchen and Tambe, Milind and Parkes, David C.},\n  journal={arXiv preprint arXiv:2602.06836},\n  year={2026}\n}"
+        }
+      ]
+    },
+    {
+      "id": "conference",
+      "title": "Conference Papers",
+      "papers": [
+        {
+          "title": "Policy-to-Language: Train LLMs to Explain Decisions with Flow-Matching Generated Rewards",
+          "authors": "Xinyi Yang, Liang Zeng, Heng Dong, Chao Yu, Xiaoran Wu, Huazhong Yang, Yu Wang, Milind Tambe, Tonghan Wang",
+          "year": 2026,
+          "venueShort": "ICLR",
+          "venueFull": "International Conference on Learning Representations (ICLR)",
+          "venueColor": "#2563eb",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2502.12530" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{yang2026policy,\n  title={Policy-to-Language: Train LLMs to Explain Decisions with Flow-Matching Generated Rewards},\n  author={Yang, Xinyi and Zeng, Liang and Dong, Heng and Yu, Chao and Wu, Xiaoran and Yang, Huazhong and Wang, Yu and Tambe, Milind and Wang, Tonghan},\n  booktitle={International Conference on Learning Representations},\n  year={2026}\n}"
+        },
+        {
+          "title": "Composite Flow Matching for Reinforcement Learning with Shifted-Dynamics Data",
+          "authors": "Lingkai Kong*, Haichuan Wang*, Tonghan Wang*, Guojun Xiong, Milind Tambe",
+          "year": 2025,
+          "venueShort": "NeurIPS",
+          "venueFull": "Advances in Neural Information Processing Systems (NeurIPS)",
+          "venueColor": "#7c3aed",
+          "awards": ["Spotlight"],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/pdf/2505.23062" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{kong2025composite,\n  title={Composite Flow Matching for Reinforcement Learning with Shifted-Dynamics Data},\n  author={Kong, Lingkai and Wang, Haichuan and Wang, Tonghan and Xiong, Guojun and Tambe, Milind},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2025}\n}"
+        },
+        {
+          "title": "BundleFlow: Deep Menus for Combinatorial Auctions by Diffusion-Based Optimization",
+          "authors": "Tonghan Wang, Yanchen Jiang, David C. Parkes",
+          "year": 2025,
+          "venueShort": "NeurIPS",
+          "venueFull": "Advances in Neural Information Processing Systems (NeurIPS)",
+          "venueColor": "#7c3aed",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2502.15283" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2025bundleflow,\n  title={BundleFlow: Deep Menus for Combinatorial Auctions by Diffusion-Based Optimization},\n  author={Wang, Tonghan and Jiang, Yanchen and Parkes, David C.},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2025}\n}"
+        },
+        {
+          "title": "Adaptive Frontier Exploration on Graphs with Applications to Network-Based Disease Testing",
+          "authors": "Davin Choo*, Yuqi Pan*, Tonghan Wang, Milind Tambe, Alastair van Heerden, Cheryl Johnson",
+          "year": 2025,
+          "venueShort": "NeurIPS",
+          "venueFull": "Advances in Neural Information Processing Systems (NeurIPS)",
+          "venueColor": "#7c3aed",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2505.21671" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{choo2025adaptive,\n  title={Adaptive Frontier Exploration on Graphs with Applications to Network-Based Disease Testing},\n  author={Choo, Davin and Pan, Yuqi and Wang, Tonghan and Tambe, Milind and van Heerden, Alastair and Johnson, Cheryl},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2025}\n}"
+        },
+        {
+          "title": "Robust Optimization with Diffusion Models for Green Security",
+          "authors": "Lingkai Kong, Haichuan Wang, Yuqi Pan, Cheol Woo Kim, Mingxiao Song, Alayna Nguyen, Tonghan Wang, Haifeng Xu, Milind Tambe",
+          "year": 2025,
+          "venueShort": "UAI",
+          "venueFull": "Conference on Uncertainty in Artificial Intelligence (UAI)",
+          "venueColor": "#0d9488",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://openreview.net/forum?id=lLdal3hZtz&noteId=lLdal3hZtz" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{kong2025robust,\n  title={Robust Optimization with Diffusion Models for Green Security},\n  author={Kong, Lingkai and Wang, Haichuan and Pan, Yuqi and Kim, Cheol Woo and Song, Mingxiao and Nguyen, Alayna and Wang, Tonghan and Xu, Haifeng and Tambe, Milind},\n  booktitle={Conference on Uncertainty in Artificial Intelligence},\n  year={2025}\n}"
+        },
+        {
+          "title": "On Diffusion Models for Multi-Agent Partial Observability: Shared Attractors, Error Bounds, and Composite Flow",
+          "authors": "Tonghan Wang*, Heng Dong*, Yanchen Jiang, David C. Parkes, Milind Tambe",
+          "year": 2025,
+          "venueShort": "AAMAS",
+          "venueFull": "International Conference on Autonomous Agents and Multiagent Systems (AAMAS)",
+          "venueColor": "#4338ca",
+          "awards": ["Oral"],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/pdf/2410.13953" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2025diffusion,\n  title={On Diffusion Models for Multi-Agent Partial Observability: Shared Attractors, Error Bounds, and Composite Flow},\n  author={Wang, Tonghan and Dong, Heng and Jiang, Yanchen and Parkes, David C. and Tambe, Milind},\n  booktitle={International Conference on Autonomous Agents and Multiagent Systems},\n  year={2025}\n}"
+        },
+        {
+          "title": "The Bandit Whisperer: Communication Learning for Restless Bandits",
+          "authors": "Tonghan Wang*, Yunfan Zhao*, Dheeraj Mysore Nagaraj, Aparna Taneja, Milind Tambe",
+          "year": 2025,
+          "venueShort": "AAAI",
+          "venueFull": "AAAI Conference on Artificial Intelligence",
+          "venueColor": "#ea580c",
+          "awards": ["Oral"],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2408.05686" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2025bandit,\n  title={The Bandit Whisperer: Communication Learning for Restless Bandits},\n  author={Wang, Tonghan and Zhao, Yunfan and Nagaraj, Dheeraj Mysore and Taneja, Aparna and Tambe, Milind},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  year={2025}\n}"
+        },
+        {
+          "title": "GemNet: Menu-Based, Strategy-Proof Multi-Bidder Auctions Through Deep Learning",
+          "authors": "Tonghan Wang*, Yanchen Jiang*, David C. Parkes",
+          "year": 2024,
+          "venueShort": "ACM EC",
+          "venueFull": "ACM Conference on Economics and Computation (EC)",
+          "venueColor": "#dc2626",
+          "awards": ["Best Paper – AI Track"],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2406.07428" },
+            { "text": "Press", "href": "https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3670865" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2024gemnet,\n  title={GemNet: Menu-Based, Strategy-Proof Multi-Bidder Auctions Through Deep Learning},\n  author={Wang, Tonghan and Jiang, Yanchen and Parkes, David C.},\n  booktitle={Proceedings of the 25th ACM Conference on Economics and Computation},\n  year={2024}\n}"
+        },
+        {
+          "title": "Multi-Sender Persuasion: A Computational Perspective",
+          "authors": "Tonghan Wang*, Safwan Hossain*, Tao Lin*, Yiling Chen, David C. Parkes, Haifeng Xu",
+          "year": 2024,
+          "venueShort": "ICML",
+          "venueFull": "International Conference on Machine Learning (ICML)",
+          "venueColor": "#16a34a",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://openreview.net/forum?id=8JFIKpzumn" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2024multisender,\n  title={Multi-Sender Persuasion: A Computational Perspective},\n  author={Wang, Tonghan and Hossain, Safwan and Lin, Tao and Chen, Yiling and Parkes, David C. and Xu, Haifeng},\n  booktitle={Proceedings of the 41st International Conference on Machine Learning},\n  year={2024}\n}"
+        },
+        {
+          "title": "Position: Social Environment Design Should be Further Developed for AI-based Policy-Making",
+          "authors": "Edwin Zhang, Sadie Zhao, Tonghan Wang, Safwan Hossain, Henry Gasztowtt, Stephan Zheng, David C. Parkes, Milind Tambe, Yiling Chen",
+          "year": 2024,
+          "venueShort": "ICML",
+          "venueFull": "International Conference on Machine Learning (ICML)",
+          "venueColor": "#16a34a",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://openreview.net/forum?id=S6a6gHvMWx" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{zhang2024position,\n  title={Position: Social Environment Design Should be Further Developed for AI-based Policy-Making},\n  author={Zhang, Edwin and Zhao, Sadie and Wang, Tonghan and Hossain, Safwan and Gasztowtt, Henry and Zheng, Stephan and Parkes, David C. and Tambe, Milind and Chen, Yiling},\n  booktitle={Proceedings of the 41st International Conference on Machine Learning},\n  year={2024}\n}"
+        },
+        {
+          "title": "Deep Contract Design via Discontinuous Neural Networks",
+          "authors": "Tonghan Wang, Paul Dütting, Dmitry Ivanov, Inbal Talgam-Cohen, David C. Parkes",
+          "year": 2023,
+          "venueShort": "NeurIPS",
+          "venueFull": "Advances in Neural Information Processing Systems (NeurIPS)",
+          "venueColor": "#7c3aed",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://openreview.net/forum?id=q8mH2d6uw2" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2023contract,\n  title={Deep Contract Design via Discontinuous Neural Networks},\n  author={Wang, Tonghan and D{\\\"u}tting, Paul and Ivanov, Dmitry and Talgam-Cohen, Inbal and Parkes, David C.},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2023}\n}"
+        },
+        {
+          "title": "Symmetry-Aware Robot Design with Structured Subgroups",
+          "authors": "Heng Dong, Junyu Zhang, Tonghan Wang, Chongjie Zhang",
+          "year": 2023,
+          "venueShort": "ICML",
+          "venueFull": "International Conference on Machine Learning (ICML)",
+          "venueColor": "#16a34a",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2306.00036" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{dong2023symmetry,\n  title={Symmetry-Aware Robot Design with Structured Subgroups},\n  author={Dong, Heng and Zhang, Junyu and Wang, Tonghan and Zhang, Chongjie},\n  booktitle={Proceedings of the 40th International Conference on Machine Learning},\n  year={2023}\n}"
+        },
+        {
+          "title": "Low-Rank Modular Reinforcement Learning via Muscle Synergy",
+          "authors": "Tonghan Wang*, Heng Dong*, Jiayuan Liu, Chongjie Zhang",
+          "year": 2022,
+          "venueShort": "NeurIPS",
+          "venueFull": "Advances in Neural Information Processing Systems (NeurIPS)",
+          "venueColor": "#7c3aed",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/7da6005a8d6942e8b328357da2872aed-Abstract-Conference.html" },
+            { "text": "Code", "href": "https://github.com/drdh/Synergy-RL" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2022lowrank,\n  title={Low-Rank Modular Reinforcement Learning via Muscle Synergy},\n  author={Wang, Tonghan and Dong, Heng and Liu, Jiayuan and Zhang, Chongjie},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2022}\n}"
+        },
+        {
+          "title": "Non-Linear Coordination Graphs",
+          "authors": "Tonghan Wang*, Yipeng Kang*, Qianlan Yang, Xiaoran Wu, Chongjie Zhang",
+          "year": 2022,
+          "venueShort": "NeurIPS",
+          "venueFull": "Advances in Neural Information Processing Systems (NeurIPS)",
+          "venueColor": "#7c3aed",
+          "awards": ["Spotlight"],
+          "links": [
+            { "text": "PDF", "href": "https://openreview.net/forum?id=OcNoF7qA4t" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2022nonlinear,\n  title={Non-Linear Coordination Graphs},\n  author={Wang, Tonghan and Kang, Yipeng and Yang, Qianlan and Wu, Xiaoran and Zhang, Chongjie},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2022}\n}"
+        },
+        {
+          "title": "Self-Organized Polynomial-Time Coordination Graphs",
+          "authors": "Qianlan Yang, Weijun Dong, Zhizhou Ren, Jianhao Wang, Tonghan Wang, Chongjie Zhang",
+          "year": 2022,
+          "venueShort": "ICML",
+          "venueFull": "International Conference on Machine Learning (ICML)",
+          "venueColor": "#16a34a",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://proceedings.mlr.press/v162/yang22a" },
+            { "text": "Code", "href": "https://github.com/yanqval/sop-cg" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{yang2022selforganized,\n  title={Self-Organized Polynomial-Time Coordination Graphs},\n  author={Yang, Qianlan and Dong, Weijun and Ren, Zhizhou and Wang, Jianhao and Wang, Tonghan and Zhang, Chongjie},\n  booktitle={Proceedings of the 39th International Conference on Machine Learning},\n  year={2022}\n}"
+        },
+        {
+          "title": "Context-Aware Sparse Deep Coordination Graphs",
+          "authors": "Tonghan Wang*, Liang Zeng*, Weijun Dong, Qianlan Yang, Chongjie Zhang",
+          "year": 2022,
+          "venueShort": "ICLR",
+          "venueFull": "International Conference on Learning Representations (ICLR)",
+          "venueColor": "#2563eb",
+          "awards": ["Spotlight"],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2106.02886" },
+            { "text": "Code", "href": "https://github.com/TonghanWang/CASEC-MACO-benchmark" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2022casec,\n  title={Context-Aware Sparse Deep Coordination Graphs},\n  author={Wang, Tonghan and Zeng, Liang and Dong, Weijun and Yang, Qianlan and Zhang, Chongjie},\n  booktitle={International Conference on Learning Representations},\n  year={2022}\n}"
+        },
+        {
+          "title": "Celebrating Diversity in Shared Multi-Agent Reinforcement Learning",
+          "authors": "Chenghao Li*, Tonghan Wang*, Chengjie Wu, Qianchuan Zhao, Jun Yang, Chongjie Zhang",
+          "year": 2021,
+          "venueShort": "NeurIPS",
+          "venueFull": "Advances in Neural Information Processing Systems (NeurIPS)",
+          "venueColor": "#7c3aed",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2106.02195" },
+            { "text": "Website", "href": "https://sites.google.com/view/celebrate-diversity-shared" },
+            { "text": "Code", "href": "https://github.com/lich14/CDS" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{li2021celebrating,\n  title={Celebrating Diversity in Shared Multi-Agent Reinforcement Learning},\n  author={Li, Chenghao and Wang, Tonghan and Wu, Chengjie and Zhao, Qianchuan and Yang, Jun and Zhang, Chongjie},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2021}\n}"
+        },
+        {
+          "title": "RODE: Learning Roles to Decompose Multi-Agent Tasks",
+          "authors": "Tonghan Wang, Tarun Gupta, Anuj Mahajan, Bei Peng, Shimon Whiteson, Chongjie Zhang",
+          "year": 2021,
+          "venueShort": "ICLR",
+          "venueFull": "International Conference on Learning Representations (ICLR)",
+          "venueColor": "#2563eb",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2010.01523" },
+            { "text": "Website", "href": "https://sites.google.com/view/rode-marl" },
+            { "text": "Code", "href": "https://github.com/TonghanWang/RODE" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2021rode,\n  title={RODE: Learning Roles to Decompose Multi-Agent Tasks},\n  author={Wang, Tonghan and Gupta, Tarun and Mahajan, Anuj and Peng, Bei and Whiteson, Shimon and Zhang, Chongjie},\n  booktitle={International Conference on Learning Representations},\n  year={2021}\n}"
+        },
+        {
+          "title": "DOP: Off-Policy Multi-Agent Decomposed Policy Gradients",
+          "authors": "Tonghan Wang*, Yihan Wang*, Beining Han*, Heng Dong, Chongjie Zhang",
+          "year": 2021,
+          "venueShort": "ICLR",
+          "venueFull": "International Conference on Learning Representations (ICLR)",
+          "venueColor": "#2563eb",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2007.12322" },
+            { "text": "Video", "href": "https://sites.google.com/view/dop-mapg" },
+            { "text": "Code", "href": "https://github.com/TonghanWang/DOP" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2021dop,\n  title={DOP: Off-Policy Multi-Agent Decomposed Policy Gradients},\n  author={Wang, Tonghan and Wang, Yihan and Han, Beining and Dong, Heng and Zhang, Chongjie},\n  booktitle={International Conference on Learning Representations},\n  year={2021}\n}"
+        },
+        {
+          "title": "Incorporating Pragmatic Reasoning Communication into Emergent Language",
+          "authors": "Yipeng Kang, Tonghan Wang, Gerard de Melo",
+          "year": 2020,
+          "venueShort": "NeurIPS",
+          "venueFull": "Advances in Neural Information Processing Systems (NeurIPS)",
+          "venueColor": "#7c3aed",
+          "awards": ["Spotlight"],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2006.04109" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{kang2020pragmatic,\n  title={Incorporating Pragmatic Reasoning Communication into Emergent Language},\n  author={Kang, Yipeng and Wang, Tonghan and de Melo, Gerard},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2020}\n}"
+        },
+        {
+          "title": "ROMA: Multi-Agent Reinforcement Learning with Emergent Roles",
+          "authors": "Tonghan Wang, Heng Dong, Victor Lesser, Chongjie Zhang",
+          "year": 2020,
+          "venueShort": "ICML",
+          "venueFull": "International Conference on Machine Learning (ICML)",
+          "venueColor": "#16a34a",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2003.08039" },
+            { "text": "Website", "href": "https://sites.google.com/view/romarl" },
+            { "text": "Code", "href": "https://github.com/TonghanWang/ROMA" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2020roma,\n  title={ROMA: Multi-Agent Reinforcement Learning with Emergent Roles},\n  author={Wang, Tonghan and Dong, Heng and Lesser, Victor and Zhang, Chongjie},\n  booktitle={Proceedings of the 37th International Conference on Machine Learning},\n  year={2020}\n}"
+        },
+        {
+          "title": "Influence-Based Multi-Agent Exploration",
+          "authors": "Tonghan Wang*, Jianhao Wang*, Yi Wu, Chongjie Zhang",
+          "year": 2020,
+          "venueShort": "ICLR",
+          "venueFull": "International Conference on Learning Representations (ICLR)",
+          "venueColor": "#2563eb",
+          "awards": ["Spotlight"],
+          "links": [
+            { "text": "PDF", "href": "https://openreview.net/forum?id=BJgy96EYvr&noteId=BJgy96EYvr" },
+            { "text": "Website", "href": "https://sites.google.com/view/influence-based-mae/" },
+            { "text": "Code", "href": "https://github.com/TonghanWang/EITI-EDTI" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2020influence,\n  title={Influence-Based Multi-Agent Exploration},\n  author={Wang, Tonghan and Wang, Jianhao and Wu, Yi and Zhang, Chongjie},\n  booktitle={International Conference on Learning Representations},\n  year={2020}\n}"
+        },
+        {
+          "title": "Learning Nearly Decomposable Value Functions with Communication Minimization",
+          "authors": "Tonghan Wang*, Jianhao Wang*, Chongyi Zheng, Chongjie Zhang",
+          "year": 2020,
+          "venueShort": "ICLR",
+          "venueFull": "International Conference on Learning Representations (ICLR)",
+          "venueColor": "#2563eb",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://openreview.net/forum?id=HJx-3grYDB&noteId=HJx-3grYDB" },
+            { "text": "Website", "href": "https://sites.google.com/view/ndq" },
+            { "text": "Code", "href": "https://github.com/TonghanWang/NDQ" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2020ndq,\n  title={Learning Nearly Decomposable Value Functions with Communication Minimization},\n  author={Wang, Tonghan and Wang, Jianhao and Zheng, Chongyi and Zhang, Chongjie},\n  booktitle={International Conference on Learning Representations},\n  year={2020}\n}"
+        },
+        {
+          "title": "Convergence of Multi-Agent Learning with a Finite Step Size in General-Sum Games",
+          "authors": "Xinliang Song, Tonghan Wang, Chongjie Zhang",
+          "year": 2019,
+          "venueShort": "AAMAS",
+          "venueFull": "International Conference on Autonomous Agents and Multiagent Systems (AAMAS)",
+          "venueColor": "#4338ca",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://dl.acm.org/doi/10.5555/3306127.3331788" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{song2019convergence,\n  title={Convergence of Multi-Agent Learning with a Finite Step Size in General-Sum Games},\n  author={Song, Xinliang and Wang, Tonghan and Zhang, Chongjie},\n  booktitle={Proceedings of the 18th International Conference on Autonomous Agents and Multi-Agent Systems},\n  year={2019}\n}"
+        },
+        {
+          "title": "Compact Object Representation of a Non-Rigid Object for Real-Time Tracking in AR Systems",
+          "authors": "Tonghan Wang, Xueying Qin, Fan Zhong, Baoquan Chen, Ming C. Lin",
+          "year": 2018,
+          "venueShort": "ISMAR",
+          "venueFull": "IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
+          "venueColor": "#0891b2",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://ieeexplore.ieee.org/abstract/document/8699328" },
+            { "text": "Website", "href": "https://sites.google.com/view/corsr" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2018compact,\n  title={Compact Object Representation of a Non-Rigid Object for Real-Time Tracking in AR Systems},\n  author={Wang, Tonghan and Qin, Xueying and Zhong, Fan and Chen, Baoquan and Lin, Ming C.},\n  booktitle={2018 IEEE International Symposium on Mixed and Augmented Reality},\n  year={2018}\n}"
+        }
+      ]
+    },
+    {
+      "id": "journal",
+      "title": "Journal Papers",
+      "papers": [
+        {
+          "title": "Automated Mechanism Design: A Survey",
+          "authors": "Michael J. Curry, Zhou Fan, Yanchen Jiang, Sai Srivatsa Ravindranath, Tonghan Wang, David C. Parkes",
+          "year": 2025,
+          "venueShort": "SIGecom",
+          "venueFull": "ACM SIGecom Exchanges",
+          "venueColor": "#6b7280",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{curry2025automated,\n  title={Automated Mechanism Design: A Survey},\n  author={Curry, Michael J. and Fan, Zhou and Jiang, Yanchen and Ravindranath, Sai Srivatsa and Wang, Tonghan and Parkes, David C.},\n  journal={ACM SIGecom Exchanges},\n  year={2025}\n}"
+        },
+        {
+          "title": "Multi-Agent Policy Transfer via Task Relationship Modeling",
+          "authors": "Tonghan Wang*, Rongjun Qin*, Feng Chen*, Lei Yuan, Xiaoran Wu, Zongzhang Zhang, Chongjie Zhang, Yang Yu",
+          "year": 2024,
+          "venueShort": "SCIS",
+          "venueFull": "Science China Information Sciences",
+          "venueColor": "#6b7280",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://link.springer.com/article/10.1007/s11432-023-3862-1" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{wang2024transfer,\n  title={Multi-Agent Policy Transfer via Task Relationship Modeling},\n  author={Wang, Tonghan and Qin, Rongjun and Chen, Feng and Yuan, Lei and Wu, Xiaoran and Zhang, Zongzhang and Zhang, Chongjie and Yu, Yang},\n  journal={Science China Information Sciences},\n  year={2024}\n}"
+        },
+        {
+          "title": "Celebrating Diversity With Subtask Specialization in Shared Multiagent Reinforcement Learning",
+          "authors": "Chenghao Li, Tonghan Wang, Chengjie Wu, Qianchuan Zhao, Jun Yang, Chongjie Zhang",
+          "year": 2023,
+          "venueShort": "IEEE TNNLS",
+          "venueFull": "IEEE Transactions on Neural Networks and Learning Systems",
+          "venueColor": "#6b7280",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://ieeexplore.ieee.org/abstract/document/10310295" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{li2023diversity,\n  title={Celebrating Diversity With Subtask Specialization in Shared Multiagent Reinforcement Learning},\n  author={Li, Chenghao and Wang, Tonghan and Wu, Chengjie and Zhao, Qianchuan and Yang, Jun and Zhang, Chongjie},\n  journal={IEEE Transactions on Neural Networks and Learning Systems},\n  year={2023}\n}"
+        }
+      ]
+    },
+    {
+      "id": "workshop",
+      "title": "Workshop Papers",
+      "papers": [
+        {
+          "title": "Multi-Agent Policy Transfer via Task Relationship Modeling",
+          "authors": "Tonghan Wang*, Rongjun Qin*, Feng Chen*, Lei Yuan, Xiaoran Wu, Zongzhang Zhang, Chongjie Zhang, Yang Yu",
+          "year": 2022,
+          "venueShort": "NeurIPS WS",
+          "venueFull": "NeurIPS 2022 Deep Reinforcement Learning Workshop",
+          "venueColor": "#7c3aed",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://openreview.net/forum?id=5pWNx-LZ8D" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2022transferws,\n  title={Multi-Agent Policy Transfer via Task Relationship Modeling},\n  author={Wang, Tonghan and Qin, Rongjun and Chen, Feng and Yuan, Lei and Wu, Xiaoran and Zhang, Zongzhang and Zhang, Chongjie and Yu, Yang},\n  booktitle={NeurIPS 2022 Deep Reinforcement Learning Workshop},\n  year={2022}\n}"
+        },
+        {
+          "title": "Model and Method: Training-Time Attack for Cooperative Multi-Agent Reinforcement Learning",
+          "authors": "Tonghan Wang*, Siyang Wu*, Xiaoran Wu, Jingfeng Zhang, Yujing Hu, Changjie Fan, Chongjie Zhang",
+          "year": 2022,
+          "venueShort": "NeurIPS WS",
+          "venueFull": "NeurIPS 2022 Deep Reinforcement Learning Workshop",
+          "venueColor": "#7c3aed",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://openreview.net/forum?id=cZSNk8veQW7" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{wang2022attack,\n  title={Model and Method: Training-Time Attack for Cooperative Multi-Agent Reinforcement Learning},\n  author={Wang, Tonghan and Wu, Siyang and Wu, Xiaoran and Zhang, Jingfeng and Hu, Yujing and Fan, Changjie and Zhang, Chongjie},\n  booktitle={NeurIPS 2022 Deep Reinforcement Learning Workshop},\n  year={2022}\n}"
+        }
+      ]
+    }
+  ]
+}
