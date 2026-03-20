@@ -27,14 +27,10 @@
         "children": 0
       },
       {
-        "label": "Posts",
-        "link": "/projects-5",
+        "label": "Projects",
+        "link": "/projects",
         "children": [
           {
-            "label": "Projects",
-            "link": "/projects"
-          },
-           {
             "label": "Recruitment",
             "link": "/blog/recruitment"
           }
@@ -42,7 +38,7 @@
       },
       {
         "label": "Teaching & Service",
-        "link": "/services/service-1",
+        "link": "/teaching",
         "children": 0
       },
       {
@@ -58,8 +54,8 @@
     ]
   },
   "footer": {
-    "copy": "© 2024. Tonghan Wang. All rights reserved.",
-    "dev": "Developed by: &nbsp;<a href=\"https://github.com/Aklilu-Mandefro/\" target=\"_blank\">Aklilu Mandefro</a>"
+    "copy": "© 2026. Tonghan Wang. All rights reserved.",
+    "dev": ""
   },
   "social": [
     {
@@ -70,13 +66,17 @@
     {
       "link": "https://github.com/tonghanwang",
       "icon": "fab fa-github",
-      "title": "Github"
+      "title": "GitHub"
     },
     {
-      "link": "https://twitter.com/TonghanW",
+      "link": "https://twitter.com/tonghanwang",
       "icon": "fab fa-twitter",
-      "title": "Twitter"
+      "title": "Twitter / X"
+    },
+    {
+      "link": "mailto:twang1@g.harvard.edu",
+      "icon": "fas fa-envelope",
+      "title": "Email"
     }
-    
   ]
 }

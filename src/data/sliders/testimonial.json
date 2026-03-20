@@ -3,14 +3,16 @@
     "items": [
         {
             "type": "award",
+            "date": "Jan 2026",
             "name": "Honored to receive the 2025 Victor Lesser Distinguished Dissertation Award!",
             "highlight": "Victor Lesser Distinguished Dissertation Award",
             "image": "",
-            "role": "Autonomous Agents and Multiagent Systems",
+            "role": "Autonomous Agents & Multiagent Systems",
             "text": "For my dissertation 'Advancing Deep Learning for Multi-agent AI: Mechanisms, Organizations, and Dynamics'."
         },
         {
             "type": "award",
+            "date": "Dec 2025",
             "name": "Our paper received a Spotlight at NeurIPS 2025!",
             "image": "",
             "role": "NeurIPS 2025",
@@ -18,6 +20,7 @@
         },
         {
             "type": "award",
+            "date": "Feb 2025",
             "name": "Our paper received an Oral presentation at AAAI 2025!",
             "image": "",
             "role": "AAAI 2025",
@@ -25,6 +28,7 @@
         },
         {
             "type": "award",
+            "date": "Jul 2024",
             "name": "Honored to announce that our paper has been awarded the 'Best Paper in AI Track' at ACM EC 2024!",
             "highlight": "Best Paper in AI Track",
             "image": "/img/customers/ec24_logo.png",
@@ -32,11 +36,12 @@
             "text": "Working with Yanchen Jiang and David Parkes, we tackled a long-standing problem in microeconomics. We developed the first strategy-proof, multi-bidder, and general auction design algorithm using deep learning.",
             "link": {
                 "href": "https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3670865",
-                "text": "[Press]"
+                "text": "Press release"
             }
         },
         {
             "type": "paper",
+            "date": "Jul 2024",
             "name": "Discontinuous deep learning is gaining attention!",
             "image": "/img/customers/2.jpg",
             "role": "ICML 2024",
@@ -44,6 +49,7 @@
         },
         {
             "type": "paper",
+            "date": "Dec 2023",
             "name": "Discontinuous deep learning for contract design!",
             "image": "/img/customers/3.jpg",
             "role": "NeurIPS 2023",

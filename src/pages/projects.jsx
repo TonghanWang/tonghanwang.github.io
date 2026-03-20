@@ -1,27 +1,30 @@
-import { useState } from 'react';
-
 import Layouts from "@layouts/Layouts";
 import PageBanner from "@components/PageBanner";
-import ProjectsGrid from "@components/ProjectsGrid";
-import CallToActionSection from "@components/sections/CallToAction";
-
 import { getSortedProjectsData } from "@library/projects";
-
 import Link from "next/link";
 
 const Projects = (props) => {
   return (
-    <Layouts
-      // rightPanelBackground={"/img/person/bg-4.jpg"}
-      // rightPanelImg={"/img/person/5.png"}
-      fullWidth={true}
-    >
-      <PageBanner pageTitle={"Designing a Better World"} breadTitle={"Projects"} align={"center"} />
+    <Layouts fullWidth={true}>
+      <PageBanner pageTitle="Research Projects" />
 
-      <ProjectsGrid projects={props.projects} columns={1} />
-      
-      <CallToActionSection />
-      
+      <section style={{ paddingBottom: '80px' }}>
+        <div className="proj-list">
+          {props.projects.map((item, key) => (
+            <Link href={`/projects/${item.id}`} className="proj-card mil-up" key={key}>
+              <div className="proj-card-img">
+                <img src={item.image} alt={item.title} />
+              </div>
+              <div className="proj-card-body">
+                <p className="proj-card-category">{item.category}</p>
+                <h4 className="proj-card-title">{item.title}</h4>
+                <span className="proj-card-link">Explore →</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
     </Layouts>
   );
 };

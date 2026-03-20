@@ -1,20 +1,13 @@
 import Data from '@data/sliders/testimonial';
 
-const ACCENT = '#2563eb';
-const ACCENT_BG = 'rgba(37, 99, 235, 0.06)';
+const ACCENT      = '#2563eb';
+const ACCENT_BG   = 'rgba(37, 99, 235, 0.07)';
+const TEAL        = '#0d9488';
+const TEAL_BG     = 'rgba(13, 148, 136, 0.07)';
 
-function highlightPhrase(text, phrase) {
-    if (!phrase) return text;
-    const parts = text.split(new RegExp(`(${phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'));
-    return parts.map((part, i) =>
-        part.toLowerCase() === phrase.toLowerCase()
-            ? <span key={i} style={{color: ACCENT, fontWeight: '800'}}>{part}</span>
-            : part
-    );
-}
-
+// ── Icons ─────────────────────────────────────────────────────────────────────
 const TrophyIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
          fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="8 21 12 17 16 21"/>
         <line x1="12" y1="17" x2="12" y2="11"/>
@@ -25,129 +18,193 @@ const TrophyIcon = () => (
 );
 
 const PaperIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
          fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
         <polyline points="14 2 14 8 20 8"/>
         <line x1="16" y1="13" x2="8" y2="13"/>
         <line x1="16" y1="17" x2="8" y2="17"/>
-        <polyline points="10 9 9 9 8 9"/>
     </svg>
 );
 
-const styles = {
-    section: {
-        padding: '60px 0 80px',
-    },
-    sectionLabel: {
-        fontSize: '13px',
-        fontWeight: '600',
-        letterSpacing: '2px',
-        textTransform: 'uppercase',
-        color: '#888',
-        marginBottom: '32px',
-    },
-    feed: {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '20px',
-    },
-    card: (type) => ({
+// ── Highlight helper ──────────────────────────────────────────────────────────
+function highlightPhrase(text, phrase) {
+    if (!phrase) return text;
+    const parts = text.split(new RegExp(`(${phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'));
+    return parts.map((part, i) =>
+        part.toLowerCase() === phrase.toLowerCase()
+            ? <span key={i} style={{ color: ACCENT, fontWeight: '800' }}>{part}</span>
+            : part
+    );
+}
+
+// ── Card ──────────────────────────────────────────────────────────────────────
+const NewsCard = ({ item, index }) => {
+    const isAward = item.type === 'award';
+    const color   = isAward ? ACCENT : TEAL;
+    const colorBg = isAward ? ACCENT_BG : TEAL_BG;
+
+    const cardStyle = isAward ? {
         display: 'flex',
         alignItems: 'flex-start',
         gap: '20px',
-        padding: type === 'award' ? '24px 28px' : '12px 0',
-        borderRadius: type === 'award' ? '0 8px 8px 0' : '0',
-        backgroundColor: type === 'award' ? '#fafafa' : 'transparent',
-        borderLeft: type === 'award' ? `4px solid ${ACCENT}` : 'none',
-        boxShadow: type === 'award' ? '0 2px 12px rgba(0,0,0,0.06)' : 'none',
+        padding: '22px 26px',
+        borderRadius: '0 12px 12px 0',
+        borderLeft: `4px solid ${color}`,
+        background: 'rgba(255, 255, 255, 0.12)',
+        backdropFilter: 'blur(4px) saturate(1.4)',
+        WebkitBackdropFilter: 'blur(4px) saturate(1.4)',
+        border: `1px solid rgba(255, 255, 255, 0.55)`,
+        borderLeft: `4px solid ${color}`,
+        boxShadow: '0 4px 24px rgba(37,99,235,0.08), inset 0 1px 0 rgba(255,255,255,0.7)',
         transition: 'box-shadow 0.2s ease, transform 0.2s ease',
-    }),
-    iconWrap: (type) => ({
-        flexShrink: 0,
-        width: '44px',
-        height: '44px',
-        borderRadius: '50%',
-        backgroundColor: type === 'award' ? ACCENT_BG : 'transparent',
-        color: type === 'award' ? ACCENT : '#aaa',
+        animationDelay: `${index * 0.1}s`,
+    } : {
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: '2px',
-    }),
-    body: {
-        flex: 1,
-    },
-    badge: (type) => ({
-        display: 'inline-block',
-        fontSize: '12px',
-        fontWeight: '700',
-        letterSpacing: '1px',
-        textTransform: 'uppercase',
-        color: type === 'award' ? ACCENT : '#555',
-        backgroundColor: type === 'award' ? ACCENT_BG : 'rgba(0,0,0,0.05)',
-        borderRadius: '4px',
-        padding: '2px 9px',
-        marginBottom: '10px',
-    }),
-    headline: {
-        fontSize: '18px',
-        fontWeight: '700',
-        color: '#1a1a1a',
-        lineHeight: '1.4',
-        margin: '0 0 8px',
-    },
-    description: {
-        fontSize: '15px',
-        color: '#555',
-        lineHeight: '1.7',
-        margin: '0 0 10px',
-    },
-    link: {
-        fontSize: '14px',
-        fontWeight: '600',
-        color: ACCENT,
-        textDecoration: 'none',
-    },
-};
+        alignItems: 'flex-start',
+        gap: '20px',
+        padding: '22px 26px',
+        borderRadius: '0 12px 12px 0',
+        borderLeft: `4px solid ${color}`,
+        background: 'rgba(255, 255, 255, 0.10)',
+        backdropFilter: 'blur(4px) saturate(1.4)',
+        WebkitBackdropFilter: 'blur(4px) saturate(1.4)',
+        border: `1px solid rgba(255, 255, 255, 0.50)`,
+        borderLeft: `4px solid ${color}`,
+        boxShadow: '0 4px 24px rgba(13,148,136,0.08), inset 0 1px 0 rgba(255,255,255,0.65)',
+        transition: 'box-shadow 0.2s ease, transform 0.2s ease',
+        animationDelay: `${index * 0.1}s`,
+    };
 
-const TestimonialSlider = () => {
     return (
-        <section id="news" style={styles.section}>
-            <p className="mil-upper mil-up" style={styles.sectionLabel}>News</p>
-            <div style={styles.feed}>
-                {Data.items.map((item, key) => (
-                    <div
-                        key={`news-item-${key}`}
-                        style={styles.card(item.type)}
-                        onMouseEnter={e => {
-                            e.currentTarget.style.boxShadow = '0 6px 24px rgba(0,0,0,0.12)';
-                            e.currentTarget.style.transform = 'translateY(-2px)';
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
-                            e.currentTarget.style.transform = 'translateY(0)';
-                        }}
-                    >
-                        <div style={styles.iconWrap(item.type)}>
-                            {item.type === 'award' ? <TrophyIcon /> : <PaperIcon />}
-                        </div>
-                        <div style={styles.body}>
-                            <span style={styles.badge(item.type)}>{item.role}</span>
-                            <p style={styles.headline}>{highlightPhrase(item.name, item.highlight)}</p>
-                            <p style={styles.description}>{item.text}</p>
-                            {item.link && (
-                                <a href={item.link.href} target="_blank" rel="noopener noreferrer"
-                                   style={styles.link}>
-                                    {item.link.text}
-                                </a>
-                            )}
-                        </div>
-                    </div>
-                ))}
+        <div
+            className="news-card"
+            style={cardStyle}
+            onMouseEnter={e => {
+                e.currentTarget.style.boxShadow = isAward
+                    ? '0 8px 32px rgba(37,99,235,0.13), inset 0 1px 0 rgba(255,255,255,0.9)'
+                    : '0 8px 32px rgba(13,148,136,0.10), inset 0 1px 0 rgba(255,255,255,0.9)';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={e => {
+                e.currentTarget.style.boxShadow = isAward
+                    ? '0 2px 16px rgba(37,99,235,0.06), inset 0 1px 0 rgba(255,255,255,0.85)'
+                    : '0 2px 16px rgba(13,148,136,0.06), inset 0 1px 0 rgba(255,255,255,0.85)';
+                e.currentTarget.style.transform = 'translateY(0)';
+            }}
+        >
+            {/* Icon */}
+            <div style={{
+                flexShrink: 0,
+                width: '42px',
+                height: '42px',
+                borderRadius: '50%',
+                background: colorBg,
+                color: color,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginTop: '2px',
+            }}>
+                {isAward ? <TrophyIcon /> : <PaperIcon />}
             </div>
-        </section>
+
+            {/* Body */}
+            <div style={{ flex: 1 }}>
+                {/* Badge row */}
+                <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '4px', marginBottom: '10px' }}>
+                    <span className="news-badge" style={{
+                        color: color,
+                        background: colorBg,
+                    }}>
+                        {item.role}
+                    </span>
+                    {item.date && (
+                        <span className="news-date-chip">{item.date}</span>
+                    )}
+                </div>
+
+                <p style={{ fontSize: '17px', fontWeight: '700', color: '#1a1a1a', lineHeight: '1.4', margin: '0 0 8px' }}>
+                    {highlightPhrase(item.name, item.highlight)}
+                </p>
+                <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.7', margin: '0 0 10px' }}>
+                    {item.text}
+                </p>
+                {item.link && (
+                    <a href={item.link.href} target="_blank" rel="noopener noreferrer"
+                       style={{ fontSize: '13px', fontWeight: '600', color: color, textDecoration: 'none',
+                                borderBottom: '1px solid transparent', transition: 'border-color 0.15s' }}
+                       onMouseEnter={e => e.currentTarget.style.borderBottomColor = color}
+                       onMouseLeave={e => e.currentTarget.style.borderBottomColor = 'transparent'}>
+                        {item.link.text} →
+                    </a>
+                )}
+            </div>
+        </div>
     );
 };
+
+// ── Section ───────────────────────────────────────────────────────────────────
+const TestimonialSlider = () => (
+    <section id="news" style={{ padding: '60px 0 80px' }}>
+        <p className="mil-upper mil-up" style={{
+            fontSize: '13px', fontWeight: '600', letterSpacing: '2px',
+            textTransform: 'uppercase', color: '#888', marginBottom: '32px',
+        }}>
+            News
+        </p>
+
+        <div className="news-bg-wrap">
+
+            {/* ── Abstract SVG illustration ───────────────────────────────── */}
+            <svg className="news-bg-svg" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+
+                {/* Concentric radar rings — top-right focal point */}
+                <circle cx="820" cy="60"  r="260" fill="none" stroke="#eff6ff" strokeWidth="2.5"/>
+                <circle cx="820" cy="60"  r="190" fill="none" stroke="#dbeafe" strokeWidth="2.5"/>
+                <circle cx="820" cy="60"  r="130" fill="none" stroke="#bfdbfe" strokeWidth="2.5"/>
+                <circle cx="820" cy="60"  r="75"  fill="none" stroke="#dbeafe" strokeWidth="2.5"/>
+                <circle cx="820" cy="60"  r="28"  fill="rgba(59,130,246,0.06)"/>
+                <circle cx="820" cy="60"  r="5"   fill="#93c5fd" opacity="0.4"/>
+
+                {/* Concentric arcs — bottom-left focal point */}
+                <path d="M -60 380 A 220 220 0 0 1 220 200" fill="none" stroke="#eff6ff" strokeWidth="2.5"/>
+                <path d="M -60 430 A 280 280 0 0 1 270 190" fill="none" stroke="#e0e7ff" strokeWidth="2.5"/>
+                <path d="M -60 480 A 340 340 0 0 1 320 180" fill="none" stroke="#e0e7ff" strokeWidth="2.5"/>
+                <circle cx="0"   cy="340" r="5"   fill="#a5b4fc" opacity="0.35"/>
+
+                {/* Flowing connector curves between the two focal points */}
+                <path d="M 60 310 C 200 240, 380 310, 520 220 S 700 120, 820 60"
+                      fill="none" stroke="#dbeafe" strokeWidth="2.5" strokeDasharray="7 5"/>
+                <path d="M 30 370 C 180 290, 360 360, 530 260 S 710 150, 820 60"
+                      fill="none" stroke="#eff6ff" strokeWidth="2.5"/>
+
+                {/* Intersection dots along curves */}
+                <circle cx="220" cy="265" r="3" fill="#bfdbfe" opacity="0.5"/>
+                <circle cx="390" cy="295" r="3" fill="#c7d2fe" opacity="0.45"/>
+                <circle cx="530" cy="230" r="3" fill="#bfdbfe" opacity="0.5"/>
+                <circle cx="665" cy="155" r="3" fill="#93c5fd" opacity="0.4"/>
+
+                {/* Subtle cross-hair at bottom-right */}
+                <line x1="760" y1="450" x2="760" y2="510" stroke="#eff6ff" strokeWidth="1"/>
+                <line x1="730" y1="480" x2="790" y2="480" stroke="#eff6ff" strokeWidth="1"/>
+                <circle cx="760" cy="480" r="2.5" fill="#bfdbfe" opacity="0.4"/>
+
+                {/* Scattered accent dots */}
+                <circle cx="180" cy="80"  r="2" fill="#c7d2fe" opacity="0.3"/>
+                <circle cx="440" cy="130" r="2" fill="#bfdbfe" opacity="0.3"/>
+                <circle cx="600" cy="410" r="2" fill="#dbeafe" opacity="0.4"/>
+                <circle cx="300" cy="470" r="2" fill="#c7d2fe" opacity="0.3"/>
+
+            </svg>
+
+            <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {Data.items.map((item, key) => (
+                    <NewsCard key={`news-item-${key}`} item={item} index={key} />
+                ))}
+            </div>
+        </div>
+    </section>
+);
 
 export default TestimonialSlider;
