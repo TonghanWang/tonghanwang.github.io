@@ -12,7 +12,6 @@
     pointer-events: none;
     justify-content: center !important;
     padding-left: 90px !important;
-    padding-right: 35% !important;
 }
 
 /* ─── The pill ───────────────────────────────────────────────────────────────── */
@@ -112,7 +111,7 @@
 
 /* ─── Mobile nav ─────────────────────────────────────────────────────────────── */
 @media screen and (max-width: 1200px) {
-    .mil-top-panel { padding-left: 0 !important; padding-right: 0 !important; }
+    .mil-top-panel { padding-left: 0 !important; }
     .nav-pill {
         max-width: calc(100% - 32px);
         margin: 0 16px;
