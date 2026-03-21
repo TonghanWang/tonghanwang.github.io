@@ -11,7 +11,8 @@ list:
   heading: ""
   items:
     - label: "Victor Lesser Distinguished Dissertation Award"
-      value: "<p><i class=\"fa fa-trophy\"></i> Autonomous Agents and Multiagent Systems (AAMAS)</p>
+      trophy: true
+      value: "<p>Autonomous Agents and Multiagent Systems (AAMAS)</p>
       <p> </br> </p>"
     - label: "NeurIPS 2025 Spotlight"
       value: "<p>Spotlight paper, Conference on Neural Information Processing Systems, 2025</p>
@@ -20,7 +21,8 @@ list:
       value: "<p>Oral presentation, AAAI Conference on Artificial Intelligence, 2025</p>
       <p> </br> </p>"
     - label: "EC 2024 Best Paper Award"
-      value: "<p><i class=\"fa fa-trophy\"></i> AI Track, ACM Conference on Economics and Computation, 2024</p>
+      trophy: true
+      value: "<p>AI Track, ACM Conference on Economics and Computation, 2024</p>
       <p> </br> </p>"
     - label: "NeurIPS 2022 Spotlight"
       value: "<p>Spotlight paper, Conference on Neural Information Processing Systems, 2022</p>
