@@ -1,10 +1,12 @@
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import appData from "@data/app.json";
 import { useRouter } from 'next/router';
 import LogoMark from "@components/LogoMark";
 import { useLanguage } from "@library/LanguageContext";
 import { translations } from "@library/i18n";
+
+const NAV_POS_KEY = 'navPillPos';
 
 const DefaultHeader = ({ extraClass }) => {
   const [toggle, setToggle] = useState(false);
@@ -30,9 +32,15 @@ const DefaultHeader = ({ extraClass }) => {
     navItems.push(newobj);
   });
 
+  // Restore saved position after mount (SSR-safe)
+  useEffect(() => {
+    const saved = localStorage.getItem(NAV_POS_KEY);
+    if (saved) {
+      try { setPos(JSON.parse(saved)); } catch {}
+    }
+  }, []);
+
   const handleMouseDown = (e) => {
-    // Let clicks on links and buttons through
-    if (e.target.closest('a') || e.target.closest('button')) return;
     e.preventDefault();
 
     const panel = e.currentTarget.closest('.mil-top-panel');
@@ -47,18 +55,24 @@ const DefaultHeader = ({ extraClass }) => {
 
     setDragging(true);
 
+    let latestPos = null;
+
     const onMove = (e) => {
       if (!dragRef.current) return;
       const dx = e.clientX - dragRef.current.startMouseX;
       const dy = e.clientY - dragRef.current.startMouseY;
-      setPos({
+      latestPos = {
         x: Math.max(0, dragRef.current.startPosX + dx),
         y: Math.max(0, dragRef.current.startPosY + dy),
-      });
+      };
+      setPos(latestPos);
     };
 
     const onUp = () => {
       setDragging(false);
+      if (latestPos) {
+        localStorage.setItem(NAV_POS_KEY, JSON.stringify(latestPos));
+      }
       dragRef.current = null;
       document.removeEventListener('mousemove', onMove);
       document.removeEventListener('mouseup', onUp);
@@ -70,8 +84,8 @@ const DefaultHeader = ({ extraClass }) => {
 
   // When pos is set by drag, override CSS position with inline styles
   const panelStyle = pos ? {
-    right: 'auto',
     left: pos.x,
+    right: 'auto',
     top: pos.y,
     transform: 'none',
   } : {};
@@ -82,10 +96,14 @@ const DefaultHeader = ({ extraClass }) => {
     {/* top bar */}
     <div className="mil-top-panel" style={panelStyle}>
       <div className="nav-pills-container">
-      <div
-        className={`nav-pill${dragging ? ' nav-dragging' : ''}`}
-        onMouseDown={handleMouseDown}
-      >
+      <div className={`nav-pill${dragging ? ' nav-dragging' : ''}`}>
+
+        <div
+          className={`nav-pill-drag-handle${dragging ? ' nav-dragging' : ''}`}
+          onMouseDown={handleMouseDown}
+        >
+          <span className="drag-grip" />
+        </div>
 
         <Link href="/" className="nav-logo">
           <LogoMark size={34} variant="badge" />

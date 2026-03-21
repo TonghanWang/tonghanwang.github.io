@@ -1,4 +1,4 @@
-/* ─── Vertical right-side nav (desktop >1200px) ─────────────────────────────── */
+/* ─── Vertical left-side nav (desktop >1200px) ──────────────────────────────── */
 
 /* Frame spans full viewport height */
 .mil-frame { height: 100vh; }
@@ -12,7 +12,8 @@
     -webkit-backdrop-filter: none !important;
     pointer-events: none;
     position: absolute;
-    right: 24px;
+    left: 24px;
+    right: auto;
     top: calc(50vh - 260px);
     transform: none;
     height: auto !important;
@@ -75,11 +76,30 @@
         /* right edge — dimmest */
         inset -1px 0 0 rgba(255, 255, 255, 0.18);
     gap: 2px;
-    cursor: grab;
-    user-select: none;
 }
-.nav-pill.nav-dragging { cursor: grabbing; }
 .nav-pill a { cursor: pointer; }
+
+/* ─── Drag handle — top of nav-pill ─────────────────────────────────────────── */
+.nav-pill-drag-handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0 3px;
+    cursor: grab;
+    opacity: 0.35;
+    transition: opacity 0.2s ease;
+    border-radius: 14px 14px 0 0;
+    &:hover { opacity: 0.65; }
+    &.nav-dragging { cursor: grabbing; opacity: 0.65; }
+}
+.drag-grip {
+    display: block;
+    width: 20px;
+    height: 10px;
+    background-image: radial-gradient(circle, #374151 1.5px, transparent 1.5px);
+    background-size: 6px 5px;
+    background-repeat: repeat;
+}
 
 /* ─── Icon pill — independent bar for social icons + lang toggle ─────────────── */
 .icon-pill {
@@ -177,24 +197,24 @@
     font-weight: 700 !important;
 }
 
-/* ─── Desktop submenu dropdown — opens to the LEFT of the vertical pill ──────── */
+/* ─── Desktop submenu dropdown — opens to the RIGHT of the vertical pill ─────── */
 .mil-top-panel .mil-navigation ul li.mil-has-children {
-    /* hover bridge: extend to the left so cursor can reach the submenu */
+    /* hover bridge: extends right so cursor can reach the submenu */
     &:after {
         width: 40px !important;
         height: 100% !important;
         bottom: auto !important;
         top: 0 !important;
-        left: auto !important;
-        right: -40px !important;
+        right: auto !important;
+        left: -40px !important;
     }
 }
 .mil-top-panel .mil-navigation ul li.mil-has-children ul {
-    /* reposition: vertically centered on the item, to the left of the pill */
+    /* reposition: vertically centered on the item, to the right of the pill */
     top: 50% !important;
-    left: auto !important;
-    right: calc(100% + 10px) !important;
-    transform: translateX(10px) translateY(-50%) scale(0.98) !important;
+    right: auto !important;
+    left: calc(100% + 10px) !important;
+    transform: translateX(-10px) translateY(-50%) scale(0.98) !important;
 
     padding: 6px !important;
     background-color: rgba(255, 255, 255, 0.97);
@@ -257,6 +277,8 @@
         -webkit-backdrop-filter: none;
         gap: 0;
     }
+
+    .nav-pill-drag-handle { display: none; }
 
     .nav-logo {
         padding: 0 12px 0 0;
