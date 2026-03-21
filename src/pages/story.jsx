@@ -27,12 +27,9 @@ const PaperItem = ({ paper, catId, idx }) => {
             {/* ── Authors ─────────────────────────────────────────── */}
             <p className="pub-authors">{paper.authors}</p>
 
-            {/* ── Venue + award badges ─────────────────────────────── */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginBottom: '6px' }}>
-                <span
-                    className="pub-venue-badge"
-                    title={paper.venueFull}
-                >
+            {/* ── Venue + award badges + links ─────────────────────── */}
+            <div className="pub-links" style={{ flexWrap: 'wrap', gap: '6px' }}>
+                <span className="pub-venue-badge" title={paper.venueFull}>
                     {paper.venueShort}
                 </span>
                 {paper.awards.map((award, i) => (
@@ -41,10 +38,6 @@ const PaperItem = ({ paper, catId, idx }) => {
                         {award}
                     </span>
                 ))}
-            </div>
-
-            {/* ── Links ────────────────────────────────────────────── */}
-            <div className="pub-links">
                 {paper.links.map((l, i) => (
                     <a key={i} href={l.href} target="_blank" rel="noopener noreferrer" className="pub-link">
                         {l.text}
@@ -94,7 +87,7 @@ const Story = () => (
                             </div>
 
                             {/* Papers */}
-                            <div className="mil-timeline mil-mb-90">
+                            <div className="mil-timeline mil-mb-90" style={{ marginBottom: '40px' }}>
                                 <div className="mil-timeline-track"></div>
                                 <ul style={{ paddingLeft: 0 }}>
                                     {cat.papers.map((paper, idx) => (

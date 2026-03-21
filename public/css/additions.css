@@ -249,14 +249,14 @@
 .news-card { animation: cardFadeUp 0.5s ease both; }
 
 .news-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     border-radius: 6px;
     padding: 3px 10px;
-    margin-bottom: 10px;
 }
 .news-date-chip {
     display: inline-flex;
@@ -325,23 +325,43 @@
 .mil-section-title .mil-divider { display: none; }
 .mil-timeline ul { flex: 1; min-width: 0; }
 .pub-paper-item {
-    padding: 22px 0;
+    padding: 14px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     transition: background 0.2s ease;
 }
 .pub-paper-item:last-child { border-bottom: none; }
 
 .pub-venue-badge {
-    display: inline-block;
-    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.4px;
-    border-radius: 6px;
-    padding: 4px 12px;
+    letter-spacing: 0.5px;
+    border-radius: 999px;
+    padding: 3px 11px;
     margin-right: 6px;
     margin-bottom: 4px;
-    background: #1a1a1a !important;
-    color: #fff !important;
+    color: #0d7a5f;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+.role-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 999px;
+    padding: 3px 11px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    color: #0d7a5f;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 .pub-award-badge {
     display: inline-flex;
@@ -388,21 +408,29 @@
 .pub-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 8px;
+    gap: 6px;
+    margin-top: 6px;
     align-items: center;
 }
 .pub-link {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     color: #2563eb;
     text-decoration: none;
-    padding: 3px 0;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.15s ease;
     letter-spacing: 0.2px;
+    padding: 3px 11px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.07);
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.pub-link:hover { border-bottom-color: #2563eb; }
+.pub-link:hover {
+    background: rgba(37, 99, 235, 0.14);
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
+}
 
 .pub-year-group {
     display: flex;
@@ -429,7 +457,7 @@
 .pub-authors {
     font-size: 15px;
     color: #555;
-    margin: 6px 0 8px;
+    margin: 3px 0 6px;
     line-height: 1.5;
 }
 .pub-section-count {

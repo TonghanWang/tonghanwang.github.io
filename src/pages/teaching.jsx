@@ -39,7 +39,7 @@ const Teaching = () => (
                                 </div>
                                 <p className="pub-authors">{item.institution}</p>
                                 <div style={{ marginTop: '4px' }}>
-                                    <span className="pub-venue-badge">{item.role}</span>
+                                    <span className="role-badge">{item.role}</span>
                                 </div>
                             </li>
                         ))}
@@ -55,8 +55,8 @@ const Teaching = () => (
                                     <span className="pub-year-badge">{item.years}</span>
                                 </div>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '6px' }}>
-                                    <span className="pub-venue-badge">{item.short}</span>
-                                    <span className="pub-venue-badge">Reviewer</span>
+                                    <span className="role-badge">{item.short}</span>
+                                    <span className="role-badge">Reviewer</span>
                                     {item.award && (
                                         <span className="pub-award-badge">
                                             <StarIcon />

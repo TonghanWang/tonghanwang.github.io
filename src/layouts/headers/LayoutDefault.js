@@ -1,21 +1,15 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import appData from "@data/app.json";
 import { useRouter } from 'next/router';
+import LogoMark from "@components/LogoMark";
 
 const DefaultHeader = ({ extraClass }) => {
   const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   const navItems = [];
 
   const { asPath } = useRouter();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   appData.header.menu.forEach((item, index) => {
     let s_class1 = '';
@@ -34,12 +28,11 @@ const DefaultHeader = ({ extraClass }) => {
     <>
 
     {/* top bar */}
-    <div className={`mil-top-panel${scrolled ? ' nav-scrolled' : ''}`}>
+    <div className="mil-top-panel">
       <div className="nav-pill">
 
         <Link href="/" className="nav-logo">
-          <span className="nav-logo-initials">TW</span>
-          <span className="nav-logo-name">Tonghan Wang</span>
+          <LogoMark size={34} variant="badge" />
         </Link>
 
         <div className={`mil-navigation ${toggle ? "mil-active" : ""}`}>

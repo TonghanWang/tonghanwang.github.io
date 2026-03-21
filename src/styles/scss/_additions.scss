@@ -1,4 +1,9 @@
-/* ─── Floating pill top bar ─────────────────────────────────────────────────── */
+/* ─── Vertical right-side nav (desktop >1200px) ─────────────────────────────── */
+
+/* Frame spans full viewport height */
+.mil-frame { height: 100vh; }
+
+/* Top panel → floating vertical pill, right edge, vertically centered */
 .mil-top-panel {
     background: transparent !important;
     border-bottom: none !important;
@@ -6,43 +11,61 @@
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     pointer-events: none;
+    position: absolute !important;
+    right: 24px !important;
+    top: 15% !important;
+    transform: none;
+    height: auto !important;
+    width: auto !important;
+    flex-direction: column !important;
     justify-content: center !important;
-    padding-left: 90px !important;
-
-    @media screen and (max-width: 1200px) {
-        padding-left: 0 !important;
-    }
+    align-items: center !important;
+    padding: 0 !important;
 }
 
-/* ─── The pill ───────────────────────────────────────────────────────────────── */
+/* Left panel: full height now that there's no horizontal top bar */
+.mil-left-panel {
+    height: 100vh !important;
+    padding-top: 60px !important;
+}
+
+/* No horizontal bar → remove content top padding */
+.mil-content { padding-top: 0 !important; }
+
+/* Right panel spans full height */
+.mil-right-banner { height: 100vh !important; }
+
+/* ─── The pill — vertical ─────────────────────────────────────────────────── */
 .nav-pill {
     pointer-events: all;
     display: flex;
-    align-items: center;
-    height: 58px;
-    max-width: 1100px;
-    padding: 0 8px 0 4px;
-    border-radius: 999px;
+    flex-direction: column;
+    align-items: stretch;
+    width: auto;
+    min-width: 130px;
+    height: auto;
+    padding: 6px;
+    border-radius: 20px;
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(20px) saturate(1.8);
     -webkit-backdrop-filter: blur(20px) saturate(1.8);
     border: 1px solid rgba(37, 99, 235, 0.1);
     box-shadow: 0 2px 16px rgba(37, 99, 235, 0.07), 0 1px 4px rgba(0, 0, 0, 0.04);
-    transition: height 0.25s ease, box-shadow 0.25s ease;
-}
-.nav-scrolled .nav-pill {
-    height: 50px;
-    box-shadow: 0 6px 32px rgba(37, 99, 235, 0.14), 0 2px 8px rgba(0, 0, 0, 0.07);
+    gap: 2px;
 }
 
 /* ─── Nav logo ───────────────────────────────────────────────────────────────── */
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
     text-decoration: none;
-    padding: 0 16px 0 8px;
+    padding: 8px;
     flex-shrink: 0;
+    border-radius: 14px;
+    margin-bottom: 2px;
+    transition: background 0.2s ease;
+    &:hover { background: rgba(37, 99, 235, 0.06); }
 }
 .nav-logo-initials {
     width: 30px;
@@ -58,26 +81,28 @@
     letter-spacing: 0.5px;
     flex-shrink: 0;
     transition: opacity $t-sm;
-    .nav-logo:hover & { opacity: 0.85; }
-}
-.nav-logo-name {
-    font-size: 17px;
-    font-weight: 600;
-    color: #1a1a1a;
-    letter-spacing: 0.1px;
-    white-space: nowrap;
 }
 
-/* ─── Nav links: pill-highlight ──────────────────────────────────────────────── */
+/* ─── Nav links — vertical stacked ──────────────────────────────────────────── */
+.mil-navigation {
+    display: block !important;
+    text-align: left !important;
+    & nav { width: 100%; }
+    & ul {
+        flex-direction: column !important;
+        & li { margin-right: 0 !important; }
+    }
+}
 .mil-navigation ul li > a {
-    font-size: 17px !important;
+    font-size: 15px !important;
     font-weight: 500 !important;
     letter-spacing: 0.2px !important;
     color: #374151 !important;
-    padding: 6px 12px !important;
-    border-radius: 999px;
+    padding: 8px 14px !important;
+    border-radius: 14px !important;
+    display: block !important;
     transition: background 0.2s ease, color 0.2s ease !important;
-    position: relative;
+    white-space: nowrap;
     &::after { display: none !important; }
     &:hover {
         background: rgba(37, 99, 235, 0.07);
@@ -91,34 +116,96 @@
     font-weight: 600 !important;
 }
 
-/* ─── Desktop submenu dropdown ───────────────────────────────────────────────── */
+/* ─── Desktop submenu dropdown — opens to the LEFT of the vertical pill ──────── */
+.mil-top-panel .mil-navigation ul li.mil-has-children {
+    /* hover bridge: extend to the left so cursor can reach the submenu */
+    &:after {
+        width: 40px !important;
+        height: 100% !important;
+        bottom: auto !important;
+        top: 0 !important;
+        left: auto !important;
+        right: -40px !important;
+    }
+}
 .mil-top-panel .mil-navigation ul li.mil-has-children ul {
+    /* reposition: vertically centered on the item, to the left of the pill */
+    top: 50% !important;
+    left: auto !important;
+    right: calc(100% + 10px) !important;
+    transform: translateX(10px) translateY(-50%) scale(0.98) !important;
+
+    padding: 6px !important;
     background-color: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(37, 99, 235, 0.1);
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-    li a {
-        color: #374151;
-        border-radius: 8px;
-        &:hover { color: #2563eb; background: rgba(37, 99, 235, 0.06); }
+    li {
+        margin-bottom: 0 !important;
+        a {
+            color: #374151;
+            border-radius: 8px;
+            padding: 7px 14px !important;
+            display: block;
+            &:hover { color: #2563eb; background: rgba(37, 99, 235, 0.06); }
+        }
     }
 }
+.mil-top-panel .mil-navigation ul li.mil-has-children:hover ul {
+    transform: translateX(0) translateY(-50%) scale(1) !important;
+}
 
-/* ─── Mobile nav ─────────────────────────────────────────────────────────────── */
+/* ─── Mobile (≤1200px): revert to horizontal top bar ────────────────────────── */
 @media screen and (max-width: 1200px) {
-    .nav-pill {
-        max-width: calc(100% - 32px);
-        margin: 0 16px;
-        border-radius: 16px;
-        padding: 0 8px;
-    }
-    .nav-logo { padding: 0 12px 0 8px; }
-    .nav-logo-name { display: none; }
+    .mil-frame { height: auto; }
 
-    .mil-top-panel .mil-navigation {
-        top: 74px;
+    .mil-top-panel {
+        position: static !important;
+        transform: none !important;
+        height: 90px !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0 16px !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(20px) saturate(1.8) !important;
+        -webkit-backdrop-filter: blur(20px) saturate(1.8) !important;
+        border-bottom: 1px solid rgba(37, 99, 235, 0.08) !important;
+        pointer-events: all !important;
+    }
+
+    /* mil-left-panel is hidden on mobile via _components.scss */
+    .mil-content { padding-top: 90px !important; }
+    .mil-right-banner { height: calc(100vh - 90px) !important; }
+
+    .nav-pill {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        min-width: unset;
+        height: 100%;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        gap: 0;
+    }
+
+    .nav-logo {
+        padding: 0 12px 0 0;
+        margin-bottom: 0;
+        border-radius: 0;
+        &:hover { background: none; }
+    }
+
+    .mil-navigation {
+        top: 90px;
         background-color: rgba(255, 255, 255, 0.97) !important;
         backdrop-filter: blur(20px) !important;
         -webkit-backdrop-filter: blur(20px) !important;
@@ -126,13 +213,14 @@
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07) !important;
         border-radius: 0 0 16px 16px;
     }
-    .mil-top-panel .mil-navigation nav ul li a { color: #1a1a1a !important; }
-    .mil-top-panel .mil-navigation nav ul li a:hover { color: #2563eb !important; }
-    .mil-top-panel .mil-navigation nav ul li.mil-active > a {
+    .mil-navigation nav ul li a { color: #1a1a1a !important; }
+    .mil-navigation nav ul li a:hover { color: #2563eb !important; }
+    .mil-navigation nav ul li.mil-active > a {
         color: #2563eb !important;
         background: none !important;
         font-weight: 600 !important;
     }
+
     .mil-top-panel .mil-top-panel-btns {
         padding-right: 0 !important;
         margin-left: auto;
@@ -258,14 +346,14 @@
 }
 
 .news-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     border-radius: 6px;
     padding: 3px 10px;
-    margin-bottom: 10px;
 }
 
 .news-date-chip {
@@ -289,7 +377,7 @@
     justify-content: center !important;
     position: relative;
     height: auto !important;
-    min-height: calc(100vh - 90px);
+    min-height: 100vh;
     padding: 40px 0;
     gap: 0;
 
@@ -336,7 +424,7 @@
 
 /* ─── Publications page ────────────────────────────────────────────────────── */
 .pub-paper-item {
-    padding: 22px 0;
+    padding: 14px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     transition: background $t-sm;
 
@@ -346,15 +434,37 @@
 }
 
 .pub-venue-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.6px;
-    border-radius: 6px;
-    padding: 3px 10px;
+    letter-spacing: 0.5px;
+    border-radius: 999px;
+    padding: 3px 11px;
     margin-right: 6px;
     margin-bottom: 4px;
-    color: #fff;
+    color: #0d7a5f;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.role-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 999px;
+    padding: 3px 11px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    color: #0d7a5f;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .pub-award-badge {
@@ -457,23 +567,29 @@
 .pub-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 8px;
+    gap: 6px;
+    margin-top: 6px;
     align-items: center;
 }
 
 .pub-link {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     color: #2563eb;
     text-decoration: none;
-    padding: 3px 0;
-    border-bottom: 1px solid transparent;
-    transition: border-color $t-sm;
     letter-spacing: 0.2px;
+    padding: 3px 11px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.07);
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background $t-sm, border-color $t-sm, box-shadow $t-sm;
 
     &:hover {
-        border-bottom-color: #2563eb;
+        background: rgba(37, 99, 235, 0.14);
+        border-color: rgba(37, 99, 235, 0.35);
+        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
     }
 }
 
@@ -508,7 +624,7 @@
 .pub-authors {
     font-size: 15px;
     color: #555;
-    margin: 6px 0 8px;
+    margin: 3px 0 6px;
     line-height: 1.5;
 }
 
