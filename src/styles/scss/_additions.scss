@@ -13,7 +13,7 @@
     pointer-events: none;
     position: absolute;
     right: 24px;
-    top: 15%;
+    top: calc(50vh - 260px);
     transform: none;
     height: auto !important;
     width: auto !important;
@@ -46,12 +46,27 @@
     height: auto;
     padding: 6px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(24px) saturate(2);
-    -webkit-backdrop-filter: blur(24px) saturate(2);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12),
-                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    background: linear-gradient(
+        150deg,
+        rgba(0, 110, 120, 0.22) 0%,
+        rgba(20, 60, 130, 0.18) 55%,
+        rgba(50, 20, 100, 0.22) 100%
+    );
+    backdrop-filter: blur(24px) saturate(2) brightness(1.04);
+    -webkit-backdrop-filter: blur(24px) saturate(2) brightness(1.04);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow:
+        /* outer depth */
+        0 12px 48px rgba(10, 40, 100, 0.14),
+        0 2px 8px rgba(0, 0, 0, 0.08),
+        /* top edge — bright catch light */
+        inset 0 1px 0 rgba(255, 255, 255, 0.75),
+        /* bottom edge — dim, in shadow */
+        inset 0 -1px 0 rgba(255, 255, 255, 0.12),
+        /* left edge — secondary highlight */
+        inset 1px 0 0 rgba(255, 255, 255, 0.40),
+        /* right edge — dimmest */
+        inset -1px 0 0 rgba(255, 255, 255, 0.18);
     gap: 2px;
     cursor: grab;
     user-select: none;
@@ -111,17 +126,18 @@
     border: 1px solid transparent;
     &::after { display: none !important; }
     &:hover {
-        background: rgba(255, 255, 255, 0.28) !important;
-        border-color: rgba(255, 255, 255, 0.45) !important;
+        background: rgba(255, 255, 255, 0.30) !important;
+        border-color: rgba(255, 255, 255, 0.50) !important;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
         color: #1a1a1a !important;
     }
 }
 .mil-navigation ul li.mil-active > a::before { display: none !important; }
 .mil-navigation ul li.mil-active > a {
-    background: rgba(255, 255, 255, 0.35) !important;
-    border: 1px solid rgba(255, 255, 255, 0.55) !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.7) !important;
+    background: rgba(255, 255, 255, 0.50) !important;
+    border: 1px solid rgba(255, 255, 255, 0.65) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    border-radius: 999px !important;
     color: #1a1a1a !important;
     font-weight: 700 !important;
 }
@@ -233,7 +249,67 @@
 
     .mil-top-panel .mil-top-panel-btns {
         padding-right: 0 !important;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Push lang toggle + hamburger to the right as a group */
+    .nav-pill > .lang-toggle {
         margin-left: auto;
+        margin-top: 0;
+        margin-right: 8px;
+    }
+
+    /* Kill the desktop sub-menu decoration so the collapsed sub-ul (max-height:0)
+       doesn't leave a visible border/shadow artifact below the Projects item */
+    .mil-top-panel .mil-navigation ul li.mil-has-children ul {
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+}
+
+/* ─── Language toggle button — sits below the pill, same width ───────────────── */
+.lang-toggle {
+    width: 100%;
+    margin-top: 6px;
+    padding: 7px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+    color: #1a1a1a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease,
+                color 0.2s ease, box-shadow 0.2s ease;
+    font-family: $font-1;
+    pointer-events: all;
+    backdrop-filter: blur(20px) saturate(1.8) brightness(1.04);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8) brightness(1.04);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07),
+                inset 0 1px 0 rgba(255, 255, 255, 0.75);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.70);
+        border-color: rgba(255, 255, 255, 0.85);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.90);
+    }
+}
+
+/* mobile: reset to compact inline button */
+@media screen and (max-width: 1200px) {
+    /* toggle lives below the pill on desktop only; hide on mobile */
+    .mil-top-panel > .lang-toggle {
+        display: none;
     }
 }
 
@@ -316,10 +392,63 @@
 /* ─── Social icons ──────────────────────────────────────────────────────────── */
 .social-icon {
     position: relative;
-    transition: color $t-sm, transform $t-sm !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    backdrop-filter: blur(16px) saturate(1.6);
+    -webkit-backdrop-filter: blur(16px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    transition: transform $t-sm, box-shadow $t-sm, background $t-sm !important;
+
+    & i {
+        font-size: 16px !important;
+    }
 
     &:hover {
-        transform: scale(1.15);
+        transform: scale(1.12);
+    }
+}
+
+/* Scholar — blue */
+.mil-social-icons li:nth-child(1) .social-icon {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.45) 0%, rgba(99, 102, 241, 0.40) 100%);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.40);
+    &:hover {
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.65) 0%, rgba(99, 102, 241, 0.58) 100%);
+        box-shadow: 0 6px 22px rgba(37, 99, 235, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.50);
+    }
+}
+
+/* GitHub — slate */
+.mil-social-icons li:nth-child(2) .social-icon {
+    background: linear-gradient(135deg, rgba(30, 30, 46, 0.55) 0%, rgba(71, 85, 105, 0.45) 100%);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    &:hover {
+        background: linear-gradient(135deg, rgba(30, 30, 46, 0.72) 0%, rgba(71, 85, 105, 0.62) 100%);
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+}
+
+/* Twitter/X — sky blue */
+.mil-social-icons li:nth-child(3) .social-icon {
+    background: linear-gradient(135deg, rgba(29, 155, 240, 0.45) 0%, rgba(0, 186, 255, 0.38) 100%);
+    box-shadow: 0 4px 16px rgba(29, 155, 240, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.40);
+    &:hover {
+        background: linear-gradient(135deg, rgba(29, 155, 240, 0.65) 0%, rgba(0, 186, 255, 0.55) 100%);
+        box-shadow: 0 6px 22px rgba(29, 155, 240, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.50);
+    }
+}
+
+/* Email — coral/red */
+.mil-social-icons li:nth-child(4) .social-icon {
+    background: linear-gradient(135deg, rgba(220, 60, 60, 0.42) 0%, rgba(240, 120, 60, 0.38) 100%);
+    box-shadow: 0 4px 16px rgba(220, 60, 60, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.40);
+    &:hover {
+        background: linear-gradient(135deg, rgba(220, 60, 60, 0.62) 0%, rgba(240, 120, 60, 0.55) 100%);
+        box-shadow: 0 6px 22px rgba(220, 60, 60, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.50);
     }
 }
 

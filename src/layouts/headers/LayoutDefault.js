@@ -3,10 +3,13 @@ import { useState, useRef } from "react";
 import appData from "@data/app.json";
 import { useRouter } from 'next/router';
 import LogoMark from "@components/LogoMark";
+import { useLanguage } from "@library/LanguageContext";
+import { translations } from "@library/i18n";
 
 const DefaultHeader = ({ extraClass }) => {
   const [toggle, setToggle] = useState(false);
   const [dragging, setDragging] = useState(false);
+  const { lang, setLang } = useLanguage();
   const [pos, setPos] = useState(null); // null = use CSS default position
   const dragRef = useRef(null);
 
@@ -92,7 +95,7 @@ const DefaultHeader = ({ extraClass }) => {
                 <ul>
                     {navItems.map((item, key) => (
                     <li className={item.classes} key={`header-menu-item-${key}`}>
-                        <a href={item.link}>{item.label}</a>
+                        <a href={item.link}>{translations.nav[item.label]?.[lang] ?? item.label}</a>
                         {item.children != 0 &&
                         <ul>
                             {item.children.map((subitem, key2) => (
@@ -116,6 +119,14 @@ const DefaultHeader = ({ extraClass }) => {
         </div>
 
       </div>
+
+      <button
+        className="lang-toggle"
+        onClick={() => setLang(lang === 'en' ? 'zh' : 'en')}
+        title={lang === 'en' ? 'Switch to Chinese' : '切换到英文'}
+      >
+        {lang === 'en' ? '中文' : 'EN'}
+      </button>
     </div>
     {/* top bar end */}
 

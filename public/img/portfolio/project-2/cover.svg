@@ -1,0 +1,147 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <radialGradient id="gAgentBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </radialGradient>
+    <radialGradient id="gAgentOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </radialGradient>
+    <radialGradient id="gAgentGreen" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </radialGradient>
+    <radialGradient id="gAgentPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#9333ea"/>
+    </radialGradient>
+    <radialGradient id="gAgentYellow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </radialGradient>
+    <radialGradient id="gCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </radialGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowStrong">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="url(#bg2)"/>
+
+  <!-- Subtle circuit/grid pattern -->
+  <g opacity="0.06" stroke="#60a5fa" stroke-width="1" fill="none">
+    <line x1="0" y1="125" x2="900" y2="125"/>
+    <line x1="0" y1="250" x2="900" y2="250"/>
+    <line x1="0" y1="375" x2="900" y2="375"/>
+    <line x1="180" y1="0" x2="180" y2="500"/>
+    <line x1="360" y1="0" x2="360" y2="500"/>
+    <line x1="540" y1="0" x2="540" y2="500"/>
+    <line x1="720" y1="0" x2="720" y2="500"/>
+  </g>
+
+  <!-- ── Edge connections ───────────────────────────────────── -->
+  <!-- Robot joints cluster (left side) — tight connections -->
+  <line x1="195" y1="175" x2="265" y2="245" stroke="#60a5fa" stroke-width="1.5" opacity="0.5"/>
+  <line x1="195" y1="175" x2="190" y2="275" stroke="#60a5fa" stroke-width="1.5" opacity="0.5"/>
+  <line x1="265" y1="245" x2="190" y2="275" stroke="#60a5fa" stroke-width="1.5" opacity="0.5"/>
+  <line x1="265" y1="245" x2="230" y2="355" stroke="#60a5fa" stroke-width="1.2" opacity="0.4"/>
+  <line x1="190" y1="275" x2="230" y2="355" stroke="#60a5fa" stroke-width="1.2" opacity="0.4"/>
+  <line x1="195" y1="175" x2="155" y2="310" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+  <line x1="155" y1="310" x2="190" y2="275" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+  <line x1="155" y1="310" x2="230" y2="355" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+
+  <!-- Robot joints to center (coordination) -->
+  <line x1="265" y1="245" x2="450" y2="250" stroke="#60a5fa" stroke-width="1.5" opacity="0.35" stroke-dasharray="8 4"/>
+  <line x1="190" y1="275" x2="450" y2="250" stroke="#60a5fa" stroke-width="1.2" opacity="0.3" stroke-dasharray="8 4"/>
+
+  <!-- Multi-agent learning cluster (right side) — communication links -->
+  <line x1="635" y1="145" x2="740" y2="200" stroke="#34d399" stroke-width="1.5" opacity="0.45"/>
+  <line x1="635" y1="145" x2="680" y2="280" stroke="#34d399" stroke-width="1.5" opacity="0.45"/>
+  <line x1="740" y1="200" x2="760" y2="340" stroke="#34d399" stroke-width="1.2" opacity="0.4"/>
+  <line x1="680" y1="280" x2="760" y2="340" stroke="#34d399" stroke-width="1.5" opacity="0.45"/>
+  <line x1="680" y1="280" x2="740" y2="200" stroke="#34d399" stroke-width="1" opacity="0.3"/>
+  <line x1="635" y1="145" x2="760" y2="340" stroke="#34d399" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Cross-cluster connections through center -->
+  <line x1="635" y1="145" x2="450" y2="250" stroke="#c084fc" stroke-width="1.2" opacity="0.3" stroke-dasharray="6 3"/>
+  <line x1="680" y1="280" x2="450" y2="250" stroke="#c084fc" stroke-width="1.2" opacity="0.3" stroke-dasharray="6 3"/>
+  <line x1="740" y1="200" x2="450" y2="250" stroke="#c084fc" stroke-width="1" opacity="0.25" stroke-dasharray="6 3"/>
+
+  <!-- ── Central coordination node ──────────────────────────── -->
+  <circle cx="450" cy="250" r="38" fill="none" stroke="#f1f5f9" stroke-width="1" opacity="0.15"/>
+  <circle cx="450" cy="250" r="28" fill="url(#gCenter)" filter="url(#glowStrong)"/>
+
+  <!-- ── Robot joint cluster (left) ─────────────────────────── -->
+  <!-- Label: "Joints as Agents" -->
+  <text x="195" y="100" text-anchor="middle" font-size="10" fill="#60a5fa" font-weight="700" letter-spacing="1" opacity="0.8">ROBOT JOINTS</text>
+  <line x1="130" y1="108" x2="260" y2="108" stroke="#60a5fa" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Joint nodes (robot skeleton) -->
+  <!-- Shoulder -->
+  <circle cx="195" cy="175" r="22" fill="url(#gAgentBlue)" filter="url(#glow2)"/>
+  <text x="195" y="171" text-anchor="middle" font-size="9" fill="white" font-weight="700">J1</text>
+  <text x="195" y="183" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)">shoulder</text>
+
+  <!-- Elbow -->
+  <circle cx="265" cy="245" r="20" fill="url(#gAgentBlue)" filter="url(#glow2)"/>
+  <text x="265" y="241" text-anchor="middle" font-size="9" fill="white" font-weight="700">J2</text>
+  <text x="265" y="253" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)">elbow</text>
+
+  <!-- Hip -->
+  <circle cx="190" cy="275" r="20" fill="url(#gAgentBlue)" filter="url(#glow2)"/>
+  <text x="190" y="271" text-anchor="middle" font-size="9" fill="white" font-weight="700">J3</text>
+  <text x="190" y="283" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)">hip</text>
+
+  <!-- Knee -->
+  <circle cx="230" cy="355" r="20" fill="url(#gAgentBlue)" filter="url(#glow2)"/>
+  <text x="230" y="351" text-anchor="middle" font-size="9" fill="white" font-weight="700">J4</text>
+  <text x="230" y="363" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)">knee</text>
+
+  <!-- Ankle -->
+  <circle cx="155" cy="310" r="18" fill="url(#gAgentBlue)" opacity="0.85" filter="url(#glow2)"/>
+  <text x="155" y="306" text-anchor="middle" font-size="9" fill="white" font-weight="700">J5</text>
+  <text x="155" y="318" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)">ankle</text>
+
+  <!-- Muscle synergy label -->
+  <rect x="80" y="415" width="145" height="24" rx="8" fill="rgba(37,99,235,0.2)" stroke="#60a5fa" stroke-width="0.8" opacity="0.7"/>
+  <text x="153" y="431" text-anchor="middle" font-size="10" fill="#93c5fd" font-weight="600">Muscle Synergy</text>
+
+  <!-- ── Multi-agent learning cluster (right) ───────────────── -->
+  <!-- Label -->
+  <text x="700" y="100" text-anchor="middle" font-size="10" fill="#34d399" font-weight="700" letter-spacing="1" opacity="0.8">MULTI-AGENT LEARNING</text>
+  <line x1="590" y1="108" x2="810" y2="108" stroke="#34d399" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Agent nodes with roles -->
+  <circle cx="635" cy="145" r="24" fill="url(#gAgentGreen)" filter="url(#glow2)"/>
+  <text x="635" y="149" text-anchor="middle" font-size="9" fill="white" font-weight="800">R1</text>
+
+  <circle cx="740" cy="200" r="22" fill="url(#gAgentOrange)" filter="url(#glow2)"/>
+  <text x="740" y="204" text-anchor="middle" font-size="9" fill="white" font-weight="800">R2</text>
+
+  <circle cx="680" cy="280" r="24" fill="url(#gAgentPurple)" filter="url(#glow2)"/>
+  <text x="680" y="284" text-anchor="middle" font-size="9" fill="white" font-weight="800">R3</text>
+
+  <circle cx="760" cy="340" r="22" fill="url(#gAgentYellow)" filter="url(#glow2)"/>
+  <text x="760" y="344" text-anchor="middle" font-size="9" fill="#1e293b" font-weight="800">R4</text>
+
+  <!-- Role-based label -->
+  <rect x="605" y="415" width="195" height="24" rx="8" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="0.8" opacity="0.7"/>
+  <text x="703" y="431" text-anchor="middle" font-size="10" fill="#6ee7b7" font-weight="600">Role-Based Cooperation</text>
+
+  <!-- ── Title ───────────────────────────────────────────────── -->
+  <text x="450" y="458" text-anchor="middle" font-size="22" fill="#f1f5f9" font-weight="800" letter-spacing="-0.5">Multi-Agent / Robots</text>
+  <text x="450" y="480" text-anchor="middle" font-size="12" fill="#94a3b8" font-weight="500">Reinforcement Learning · Coordination · Embodied AI</text>
+</svg>

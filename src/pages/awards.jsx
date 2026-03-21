@@ -5,6 +5,8 @@ import CallToActionSection from "@components/sections/CallToAction";
 import { useEffect } from "react";
 import { accordion } from "@/src/common/utilits";
 import { getSortedAwardsData, getPostData } from "@library/awards";
+import { useLanguage } from "@library/LanguageContext";
+import { translations, pick } from "@library/i18n";
 
 const TrophyIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
@@ -14,13 +16,16 @@ const TrophyIcon = () => (
 );
 
 export default function Awards({ posts }) {
+  const { lang } = useLanguage();
+  const t = translations.awards;
+
   useEffect(() => {
     accordion();
   }, []);
 
   return (
     <Layouts fullWidth>
-      <PageBanner pageTitle="Awards & Honors" />
+      <PageBanner pageTitle={pick(t.banner, lang)} />
 
       <div className="mil-p-0-60">
         {posts.map((post) => (
@@ -64,7 +69,9 @@ export default function Awards({ posts }) {
                             <div
                                 className="mil-accordion-content"
                                 style={{fontSize: '20px'}}
-                                dangerouslySetInnerHTML={{__html: item.value}}
+                                dangerouslySetInnerHTML={{
+                                    __html: pick(t.values[item.label], lang) ?? item.value
+                                }}
                             />
                         </div>
                     ))}

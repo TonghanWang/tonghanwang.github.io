@@ -1,9 +1,14 @@
 import Layouts from "@/src/layouts/Layouts";
 import Link from "next/link";
+import { useLanguage } from "@library/LanguageContext";
+import { translations, pick } from "@library/i18n";
 
 const E404 = () => {
+  const { lang } = useLanguage();
+  const t = translations.notFound;
+
   return (
-    <Layouts 
+    <Layouts
       noFooter
       rightPanelBackground={"/img/person/bg-3.jpg"}
       rightPanelImg={"/img/person/3.png"}
@@ -12,9 +17,9 @@ const E404 = () => {
       <section className="mil-side-banner mil-center">
         <div className="mil-banner-top mil-up" />
         <div className="mil-banner-title">
-          <h3 className="mil-dark mil-up mil-mb-30">Page not found</h3>
+          <h3 className="mil-dark mil-up mil-mb-30">{pick(t.title, lang)}</h3>
           <h1 className="mil-404 mil-up mil-mb-30">404</h1>
-          <p className="mil-upper mil-dark mil-up">Oops! Something went wrong :(</p>
+          <p className="mil-upper mil-dark mil-up">{pick(t.subtitle, lang)}</p>
         </div>
         <div className="mil-up mil-oval-frame">
           <div className="mil-circle-text">
@@ -26,8 +31,7 @@ const E404 = () => {
               <g>
                 <use xlinkHref="#circlePath" fill="none" />
                 <text style={{"letterSpacing": "7.8px"}}>
-                  {/* circle text */}
-                  <textPath xlinkHref="#circlePath">Go back to the homepage - </textPath>
+                  <textPath xlinkHref="#circlePath">{pick(t.circleText, lang)}</textPath>
                 </text>
               </g>
             </svg>

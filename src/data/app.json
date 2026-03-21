@@ -27,14 +27,14 @@
         "children": 0
       },
       {
+        "label": "Awards",
+        "link": "/awards",
+        "children": 0
+      },
+      {
         "label": "Projects",
         "link": "/projects",
-        "children": [
-          {
-            "label": "Recruitment",
-            "link": "/blog/recruitment"
-          }
-        ]
+        "children": 0
       },
       {
         "label": "Teaching & Service",
@@ -42,12 +42,7 @@
         "children": 0
       },
       {
-        "label": "Awards",
-        "link": "/awards",
-        "children": 0
-      },
-      {
-        "label": "Contact",
+        "label": "Join Us",
         "link": "/contact",
         "children": 0
       }

@@ -264,12 +264,11 @@ frame
             }
 
             & a {
-                font-size: 30px;
                 color: $panel-text-color;
                 transition: $t-sm;
 
                 &:hover {
-                    color: $accent;
+                    color: $panel-text-color;
                 }
             }
         }

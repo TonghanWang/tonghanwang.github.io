@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import appData from "@data/app.json";
+import { LanguageProvider } from "@library/LanguageContext";
 
 //import '../styles/scss/style-dark.scss';
 import '../styles/scss/style-light.scss';
@@ -11,7 +12,7 @@ register();
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <LanguageProvider>
         <Head>
             {/* seo begin */}
             <title>{appData.settings.siteName}</title>
@@ -21,7 +22,7 @@ function MyApp({ Component, pageProps }) {
             {/* seo end */}
         </Head>
         <Component {...pageProps} />
-    </>
+    </LanguageProvider>
   );
 }
 

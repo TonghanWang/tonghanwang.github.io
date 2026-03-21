@@ -2,6 +2,8 @@ import { useState } from "react";
 import Layouts from "@layouts/Layouts";
 import PageBanner from "@components/PageBanner";
 import PubData from "@data/sections/publications.json";
+import { useLanguage } from "@library/LanguageContext";
+import { translations, pick } from "@library/i18n";
 
 // ── Award badge icon ──────────────────────────────────────────────────────────
 const StarIcon = () => (
@@ -12,22 +14,23 @@ const StarIcon = () => (
 );
 
 // ── Single paper row ──────────────────────────────────────────────────────────
-const PaperItem = ({ paper, catId, idx }) => {
+const PaperItem = ({ paper, catId, idx, lang }) => {
     const [showAbstract, setShowAbstract] = useState(false);
+    const t = translations.publications;
 
     return (
         <li className="mil-up pub-paper-item">
 
-            {/* ── Title row ──────────────────────────────────────── */}
+            {/* ── Title row — paper titles stay in English ────────────── */}
             <div className="pub-year-group">
                 <p className="pub-title">{paper.title}</p>
                 <span className="pub-year-badge">{paper.year}</span>
             </div>
 
-            {/* ── Authors ─────────────────────────────────────────── */}
+            {/* ── Authors stay in English ──────────────────────────────── */}
             <p className="pub-authors">{paper.authors}</p>
 
-            {/* ── Venue + award badges + links ─────────────────────── */}
+            {/* ── Venue + award badges + links — all stay in English ────── */}
             <div className="pub-links" style={{ flexWrap: 'wrap', gap: '6px' }}>
                 <span className="pub-venue-badge" title={paper.venueFull}>
                     {paper.venueShort}
@@ -45,19 +48,19 @@ const PaperItem = ({ paper, catId, idx }) => {
                 ))}
             </div>
 
-            {/* ── Toggle buttons ───────────────────────────────────── */}
+            {/* ── Toggle buttons ───────────────────────────────────────── */}
             {paper.abstract && (
                 <div>
                     <button
                         className={`pub-toggle-btn${showAbstract ? ' active' : ''}`}
                         onClick={() => setShowAbstract(v => !v)}
                     >
-                        {showAbstract ? '− Abstract' : '+ Abstract'}
+                        {showAbstract ? pick(t.abstractClose, lang) : pick(t.abstractOpen, lang)}
                     </button>
                 </div>
             )}
 
-            {/* ── Abstract panel ───────────────────────────────────── */}
+            {/* ── Abstract panel ───────────────────────────────────────── */}
             {showAbstract && paper.abstract && (
                 <div className="pub-abstract-box">{paper.abstract}</div>
             )}
@@ -66,48 +69,56 @@ const PaperItem = ({ paper, catId, idx }) => {
 };
 
 // ── Page ──────────────────────────────────────────────────────────────────────
-const Story = () => (
-    <Layouts fullWidth={true}>
-        <PageBanner pageTitle="Publications" />
+const Story = () => {
+    const { lang } = useLanguage();
+    const t = translations.publications;
 
-        <section style={{ paddingBottom: '60px' }}>
-            <div className="row">
-                <div className="col-xl-12">
-                    {PubData.categories.map(cat => (
-                        <div key={cat.id}>
+    return (
+        <Layouts fullWidth={true}>
+            <PageBanner pageTitle={pick(t.banner, lang)} />
 
-                            {/* Section header */}
-                            <div className="mil-section-title mil-up mil-left mil-mb-90"
-                                 style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                                <div>
-                                    <div className="mil-divider"></div>
-                                    <h3 style={{ display: 'inline' }}>{cat.title}</h3>
+            <section style={{ paddingBottom: '60px' }}>
+                <div className="row">
+                    <div className="col-xl-12">
+                        {PubData.categories.map(cat => (
+                            <div key={cat.id}>
+
+                                {/* Section header — translated */}
+                                <div className="mil-section-title mil-up mil-left mil-mb-90"
+                                     style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                                    <div>
+                                        <div className="mil-divider"></div>
+                                        <h3 style={{ display: 'inline' }}>
+                                            {pick(t.categories[cat.id], lang) ?? cat.title}
+                                        </h3>
+                                    </div>
+                                    <span className="pub-section-count">{cat.papers.length}</span>
                                 </div>
-                                <span className="pub-section-count">{cat.papers.length}</span>
-                            </div>
 
-                            {/* Papers */}
-                            <div className="mil-timeline mil-mb-90" style={{ marginBottom: '40px' }}>
-                                <div className="mil-timeline-track"></div>
-                                <ul style={{ paddingLeft: 0 }}>
-                                    {cat.papers.map((paper, idx) => (
-                                        <PaperItem
-                                            key={`${cat.id}-${idx}`}
-                                            paper={paper}
-                                            catId={cat.id}
-                                            idx={idx}
-                                        />
-                                    ))}
-                                </ul>
-                            </div>
+                                {/* Papers */}
+                                <div className="mil-timeline mil-mb-90" style={{ marginBottom: '40px' }}>
+                                    <div className="mil-timeline-track"></div>
+                                    <ul style={{ paddingLeft: 0 }}>
+                                        {cat.papers.map((paper, idx) => (
+                                            <PaperItem
+                                                key={`${cat.id}-${idx}`}
+                                                paper={paper}
+                                                catId={cat.id}
+                                                idx={idx}
+                                                lang={lang}
+                                            />
+                                        ))}
+                                    </ul>
+                                </div>
 
-                        </div>
-                    ))}
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
-    </Layouts>
-);
+            </section>
+        </Layouts>
+    );
+};
 
 export default Story;
 

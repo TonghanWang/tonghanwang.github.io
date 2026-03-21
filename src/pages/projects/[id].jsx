@@ -405,6 +405,62 @@ const ProjectDetail = ( props ) => {
                 </>
               }
 
+              {typeof postData.description11 != "undefined" &&
+                <>
+                  {postData.description11.enabled == 1 &&
+                  <>
+                    <div className="col-lg-3">
+                        <h3 className="mil-up mil-mb-30">{postData.description11.heading}</h3>
+                    </div>
+                      <div className="col-lg-9">
+                          {postData.description11.button != undefined &&
+                              <a href={postData.description11.button.link} target={postData.description11.button.target}
+                                 className="mil-link mil-up mil-mb-15">
+                                  <span>{postData.description11.button.label}</span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                                       strokeLinejoin="round" className="feather feather-arrow-right">
+                                      <line x1="5" y1="12" x2="19" y2="12"/>
+                                      <polyline points="12 5 19 12 12 19"/>
+                                  </svg>
+                              </a>
+                          }
+                          <div className="mil-up mil-mb-30"
+                               dangerouslySetInnerHTML={{__html: postData.description11.content}}/>
+                      </div>
+                  </>
+                  }
+                </>
+              }
+
+              {typeof postData.description12 != "undefined" &&
+                <>
+                  {postData.description12.enabled == 1 &&
+                  <>
+                    <div className="col-lg-3">
+                        <h3 className="mil-up mil-mb-30">{postData.description12.heading}</h3>
+                    </div>
+                      <div className="col-lg-9">
+                          {postData.description12.button != undefined &&
+                              <a href={postData.description12.button.link} target={postData.description12.button.target}
+                                 className="mil-link mil-up mil-mb-15">
+                                  <span>{postData.description12.button.label}</span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                                       strokeLinejoin="round" className="feather feather-arrow-right">
+                                      <line x1="5" y1="12" x2="19" y2="12"/>
+                                      <polyline points="12 5 19 12 12 19"/>
+                                  </svg>
+                              </a>
+                          }
+                          <div className="mil-up mil-mb-30"
+                               dangerouslySetInnerHTML={{__html: postData.description12.content}}/>
+                      </div>
+                  </>
+                  }
+                </>
+              }
+
               {typeof postData.description10 != "undefined" &&
                 <>
                   {postData.description10.enabled == 1 &&

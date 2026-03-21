@@ -1,4 +1,6 @@
 import Data from '@data/sliders/testimonial';
+import { useLanguage } from "@library/LanguageContext";
+import { translations, pick } from "@library/i18n";
 
 const ACCENT      = '#2563eb';
 const ACCENT_BG   = 'rgba(37, 99, 235, 0.07)';
@@ -39,7 +41,7 @@ function highlightPhrase(text, phrase) {
 }
 
 // ── Card ──────────────────────────────────────────────────────────────────────
-const NewsCard = ({ item, index }) => {
+const NewsCard = ({ item, index, i18nItem, lang }) => {
     const isAward = item.type === 'award';
     const color   = isAward ? ACCENT : TEAL;
     const colorBg = isAward ? ACCENT_BG : TEAL_BG;
@@ -76,6 +78,14 @@ const NewsCard = ({ item, index }) => {
         animationDelay: `${index * 0.1}s`,
     };
 
+    // Use translated strings when available, fall back to raw data
+    const displayName = i18nItem ? pick(i18nItem.name, lang) : item.name;
+    const displayText = i18nItem ? pick(i18nItem.text, lang) : item.text;
+    const displayDate = i18nItem ? pick(i18nItem.date, lang) : item.date;
+    const displayLinkText = (i18nItem?.link && item.link)
+        ? pick(i18nItem.link, lang)
+        : item.link?.text;
+
     return (
         <div
             className="news-card"
@@ -111,7 +121,7 @@ const NewsCard = ({ item, index }) => {
 
             {/* Body */}
             <div style={{ flex: 1 }}>
-                {/* Badge row */}
+                {/* Badge row — role and venue names stay in English */}
                 <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '4px', marginBottom: '10px' }}>
                     <span className="news-badge" style={{
                         color: color,
@@ -119,16 +129,16 @@ const NewsCard = ({ item, index }) => {
                     }}>
                         {item.role}
                     </span>
-                    {item.date && (
-                        <span className="news-date-chip">{item.date}</span>
+                    {displayDate && (
+                        <span className="news-date-chip">{displayDate}</span>
                     )}
                 </div>
 
                 <p style={{ fontSize: '17px', fontWeight: '700', color: '#1a1a1a', lineHeight: '1.4', margin: '0 0 8px' }}>
-                    {highlightPhrase(item.name, item.highlight)}
+                    {highlightPhrase(displayName, item.highlight)}
                 </p>
                 <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.7', margin: '0 0 10px' }}>
-                    {item.text}
+                    {displayText}
                 </p>
                 {item.link && (
                     <a href={item.link.href} target="_blank" rel="noopener noreferrer"
@@ -136,7 +146,7 @@ const NewsCard = ({ item, index }) => {
                                 borderBottom: '1px solid transparent', transition: 'border-color 0.15s' }}
                        onMouseEnter={e => e.currentTarget.style.borderBottomColor = color}
                        onMouseLeave={e => e.currentTarget.style.borderBottomColor = 'transparent'}>
-                        {item.link.text} →
+                        {displayLinkText} →
                     </a>
                 )}
             </div>
@@ -145,13 +155,17 @@ const NewsCard = ({ item, index }) => {
 };
 
 // ── Section ───────────────────────────────────────────────────────────────────
-const TestimonialSlider = () => (
+const TestimonialSlider = () => {
+    const { lang } = useLanguage();
+    const i18nItems = translations.news.items;
+
+    return (
     <section id="news" style={{ padding: '60px 0 80px' }}>
         <p className="mil-upper mil-up" style={{
             fontSize: '13px', fontWeight: '600', letterSpacing: '2px',
             textTransform: 'uppercase', color: '#888', marginBottom: '32px',
         }}>
-            News
+            {pick(translations.news.heading, lang)}
         </p>
 
         <div className="news-bg-wrap">
@@ -200,11 +214,18 @@ const TestimonialSlider = () => (
 
             <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 {Data.items.map((item, key) => (
-                    <NewsCard key={`news-item-${key}`} item={item} index={key} />
+                    <NewsCard
+                        key={`news-item-${key}`}
+                        item={item}
+                        index={key}
+                        i18nItem={i18nItems[key]}
+                        lang={lang}
+                    />
                 ))}
             </div>
         </div>
     </section>
-);
+    );
+};
 
 export default TestimonialSlider;

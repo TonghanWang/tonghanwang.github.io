@@ -1,5 +1,7 @@
 import Data from "@data/sections/hero-1.json";
 import AboutData from "@data/sections/about.json";
+import { useLanguage } from "@library/LanguageContext";
+import { translations, pick } from "@library/i18n";
 
 function escapeRegExp(str) {
     return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -34,6 +36,18 @@ function highlightText(text, { links = {}, highlights = [], linkColor } = {}) {
 }
 
 const HeroOne = () => {
+    const { lang } = useLanguage();
+    const t = translations.hero;
+
+    const description   = pick(t.description, lang);
+    const descLinks     = t.descriptionLinks[lang] ?? t.descriptionLinks.en;
+    const bio           = pick(t.bio, lang);
+    const bioLinks      = t.bioLinks[lang] ?? t.bioLinks.en;
+    const recruiting    = pick(t.recruiting, lang);
+    const problems      = t.problems[lang] ?? t.problems.en;
+    const tooltipText   = pick(t.tooltip, lang);
+    const showCNLink    = t.showChineseProfileLink[lang] ?? true;
+
     return (
         <>
             {/* banner */}
@@ -47,10 +61,7 @@ const HeroOne = () => {
                         <span dangerouslySetInnerHTML={{ __html: Data.title }} style={{ fontSize: '45px' }} />
                         <span className="tooltip">
                             <i className="fas fa-info-circle" style={{ fontSize: '10px', verticalAlign: 'middle' }}></i>
-                            <span className="tooltiptext">
-                                Pronunciation of Tonghan: the two syllables sound like 'tongue' and 'hahn.'
-                                Feel free to use any close approximation!
-                            </span>
+                            <span className="tooltiptext">{tooltipText}</span>
                         </span>
                     </h1>
 
@@ -59,18 +70,21 @@ const HeroOne = () => {
 
                         {/* Short intro */}
                         <p className="mil-wide mil-dark" style={{ fontSize: '15px', marginBottom: '4px' }}>
-                            {highlightText(Data.description, { links: AboutData.link1, linkColor: 'inherit' })}
+                            {highlightText(description, { links: descLinks, linkColor: 'inherit' })}
                         </p>
 
                         <p className="academic-font" style={{ fontSize: '18px', textAlign: 'left', marginTop: '14px' }}>
-                            {highlightText(AboutData.description, { links: AboutData.link1, linkColor: 'inherit' })}
-                        </p>
-                        <p className="academic-font" style={{ fontSize: '18px', textAlign: 'left', marginTop: '8px' }}>
-                            {highlightText(AboutData.description3, { links: AboutData.link3, linkColor: 'inherit' })}
+                            {highlightText(bio, { links: bioLinks, linkColor: 'inherit' })}
                         </p>
 
+                        {showCNLink && (
+                            <p className="academic-font" style={{ fontSize: '18px', textAlign: 'left', marginTop: '8px' }}>
+                                {highlightText(AboutData.description3, { links: AboutData.link3, linkColor: 'inherit' })}
+                            </p>
+                        )}
+
                         {/* Research interests block */}
-                        {Array.isArray(AboutData.problems) && AboutData.problems.length > 0 && (
+                        {problems.length > 0 && (
                             <div style={{
                                 borderLeft: '4px solid #2563eb',
                                 borderRadius: '0 10px 10px 0',
@@ -79,21 +93,16 @@ const HeroOne = () => {
                                 background: 'rgba(37, 99, 235, 0.04)',
                             }}>
                                 <p className="academic-font" style={{ fontSize: '16px', textAlign: 'left', marginBottom: '10px', fontWeight: '600', color: '#1a1a1a' }}>
-                                    {highlightText(AboutData.description2, { links: AboutData.link2 })}
+                                    {recruiting}
                                 </p>
                                 <ol style={{ paddingLeft: '1.25rem', listStyleType: 'decimal', display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: 0 }}>
-                                    {AboutData.problems.map((item, idx) => (
+                                    {problems.map((item, idx) => (
                                         <li
                                             key={idx}
                                             className="academic-font"
                                             style={{ fontSize: '17px', textAlign: 'left' }}
                                         >
-                                            {typeof item === 'string'
-                                                ? item
-                                                : highlightText(item.text || '', {
-                                                    links: item.links || {},
-                                                    highlights: item.highlights || [],
-                                                })}
+                                            {item}
                                         </li>
                                     ))}
                                 </ol>
