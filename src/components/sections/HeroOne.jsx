@@ -60,7 +60,7 @@ const HeroOne = () => {
                     <h1 className="mil-up mil-mb-30">
                         <span dangerouslySetInnerHTML={{ __html: Data.title }} style={{ fontSize: '45px' }} />
                         <span className="tooltip">
-                            <i className="fas fa-info-circle" style={{ fontSize: '10px', verticalAlign: 'middle' }}></i>
+                            <i className="fas fa-info-circle" style={{ fontSize: '9px', lineHeight: 1 }}></i>
                             <span className="tooltiptext">{tooltipText}</span>
                         </span>
                     </h1>
