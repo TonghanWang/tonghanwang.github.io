@@ -81,6 +81,7 @@ const DefaultHeader = ({ extraClass }) => {
 
     {/* top bar */}
     <div className="mil-top-panel" style={panelStyle}>
+      <div className="nav-pills-container">
       <div
         className={`nav-pill${dragging ? ' nav-dragging' : ''}`}
         onMouseDown={handleMouseDown}
@@ -120,13 +121,37 @@ const DefaultHeader = ({ extraClass }) => {
 
       </div>
 
-      <button
-        className="lang-toggle"
-        onClick={() => setLang(lang === 'en' ? 'zh' : 'en')}
-        title={lang === 'en' ? 'Switch to Chinese' : '切换到英文'}
-      >
-        {lang === 'en' ? '中文' : 'EN'}
-      </button>
+      <div className="icon-pill">
+          <ul className="nav-pill-social">
+              <li>
+                  <a href="/_Tonghan__Resume.pdf" target="_blank" rel="noopener noreferrer"
+                     className="social-icon" title="Resume" aria-label="Resume">
+                      <i className="fas fa-file-alt" />
+                  </a>
+              </li>
+              {appData.social.map((item, key) => (
+                  <li key={`nav-social-${key}`}>
+                      <a href={item.link}
+                         target={item.link.startsWith('mailto') ? '_self' : '_blank'}
+                         rel="noopener noreferrer"
+                         className="social-icon"
+                         title={item.title}
+                         aria-label={item.title}>
+                          <i className={item.icon} />
+                      </a>
+                  </li>
+              ))}
+          </ul>
+          <button
+              className="lang-toggle"
+              onClick={() => setLang(lang === 'en' ? 'zh' : 'en')}
+              title={lang === 'en' ? 'Switch to Chinese' : '切换到英文'}
+          >
+              {lang === 'en' ? '中文' : 'EN'}
+          </button>
+      </div>
+      </div>
+
     </div>
     {/* top bar end */}
 

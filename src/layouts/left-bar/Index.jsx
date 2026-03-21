@@ -6,14 +6,19 @@ const leftPanelModule = () => {
         {/* left bar */}
             <div className="mil-left-panel">
 
-                <div className="mil-page-name mil-upper mil-dark">
-                    <a href="/_Tonghan__Resume.pdf" target="_blank" rel="noopener noreferrer"
-                       style={{ textDecoration: 'none', color: 'inherit' }}>
-                        Resume
-                    </a>
-                </div>
-
                 <ul className="mil-social-icons">
+                    <li key="lp-resume">
+                        <a
+                            href="/_Tonghan__Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="social-icon"
+                            title="Resume"
+                            aria-label="Resume"
+                        >
+                            <i className="fas fa-file-alt" />
+                        </a>
+                    </li>
                     {appData.social.map((item, key) => (
                         <li key={`lp-social-item-${key}`}>
                             <a

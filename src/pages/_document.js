@@ -10,6 +10,16 @@ class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
           {/* meta end */}
 
+          {/* Google Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXRQXSST4J" />
+          <script dangerouslySetInnerHTML={{ __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LXRQXSST4J');
+          `}} />
+          {/* Google Analytics end */}
+
           {/* public assets begin */}
           <link rel="stylesheet" href="/css/plugins/bootstrap-grid.css" />
           <link rel="stylesheet" href="/css/plugins/font-awesome.min.css" />
