@@ -46,14 +46,6 @@
             "image": "/img/customers/2.jpg",
             "role": "ICML 2024",
             "text": "Our new paper is accepted by ICML 2024. In this paper, we extend discontinuous networks to handle discontinuous, piecewise non-linear utility functions in Bayesian persuasion problem."
-        },
-        {
-            "type": "paper",
-            "date": "Dec 2023",
-            "name": "Discontinuous deep learning for contract design!",
-            "image": "/img/customers/3.jpg",
-            "role": "NeurIPS 2023",
-            "text": "We proposed the first deep learning approach for contract design. The function that needs approximation in the contract setting is discontinuous, so we study how to introduce discontinuity into neural networks in a differentiable way."
         }
     ]
 }
