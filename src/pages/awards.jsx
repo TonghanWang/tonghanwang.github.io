@@ -6,6 +6,13 @@ import { useEffect } from "react";
 import { accordion } from "@/src/common/utilits";
 import { getSortedAwardsData, getPostData } from "@library/awards";
 
+const TrophyIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+         fill="#b45309" style={{ display: 'inline', verticalAlign: 'middle', marginRight: '7px', flexShrink: 0 }}>
+        <path d="M6 2h12v6a6 6 0 0 1-12 0V2zm-2 2H2a2 2 0 0 0-2 2v1a4 4 0 0 0 4 4v-1A2 2 0 0 1 2 8V6h2V4zm16 0h2v2a2 2 0 0 1-2 2v1a4 4 0 0 0 4-4V6a2 2 0 0 0-2-2h-2v2zM11 14.93V17H8v2h8v-2h-3v-2.07A6.02 6.02 0 0 0 18 9H6a6.02 6.02 0 0 0 5 5.93z"/>
+    </svg>
+);
+
 export default function Awards({ posts }) {
   useEffect(() => {
     accordion();
@@ -13,7 +20,7 @@ export default function Awards({ posts }) {
 
   return (
     <Layouts fullWidth>
-      <PageBanner pageTitle="Awards & Honors" align="center" />
+      <PageBanner pageTitle="Awards & Honors" />
 
       <div className="mil-p-0-60">
         {posts.map((post) => (
@@ -43,9 +50,10 @@ export default function Awards({ posts }) {
                         >
                             <div className="mil-accordion-menu">
                                 <p
-                                    className="mil-wide mil-dark mil-up "
-                                    style={{fontSize: "22px"}}
+                                    className="mil-wide mil-dark mil-up"
+                                    style={{ fontSize: "22px", display: 'flex', alignItems: 'center' }}
                                 >
+                                    {item.trophy && <TrophyIcon />}
                                     {item.label}
                                 </p>
                                 <div className="mil-symbol mil-h3">

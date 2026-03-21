@@ -9,7 +9,7 @@ const Contact = () => {
       rightPanelBackground={"/img/person/avatar4.jpg"}
       rightPanelImg={"/img/person/avatar4.jpg"}
     >
-        <PageBanner pageTitle={"Get in touch!"} align={"center"} />
+        <PageBanner pageTitle={"Get in touch!"} />
       
         {/* info */}
         <div>
