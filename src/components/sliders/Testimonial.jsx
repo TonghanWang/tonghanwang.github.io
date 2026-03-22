@@ -79,7 +79,8 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
     };
 
     // Use translated strings when available, fall back to raw data
-    const displayName = i18nItem ? pick(i18nItem.name, lang) : item.name;
+    const displayName      = i18nItem ? pick(i18nItem.name, lang) : item.name;
+    const displayHighlight = i18nItem?.highlight ? pick(i18nItem.highlight, lang) : item.highlight;
     const displayText = i18nItem ? pick(i18nItem.text, lang) : item.text;
     const displayDate = i18nItem ? pick(i18nItem.date, lang) : item.date;
     const displayLinkText = (i18nItem?.link && item.link)
@@ -135,7 +136,7 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
                 </div>
 
                 <p style={{ fontSize: '16px', fontWeight: '700', color: '#1a1a1a', lineHeight: '1.4', margin: '0 0 6px' }}>
-                    {highlightPhrase(displayName, item.highlight)}
+                    {highlightPhrase(displayName, displayHighlight)}
                 </p>
                 <p style={{ fontSize: '14px', color: '#555', lineHeight: '1.6', margin: '0 0 6px' }}>
                     {displayText}

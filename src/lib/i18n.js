@@ -88,6 +88,7 @@ export const translations = {
           en: 'Honored to receive the 2025 Victor Lesser Distinguished Dissertation Award!',
           zh: '荣获 2025 年 Victor Lesser 杰出博士论文奖！',
         },
+        highlight: { en: 'Victor Lesser Distinguished Dissertation Award', zh: 'Victor Lesser 杰出博士论文奖' },
         text: {
           en: "For my dissertation 'Advancing Deep Learning for Multi-agent AI: Mechanisms, Organizations, and Dynamics'.",
           zh: "获奖论文：《Advancing Deep Learning for Multi-agent AI: Mechanisms, Organizations, and Dynamics》。",
@@ -121,6 +122,7 @@ export const translations = {
           en: "Honored to announce that our paper has been awarded the 'Best Paper in AI Track' at ACM EC 2024!",
           zh: '荣获 ACM EC 2024 AI Track 最佳论文奖！',
         },
+        highlight: { en: 'Best Paper in AI Track', zh: 'ACM EC 2024 AI Track 最佳论文奖' },
         text: {
           en: "Working with Yanchen Jiang and David Parkes, we tackled a long-standing problem in microeconomics. We developed the first strategy-proof, multi-bidder, and general auction design algorithm using deep learning.",
           zh: "与 Yanchen Jiang 和 David Parkes 合作，解决了微观经济学中一个长期悬而未决的难题——首次提出基于深度学习的策略防欺骗、多买方、通用拍卖设计算法。",
