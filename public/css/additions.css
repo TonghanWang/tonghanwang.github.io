@@ -263,9 +263,9 @@
     border-radius: 10px;
     padding: 6px 10px;
     position: absolute;
-    left: calc(100% + 10px);
+    right: calc(100% + 10px);
     top: 50%;
-    transform: translateY(-50%) translateX(-4px);
+    transform: translateY(-50%) translateX(4px);
     z-index: 999;
     border: 1px solid rgba(37, 99, 235, 0.12);
     box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08), 0 2px 6px rgba(0, 0, 0, 0.06);
@@ -275,11 +275,11 @@
 .icon-tip::before {
     content: '';
     position: absolute;
-    right: 100%;
+    left: 100%;
     top: 50%;
     transform: translateY(-50%);
     border: 5px solid transparent;
-    border-right-color: rgba(255, 255, 255, 0.95);
+    border-left-color: rgba(255, 255, 255, 0.95);
 }
 .social-icon:hover .icon-tip,
 .lang-toggle:hover .icon-tip {
