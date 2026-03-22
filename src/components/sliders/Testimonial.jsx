@@ -50,7 +50,7 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
         display: 'flex',
         alignItems: 'flex-start',
         gap: '20px',
-        padding: '22px 26px',
+        padding: '14px 20px',
         borderRadius: '0 12px 12px 0',
         borderLeft: `4px solid ${color}`,
         background: 'rgba(255, 255, 255, 0.12)',
@@ -65,7 +65,7 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
         display: 'flex',
         alignItems: 'flex-start',
         gap: '20px',
-        padding: '22px 26px',
+        padding: '14px 20px',
         borderRadius: '0 12px 12px 0',
         borderLeft: `4px solid ${color}`,
         background: 'rgba(255, 255, 255, 0.10)',
@@ -122,7 +122,7 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
             {/* Body */}
             <div style={{ flex: 1 }}>
                 {/* Badge row — role and venue names stay in English */}
-                <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '4px', marginBottom: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '4px', marginBottom: '6px' }}>
                     <span className="news-badge" style={{
                         color: '#374151',
                         background: 'rgba(0, 0, 0, 0.05)',
@@ -134,10 +134,10 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
                     )}
                 </div>
 
-                <p style={{ fontSize: '17px', fontWeight: '700', color: '#1a1a1a', lineHeight: '1.4', margin: '0 0 8px' }}>
+                <p style={{ fontSize: '16px', fontWeight: '700', color: '#1a1a1a', lineHeight: '1.4', margin: '0 0 6px' }}>
                     {highlightPhrase(displayName, item.highlight)}
                 </p>
-                <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.7', margin: '0 0 10px' }}>
+                <p style={{ fontSize: '14px', color: '#555', lineHeight: '1.6', margin: '0 0 6px' }}>
                     {displayText}
                 </p>
                 {item.link && (
@@ -160,8 +160,8 @@ const TestimonialSlider = () => {
     const i18nItems = translations.news.items;
 
     return (
-    <section id="news" style={{ padding: '20px 0 80px' }}>
-        <div className="mil-up" style={{ marginBottom: '32px' }}>
+    <section id="news" style={{ padding: '10px 0 60px' }}>
+        <div className="mil-up" style={{ marginBottom: '20px' }}>
             <span className="hero-tagline">
                 <span className="hero-tagline-dot" />
                 {pick(translations.news.heading, lang)}
@@ -212,7 +212,7 @@ const TestimonialSlider = () => {
 
             </svg>
 
-            <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {Data.items.map((item, key) => (
                     <NewsCard
                         key={`news-item-${key}`}

@@ -58,7 +58,7 @@ const HeroOne = () => {
                 <div className="mil-banner-title left-align">
 
                     {/* Name */}
-                    <h1 className="mil-up mil-mb-30">
+                    <h1 className="mil-up" style={{ marginBottom: '16px' }}>
                         <span style={{ fontSize: '45px', ...(lang === 'zh' && { fontFamily: "'KaiTi', 'STKaiti', '楷体', serif" }) }}>{title}</span>
                         <span className="tooltip">
                             <i className="fas fa-info-circle" style={{ fontSize: '9px', lineHeight: 1 }}></i>
@@ -74,12 +74,12 @@ const HeroOne = () => {
                             {highlightText(description, { links: descLinks, linkColor: 'inherit' })}
                         </p>
 
-                        <p className="academic-font" style={{ fontSize: '18px', textAlign: 'left', marginTop: '14px' }}>
+                        <p className="academic-font" style={{ fontSize: '18px', textAlign: 'left', marginTop: '10px' }}>
                             {highlightText(bio, { links: bioLinks, linkColor: 'inherit' })}
                         </p>
 
                         {showCNLink && (
-                            <p className="academic-font" style={{ fontSize: '18px', textAlign: 'left', marginTop: '8px' }}>
+                            <p className="academic-font" style={{ fontSize: '18px', textAlign: 'left', marginTop: '6px' }}>
                                 {highlightText(AboutData.description3, { links: AboutData.link3, linkColor: 'inherit' })}
                             </p>
                         )}
@@ -89,19 +89,19 @@ const HeroOne = () => {
                             <div style={{
                                 borderLeft: '4px solid #2563eb',
                                 borderRadius: '0 10px 10px 0',
-                                padding: '16px 20px',
-                                marginTop: '20px',
+                                padding: '12px 18px',
+                                marginTop: '14px',
                                 background: 'rgba(37, 99, 235, 0.04)',
                             }}>
-                                <p className="academic-font" style={{ fontSize: '16px', textAlign: 'left', marginBottom: '10px', fontWeight: '600', color: '#1a1a1a' }}>
+                                <p className="academic-font" style={{ fontSize: '16px', textAlign: 'left', marginBottom: '8px', fontWeight: '600', color: '#1a1a1a' }}>
                                     {recruiting}
                                 </p>
-                                <ol style={{ paddingLeft: '1.25rem', listStyleType: 'decimal', display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: 0 }}>
+                                <ol style={{ paddingLeft: '1.25rem', listStyleType: 'decimal', display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: 0 }}>
                                     {problems.map((item, idx) => (
                                         <li
                                             key={idx}
                                             className="academic-font"
-                                            style={{ fontSize: '17px', textAlign: 'left' }}
+                                            style={{ fontSize: '16px', textAlign: 'left' }}
                                         >
                                             {item}
                                         </li>
