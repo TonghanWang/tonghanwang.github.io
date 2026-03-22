@@ -1,19 +1,11 @@
 import Layouts from "@layouts/Layouts";
 import PageBanner from "@/src/components/PageBanner";
-import dynamic from "next/dynamic";
 
 import { useEffect } from "react";
 
 import { accordion } from "../../common/utilits";
 
-import Link from "next/link";
-
 import { getAllServicesIds, getServiceData } from "@library/services";
-
-import CallToActionSection from "@components/sections/CallToAction";
-import PricingSection from "@components/sections/Pricing";
-
-const TestimonialSlider = dynamic( () => import("@components/sliders/Testimonial"), { ssr: false } );
 
 const ServiceDetail = ( { postData } ) => {
   useEffect(() => {
@@ -21,19 +13,8 @@ const ServiceDetail = ( { postData } ) => {
   }, []);
 
   return (
-    <Layouts
-      // rightPanelBackground={"/img/person/bg-3.jpg"}
-      // rightPanelImg={"/img/person/6.png"}
-        fullWidth={true}
-    >
+    <Layouts fullWidth={true}>
       <PageBanner pageTitle={postData.title} align={"center"} />
-
-      {/*{postData.subtitle != undefined &&*/}
-      {/*<div className="mil-section-title mil-up mil-mb-90">*/}
-      {/*    <div className="mil-divider" />*/}
-      {/*    <h3>{postData.subtitle}</h3>*/}
-      {/*</div>*/}
-      {/*}*/}
 
       {/* about */}
       <div className="row justify-content-center">
@@ -73,13 +54,7 @@ const ServiceDetail = ( { postData } ) => {
         {/* service end */}
       </>
       }
-      
-      {/*<PricingSection />*/}
 
-      {/*<TestimonialSlider />*/}
-
-      {/*<CallToActionSection />*/}
-      
     </Layouts>
   );
 };

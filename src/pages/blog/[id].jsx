@@ -1,32 +1,24 @@
 import Layouts from "@layouts/Layouts";
-import {getAllPostsIds, getPostData, getRelatedPosts} from "@library/posts";
+import {getAllPostsIds, getPostData} from "@library/posts";
 import Date from '@library/date';
 import Link from "next/link";
 import Head from 'next/head';
-import RelatedPostsSection from "@components/sections/RelatedPosts";
-import SubscribeSection from "@components/sections/Subscribe";
 
 const PostsDetail = (props) => {
 
     const postData = props.data;
     const SITE_NAME = 'Tonghan Wang';
     const SITE_URL = 'https://tonghanwang.github.io/';
-    const slug = props.slug; // we’ll pass this from getStaticProps
+    const slug = props.slug;
     const pageUrl = `${SITE_URL}/blog/${slug}`;
     const makeAbs = (u) => (u?.startsWith('http') ? u : `${SITE_URL}${u || ''}`);
     const isRecruitment = props.slug === 'recruitment';
     const title = `${postData.title} ${isRecruitment ? '|' : '–'} ${SITE_NAME}${isRecruitment ? '.' : ''}`;
-
-    // const title = `${postData.title} – ${SITE_NAME}`;
     const description = postData.short || '';
     const ogImage = makeAbs(postData.image) || `${SITE_URL}/static/og/default.jpg`;
 
     return (
-        <Layouts
-            // fullWidth={postData.fullWidth}
-            // rightPanelBackground={postData.image}
-            fullWidth={true}
-        >
+        <Layouts fullWidth={true}>
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={description}/>
@@ -47,10 +39,6 @@ const PostsDetail = (props) => {
                 <div className="mil-banner-top mil-up"/>
                 <div className="mil-banner-title">
                     <ul className="mil-puplication-details mil-up mil-mb-60">
-                        {/*<li className="mil-puplication-author">*/}
-                        {/*  <img src={postData.author.avatar} alt={postData.author.name} />*/}
-                        {/*  <span className="mil-upper mil-dark">{postData.author.name}</span>*/}
-                        {/*</li>*/}
                         {!isRecruitment && (
                             <li><span className="mil-upper mil-dark">Date:</span>&nbsp;&nbsp;<span
                                 className="mil-upper"><Date dateString={postData.date}/></span></li>
@@ -64,9 +52,7 @@ const PostsDetail = (props) => {
                     <ul className="mil-breadcrumbs mil-up">
                         <li><Link href="/">Homepage</Link></li>
                         <li><Link href="/blog">Recruitment</Link></li>
-                        {/*<li>Publication</li>*/}
                     </ul>
-
                 </div>
             </section>
             {/* banner end */}
@@ -111,9 +97,6 @@ const PostsDetail = (props) => {
             </section>
             {/* publication end */}
 
-            {/*<RelatedPostsSection items={props.related} />*/}
-
-            {/*<SubscribeSection />*/}
         </Layouts>
     );
 };
@@ -130,12 +113,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
     const postData = await getPostData(params.id)
-    const relatedPosts = await getRelatedPosts(params.id)
 
     return {
         props: {
             data: postData,
-            related: relatedPosts,
             slug: params.id
         }
     }

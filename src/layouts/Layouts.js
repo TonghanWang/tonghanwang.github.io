@@ -1,13 +1,11 @@
 import { useEffect } from "react";
 import { scrollAnimation } from "../common/scrollAnims";
-import { preloaderAnimation } from "../common/preloader";
 import { countersAnimation } from "../common/counters";
 import { parallaxAnimation } from "../common/parallax";
 import { anchorSscroll } from "../common/utilits";
 
 import Footer from "./footers/Index";
 import Header from "./headers/Index";
-import Preloader from "./preloader/Index";
 import LeftPanel from "./left-bar/Index";
 import RightPanel from "./right-bar/Index";
 import BackToTop from "./back-to-top/Index";
@@ -38,7 +36,6 @@ const Layouts = ({
   }
 
   useEffect(() => {
-    //preloaderAnimation();
     scrollAnimation();
     countersAnimation();
     parallaxAnimation();
@@ -54,8 +51,6 @@ const Layouts = ({
 
   return (
     <div className="mil-wrapper" id="top">
-      {/* <Preloader /> */}
-
       <div className="mil-frame">
 
         {!noHeader && (
@@ -66,7 +61,7 @@ const Layouts = ({
         )}
 
         <LeftPanel />
-        
+
         <BackToTop />
       </div>
 
@@ -78,7 +73,7 @@ const Layouts = ({
             {!noFooter && <Footer layout={footer} />}
           </div>
         </div>
-        
+
         {!fullWidth &&
         <RightPanel background={rightPanelBackground} img={rightPanelImg} />
         }
