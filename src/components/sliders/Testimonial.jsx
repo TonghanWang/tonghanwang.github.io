@@ -166,12 +166,6 @@ const TestimonialSlider = () => {
                 <span className="hero-tagline-dot" />
                 {pick(translations.news.heading, lang)}
             </span>
-            <h2 style={{
-                fontSize: '32px', fontWeight: '700', color: '#1a1a1a',
-                lineHeight: 1.2, marginTop: '12px', marginBottom: 0,
-            }}>
-                {pick(translations.news.subheading, lang)}
-            </h2>
         </div>
 
         <div className="news-bg-wrap">

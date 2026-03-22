@@ -79,8 +79,7 @@ export const translations = {
 
   // ── News / Testimonial section ───────────────────────────────────────────────
   news: {
-    heading:    { en: 'News', zh: '动态' },
-    subheading: { en: 'Recent Updates', zh: '最新动态' },
+    heading: { en: 'News', zh: '动态' },
     // Indexed to match testimonial.json items array order
     items: [
       {
