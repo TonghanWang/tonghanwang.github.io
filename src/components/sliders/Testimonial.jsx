@@ -160,7 +160,7 @@ const TestimonialSlider = () => {
     const i18nItems = translations.news.items;
 
     return (
-    <section id="news" style={{ padding: '60px 0 80px' }}>
+    <section id="news" style={{ padding: '20px 0 80px' }}>
         <p className="mil-upper mil-up" style={{
             fontSize: '13px', fontWeight: '600', letterSpacing: '2px',
             textTransform: 'uppercase', color: '#888', marginBottom: '32px',

@@ -690,11 +690,11 @@
 .mil-side-banner.mil-center {
     flex-direction: column !important;
     align-items: flex-start !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     position: relative;
     height: auto !important;
-    min-height: 100vh;
-    padding: 40px 0;
+    min-height: auto;
+    padding: 60px 0 40px;
     gap: 0;
 
     .mil-banner-title {
