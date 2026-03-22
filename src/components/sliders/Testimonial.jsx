@@ -125,7 +125,7 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
                 <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '4px', marginBottom: '10px' }}>
                     <span className="news-badge" style={{
                         color: '#374151',
-                        background: colorBg,
+                        background: 'rgba(0, 0, 0, 0.05)',
                     }}>
                         {item.role}
                     </span>
