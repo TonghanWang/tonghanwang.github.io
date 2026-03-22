@@ -6,8 +6,6 @@ import LogoMark from "@components/LogoMark";
 import { useLanguage } from "@library/LanguageContext";
 import { translations } from "@library/i18n";
 
-const NAV_POS_KEY = 'navPillPos';
-
 const DefaultHeader = ({ extraClass }) => {
   const [toggle, setToggle] = useState(false);
   const [dragging, setDragging] = useState(false);
@@ -32,14 +30,6 @@ const DefaultHeader = ({ extraClass }) => {
     navItems.push(newobj);
   });
 
-  // Restore saved position after mount (SSR-safe)
-  useEffect(() => {
-    const saved = localStorage.getItem(NAV_POS_KEY);
-    if (saved) {
-      try { setPos(JSON.parse(saved)); } catch {}
-    }
-  }, []);
-
   const handleMouseDown = (e) => {
     e.preventDefault();
 
@@ -49,7 +39,7 @@ const DefaultHeader = ({ extraClass }) => {
     dragRef.current = {
       startMouseX: e.clientX,
       startMouseY: e.clientY,
-      startPosX: rect.left,
+      startRight: window.innerWidth - rect.right,
       startPosY: rect.top,
     };
 
@@ -61,8 +51,9 @@ const DefaultHeader = ({ extraClass }) => {
       if (!dragRef.current) return;
       const dx = e.clientX - dragRef.current.startMouseX;
       const dy = e.clientY - dragRef.current.startMouseY;
+      const newRight = Math.max(0, dragRef.current.startRight - dx);
       latestPos = {
-        x: Math.max(0, dragRef.current.startPosX + dx),
+        right: newRight,
         y: Math.max(0, dragRef.current.startPosY + dy),
       };
       setPos(latestPos);
@@ -70,9 +61,6 @@ const DefaultHeader = ({ extraClass }) => {
 
     const onUp = () => {
       setDragging(false);
-      if (latestPos) {
-        localStorage.setItem(NAV_POS_KEY, JSON.stringify(latestPos));
-      }
       dragRef.current = null;
       document.removeEventListener('mousemove', onMove);
       document.removeEventListener('mouseup', onUp);
@@ -84,8 +72,8 @@ const DefaultHeader = ({ extraClass }) => {
 
   // When pos is set by drag, override CSS position with inline styles
   const panelStyle = pos ? {
-    left: pos.x,
-    right: 'auto',
+    right: pos.right,
+    left: 'auto',
     top: pos.y,
     transform: 'none',
   } : {};
@@ -143,8 +131,9 @@ const DefaultHeader = ({ extraClass }) => {
           <ul className="nav-pill-social">
               <li>
                   <a href="/_Tonghan__Resume.pdf" target="_blank" rel="noopener noreferrer"
-                     className="social-icon" title="Resume" aria-label="Resume">
+                     className="social-icon" aria-label="Resume">
                       <i className="fas fa-file-alt" />
+                      <span className="icon-tip">Resume</span>
                   </a>
               </li>
               {appData.social.map((item, key) => (
@@ -153,9 +142,9 @@ const DefaultHeader = ({ extraClass }) => {
                          target={item.link.startsWith('mailto') ? '_self' : '_blank'}
                          rel="noopener noreferrer"
                          className="social-icon"
-                         title={item.title}
                          aria-label={item.title}>
                           <i className={item.icon} />
+                          <span className="icon-tip">{item.title}</span>
                       </a>
                   </li>
               ))}
@@ -163,9 +152,10 @@ const DefaultHeader = ({ extraClass }) => {
           <button
               className="lang-toggle"
               onClick={() => setLang(lang === 'en' ? 'zh' : 'en')}
-              title={lang === 'en' ? 'Switch to Chinese' : '切换到英文'}
+              aria-label={lang === 'en' ? 'Switch to Chinese' : 'Switch to English'}
           >
               {lang === 'en' ? '中文' : 'EN'}
+              <span className="icon-tip">{lang === 'en' ? 'Switch to Chinese' : '切换到英文'}</span>
           </button>
       </div>
       </div>

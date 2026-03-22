@@ -406,6 +406,8 @@
 
 /* ─── Language toggle button — sits below the pill, same width ───────────────── */
 .lang-toggle {
+    position: relative;
+    overflow: visible;
     width: 100%;
     margin-top: 6px;
     padding: 7px 0;
@@ -540,6 +542,48 @@
     visibility: visible;
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+}
+
+/* ─── Nav icon tooltips ─────────────────────────────────────────────────────── */
+.icon-tip {
+    visibility: hidden;
+    opacity: 0;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px) saturate(1.6);
+    -webkit-backdrop-filter: blur(16px) saturate(1.6);
+    color: #1a1a1a;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 6px 10px;
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%) translateX(-4px);
+    z-index: 999;
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08), 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    pointer-events: none;
+
+    /* left-pointing caret */
+    &::before {
+        content: '';
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 5px solid transparent;
+        border-right-color: rgba(255, 255, 255, 0.95);
+    }
+}
+
+.social-icon:hover .icon-tip,
+.lang-toggle:hover .icon-tip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
 }
 
 /* ─── Social icons ──────────────────────────────────────────────────────────── */
