@@ -124,7 +124,7 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
                 {/* Badge row — role and venue names stay in English */}
                 <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '4px', marginBottom: '10px' }}>
                     <span className="news-badge" style={{
-                        color: color,
+                        color: '#374151',
                         background: colorBg,
                     }}>
                         {item.role}
