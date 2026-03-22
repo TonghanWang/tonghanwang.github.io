@@ -161,12 +161,18 @@ const TestimonialSlider = () => {
 
     return (
     <section id="news" style={{ padding: '20px 0 80px' }}>
-        <p className="mil-upper mil-up" style={{
-            fontSize: '13px', fontWeight: '600', letterSpacing: '2px',
-            textTransform: 'uppercase', color: '#888', marginBottom: '32px',
-        }}>
-            {pick(translations.news.heading, lang)}
-        </p>
+        <div className="mil-up" style={{ marginBottom: '32px' }}>
+            <span className="hero-tagline">
+                <span className="hero-tagline-dot" />
+                {pick(translations.news.heading, lang)}
+            </span>
+            <h2 style={{
+                fontSize: '32px', fontWeight: '700', color: '#1a1a1a',
+                lineHeight: 1.2, marginTop: '12px', marginBottom: 0,
+            }}>
+                {pick(translations.news.subheading, lang)}
+            </h2>
+        </div>
 
         <div className="news-bg-wrap">
 
