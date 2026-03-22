@@ -39,6 +39,7 @@ const HeroOne = () => {
     const { lang } = useLanguage();
     const t = translations.hero;
 
+    const title         = pick(t.title, lang);
     const description   = pick(t.description, lang);
     const descLinks     = t.descriptionLinks[lang] ?? t.descriptionLinks.en;
     const bio           = pick(t.bio, lang);
@@ -58,7 +59,7 @@ const HeroOne = () => {
 
                     {/* Name */}
                     <h1 className="mil-up mil-mb-30">
-                        <span dangerouslySetInnerHTML={{ __html: Data.title }} style={{ fontSize: '45px' }} />
+                        <span style={{ fontSize: '45px' }}>{title}</span>
                         <span className="tooltip">
                             <i className="fas fa-info-circle" style={{ fontSize: '9px', lineHeight: 1 }}></i>
                             <span className="tooltiptext">{tooltipText}</span>

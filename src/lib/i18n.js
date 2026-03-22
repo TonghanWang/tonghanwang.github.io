@@ -17,6 +17,7 @@ export const translations = {
 
   // ── Hero section ────────────────────────────────────────────────────────────
   hero: {
+    title: { en: 'Tonghan Wang', zh: '王同翰' },
     // Subtitle below the name (hero-1.json description)
     description: {
       en: '(王同翰) Incoming Tenure-Track Assistant Professor at the College of AI, Tsinghua University.',
