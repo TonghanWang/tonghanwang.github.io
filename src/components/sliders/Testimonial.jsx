@@ -160,8 +160,8 @@ const TestimonialSlider = () => {
     const i18nItems = translations.news.items;
 
     return (
-    <section id="news" style={{ padding: '10px 0 60px' }}>
-        <div className="mil-up" style={{ marginBottom: '20px' }}>
+    <section id="news" style={{ padding: '36px 0 60px' }}>
+        <div className="mil-up" style={{ marginBottom: '10px' }}>
             <span className="hero-tagline">
                 <span className="hero-tagline-dot" />
                 {pick(translations.news.heading, lang)}
