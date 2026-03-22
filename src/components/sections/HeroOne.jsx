@@ -59,7 +59,7 @@ const HeroOne = () => {
 
                     {/* Name */}
                     <h1 className="mil-up mil-mb-30">
-                        <span style={{ fontSize: '45px' }}>{title}</span>
+                        <span style={{ fontSize: '45px', ...(lang === 'zh' && { fontFamily: "'KaiTi', 'STKaiti', '楷体', serif" }) }}>{title}</span>
                         <span className="tooltip">
                             <i className="fas fa-info-circle" style={{ fontSize: '9px', lineHeight: 1 }}></i>
                             <span className="tooltiptext">{tooltipText}</span>
