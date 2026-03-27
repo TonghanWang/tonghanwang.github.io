@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect, useCallback } from "react";
 import Data from "@data/sections/hero-1.json";
 import AboutData from "@data/sections/about.json";
 import { useLanguage } from "@library/LanguageContext";
@@ -49,6 +50,56 @@ const HeroOne = () => {
     const tooltipText   = pick(t.tooltip, lang);
     const showCNLink    = t.showChineseProfileLink[lang] ?? true;
 
+    /* ── Popover state ────────────────────────────────────────────────────── */
+    const [popState, setPopState] = useState('closed'); // 'closed' | 'open' | 'closing'
+    const [popPos,   setPopPos]   = useState({ top: 0, left: 0 });
+    const iconRef  = useRef(null);
+    const popupRef = useRef(null);
+    const closeTimer = useRef(null);
+
+    const openPop = useCallback(() => {
+        if (popState === 'open') {
+            // close with animation
+            setPopState('closing');
+            closeTimer.current = setTimeout(() => setPopState('closed'), 180);
+            return;
+        }
+        if (iconRef.current) {
+            const r = iconRef.current.getBoundingClientRect();
+            setPopPos({ top: r.bottom + 10, left: r.left });
+        }
+        clearTimeout(closeTimer.current);
+        setPopState('open');
+    }, [popState]);
+
+    // click-outside to dismiss
+    useEffect(() => {
+        if (popState !== 'open') return;
+        const handleOutside = (e) => {
+            if (
+                popupRef.current && !popupRef.current.contains(e.target) &&
+                iconRef.current  && !iconRef.current.contains(e.target)
+            ) {
+                setPopState('closing');
+                closeTimer.current = setTimeout(() => setPopState('closed'), 180);
+            }
+        };
+        document.addEventListener('mousedown', handleOutside);
+        return () => document.removeEventListener('mousedown', handleOutside);
+    }, [popState]);
+
+    // recalc position on resize so it stays anchored
+    useEffect(() => {
+        const recalc = () => {
+            if (popState === 'open' && iconRef.current) {
+                const r = iconRef.current.getBoundingClientRect();
+                setPopPos({ top: r.bottom + 10, left: r.left });
+            }
+        };
+        window.addEventListener('resize', recalc);
+        return () => window.removeEventListener('resize', recalc);
+    }, [popState]);
+
     return (
         <>
             {/* banner */}
@@ -60,11 +111,29 @@ const HeroOne = () => {
                     {/* Name */}
                     <h1 className="mil-up" style={{ marginBottom: '16px' }}>
                         <span style={{ fontSize: '45px', ...(lang === 'zh' && { fontFamily: "'KaiTi', 'STKaiti', '楷体', serif" }) }}>{title}</span>
-                        <span className="tooltip">
+                        <span
+                            ref={iconRef}
+                            className={`name-info-btn${popState === 'open' ? ' is-open' : ''}`}
+                            onClick={openPop}
+                            role="button"
+                            aria-label="Name pronunciation guide"
+                            aria-expanded={popState === 'open'}
+                        >
                             <i className="fas fa-info-circle" style={{ fontSize: '9px', lineHeight: 1 }}></i>
-                            <span className="tooltiptext">{tooltipText}</span>
                         </span>
                     </h1>
+
+                    {/* Pronunciation popover — fixed, never clips */}
+                    {popState !== 'closed' && (
+                        <div
+                            ref={popupRef}
+                            className={`name-tooltip-popup${popState === 'open' ? ' is-open' : ' is-closing'}`}
+                            style={{ top: popPos.top, left: popPos.left }}
+                            role="tooltip"
+                        >
+                            {tooltipText}
+                        </div>
+                    )}
 
                     {/* Glassmorphism card wrapping bio + interests */}
                     <div className="mil-up hero-glass-panel">
