@@ -13,6 +13,14 @@ const DefaultHeader = ({ extraClass }) => {
   const [pos, setPos] = useState(null); // null = use CSS default position
   const dragRef = useRef(null);
 
+  // Restore position from sessionStorage on mount (survives navigation, cleared on refresh)
+  useEffect(() => {
+    try {
+      const saved = sessionStorage.getItem('navPos');
+      if (saved) setPos(JSON.parse(saved));
+    } catch {}
+  }, []);
+
   const navItems = [];
 
   const { asPath } = useRouter();
@@ -61,6 +69,9 @@ const DefaultHeader = ({ extraClass }) => {
 
     const onUp = () => {
       setDragging(false);
+      if (latestPos) {
+        try { sessionStorage.setItem('navPos', JSON.stringify(latestPos)); } catch {}
+      }
       dragRef.current = null;
       document.removeEventListener('mousemove', onMove);
       document.removeEventListener('mouseup', onUp);
