@@ -30,7 +30,7 @@ const Teaching = () => {
         <Layouts fullWidth={true}>
             <PageBanner pageTitle={pick(t.banner, lang)} />
 
-            <section style={{ paddingBottom: '60px' }}>
+            <section style={{ paddingBottom: '60px' }} className={lang === 'zh' ? 'zh-kaiti' : ''}>
                 <div className="row">
                     <div className="col-xl-12">
 

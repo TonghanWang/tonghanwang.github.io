@@ -1,3 +1,14 @@
+/* ─── Scroll progress bar: theme color ──────────────────────────────────────── */
+.mil-progress-track .mil-progress { background-color: #2563eb !important; }
+
+/* ─── Chinese homepage: Kaiti font ──────────────────────────────────────────── */
+.zh-kaiti, .zh-kaiti * {
+    font-family: STKaiti, KaiTi, 'AR PL UKai CN', 'Ma Shan Zheng', serif !important;
+}
+.zh-kaiti i[class*="fa"] {
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands" !important;
+}
+
 /* ─── Accent color overrides (blue) ─────────────────────────────────────────── */
 .mil-social-icons li a:hover { color: #2563eb !important; }
 .mil-accent { color: #2563eb !important; }
@@ -164,11 +175,17 @@
     font-weight: 600;
     letter-spacing: 0.5px;
     color: #2563eb;
-    background: rgba(37, 99, 235, 0.07);
-    border: 1px solid rgba(37, 99, 235, 0.18);
+    background: rgba(37, 99, 235, 0.13);
+    border: 2.5px solid rgba(255, 255, 255, 0.65);
     border-radius: 999px;
     padding: 5px 14px;
     margin-bottom: 18px;
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+}
+.zh-kaiti .hero-tagline {
+    font-size: 20px !important;
+    padding: 6px 20px !important;
 }
 .hero-tagline-dot {
     width: 6px;

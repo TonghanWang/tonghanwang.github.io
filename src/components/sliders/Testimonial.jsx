@@ -164,7 +164,7 @@ const TestimonialSlider = () => {
     <section id="news" style={{ padding: '36px 0 60px' }}>
         <div className="mil-up" style={{ marginBottom: '10px' }}>
             <span className="hero-tagline">
-                <span className="hero-tagline-dot" />
+                {lang !== 'zh' && <span className="hero-tagline-dot" />}
                 {pick(translations.news.heading, lang)}
             </span>
         </div>

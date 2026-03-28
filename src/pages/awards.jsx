@@ -47,7 +47,7 @@ export default function Awards({ posts }) {
                 {post.list.heading && (
                   <div className="mil-section-title mil-up mil-left mil-mb-30">
                     <div className="mil-divider" />
-                    <h3>{post.list.heading}</h3>
+                    <h3 style={lang === 'zh' ? { fontFamily: "STKaiti, KaiTi, 'AR PL UKai CN', 'Ma Shan Zheng', serif", fontWeight: 400 } : {}}>{post.list.heading}</h3>
                   </div>
                 )}
                 <div className="row justify-content-center">

@@ -21,6 +21,7 @@ const Layouts = ({
   rightPanelImg,
   fullWidth100,
   extraClass,
+  showProgressBar,
 }) => {
   let bodyClass = false;
   let containerClass = false;
@@ -77,6 +78,11 @@ const Layouts = ({
         {!fullWidth &&
         <RightPanel background={rightPanelBackground} img={rightPanelImg} />
         }
+        {fullWidth && showProgressBar && (
+          <div className="mil-progress-track" style={{ position: 'fixed', right: 0, top: 0, height: '100vh' }}>
+            <div className="mil-progress" />
+          </div>
+        )}
 
       </div>
     </div>

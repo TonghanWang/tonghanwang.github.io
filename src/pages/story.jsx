@@ -74,7 +74,7 @@ const Story = () => {
     const t = translations.publications;
 
     return (
-        <Layouts fullWidth={true}>
+        <Layouts fullWidth={true} showProgressBar={true}>
             <PageBanner pageTitle={pick(t.banner, lang)} />
 
             <section style={{ paddingBottom: '60px' }}>
@@ -88,7 +88,7 @@ const Story = () => {
                                      style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                                     <div>
                                         <div className="mil-divider"></div>
-                                        <h3 style={{ display: 'inline' }}>
+                                        <h3 style={{ display: 'inline', ...(lang === 'zh' ? { fontFamily: "STKaiti, KaiTi, 'AR PL UKai CN', 'Ma Shan Zheng', serif", fontWeight: 400 } : {}) }}>
                                             {pick(t.categories[cat.id], lang) ?? cat.title}
                                         </h3>
                                     </div>

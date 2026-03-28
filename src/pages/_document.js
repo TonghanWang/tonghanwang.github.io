@@ -20,6 +20,12 @@ class MyDocument extends Document {
           `}} />
           {/* Google Analytics end */}
 
+          {/* Kaiti font */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet" />
+          {/* Kaiti font end */}
+
           {/* public assets begin */}
           <link rel="stylesheet" href="/css/plugins/bootstrap-grid.css" />
           <link rel="stylesheet" href="/css/plugins/font-awesome.min.css" />

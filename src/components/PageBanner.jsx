@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import appData from "@data/app.json";
+import { useLanguage } from "@library/LanguageContext";
 
 const PageBanner = ({ pageTitle, breadTitle, align }) => {
+  const { lang } = useLanguage();
   let clearBreadTitle;
 
   if ( breadTitle != undefined ) {
@@ -22,7 +24,7 @@ const PageBanner = ({ pageTitle, breadTitle, align }) => {
       {/* banner */}
       <section className={`mil-banner-sm mil-${align}`}>
           <div className="mil-banner-title">
-              <h1 className="mil-h1-sm mil-up mil-mb-60" dangerouslySetInnerHTML={{__html : pageTitle}} />
+              <h1 className="mil-h1-sm mil-up mil-mb-60" style={lang === 'zh' ? { fontFamily: "STKaiti, KaiTi, 'AR PL UKai CN', 'Ma Shan Zheng', serif", fontWeight: 400 } : {}} dangerouslySetInnerHTML={{__html : pageTitle}} />
           </div>
       </section>
       {/* banner end */}
