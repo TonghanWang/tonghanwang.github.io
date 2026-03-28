@@ -62,11 +62,13 @@ export const translations = {
     problems: {
       en: [
         'Economics of generative models--for example, how LLMs sell advertisements and how tokens are priced.',
+        'Agentic intelligence, especially systems involving multiple agents.',
         'Principled deep learning methods for solving fundamental problems in microeconomics.',
         'Modular control of a robot, treating each joint as an agent.',
       ],
       zh: [
         '生成模型的经济学——例如，大语言模型如何投放广告、词元如何定价。',
+        '智能体，尤其是涉及多个智能体协作与交互的场景。',
         '有理论保证的深度学习方法，用于解决微观经济学中的基础性问题。',
         '将机器人的每个关节视为一个独立智能体，实现模块化控制。',
       ],

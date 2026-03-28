@@ -100,6 +100,10 @@
     font-weight: 600 !important;
 }
 
+/* ─── Chinese nav: center items ─────────────────────────────────────────────── */
+.mil-navigation.mil-nav-zh { flex: 1 !important; }
+.mil-navigation.mil-nav-zh nav ul { justify-content: center !important; }
+
 /* ─── Desktop submenu dropdown ───────────────────────────────────────────────── */
 .mil-top-panel .mil-navigation ul li.mil-has-children ul {
     background-color: rgba(255, 255, 255, 0.97);
@@ -417,8 +421,8 @@
     border-radius: 999px;
     padding: 3px 11px;
     color: #0d7a5f;
-    background: rgba(16, 185, 129, 0.08);
-    border: 1px solid rgba(16, 185, 129, 0.25);
+    background: transparent;
+    border: none;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
@@ -433,8 +437,8 @@
     margin-right: 6px;
     margin-bottom: 4px;
     color: #0d7a5f;
-    background: rgba(16, 185, 129, 0.08);
-    border: 1px solid rgba(16, 185, 129, 0.25);
+    background: transparent;
+    border: none;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
@@ -444,11 +448,11 @@
     gap: 4px;
     font-size: 11px;
     font-weight: 700;
-    background: rgba(37, 99, 235, 0.08);
+    background: transparent;
     color: #2563eb;
     border-radius: 6px;
     padding: 3px 10px;
-    border: 1px solid rgba(37, 99, 235, 0.2);
+    border: none;
 }
 .pub-toggle-btn {
     background: none;
@@ -493,15 +497,14 @@
     letter-spacing: 0.2px;
     padding: 3px 11px;
     border-radius: 999px;
-    background: rgba(37, 99, 235, 0.07);
-    border: 1px solid rgba(37, 99, 235, 0.18);
+    background: transparent;
+    border: none;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 .pub-link:hover {
-    background: rgba(37, 99, 235, 0.14);
-    border-color: rgba(37, 99, 235, 0.35);
+    background: rgba(37, 99, 235, 0.07);
     box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
 }
 

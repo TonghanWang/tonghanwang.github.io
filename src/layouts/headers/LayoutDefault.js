@@ -108,7 +108,7 @@ const DefaultHeader = ({ extraClass }) => {
           <LogoMark size={34} variant="badge" />
         </Link>
 
-        <div className={`mil-navigation ${toggle ? "mil-active" : ""}`}>
+        <div className={`mil-navigation ${toggle ? "mil-active" : ""}${lang === 'zh' ? ' mil-nav-zh' : ''}`}>
             <nav id="swupMenu" className="mil-menu-transition">
                 <ul>
                     {navItems.map((item, key) => (
