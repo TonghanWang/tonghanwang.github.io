@@ -2,7 +2,7 @@
   "teaching": [
     {
       "course": "AM 220: Geometric Methods for Machine Learning",
-      "term": "Spring 2024",
+      "term": "Spring 2026",
       "institution": "Harvard University",
       "role": "Teaching Fellow"
     },
@@ -29,28 +29,28 @@
     {
       "short": "ICLR",
       "full": "International Conference on Learning Representations",
-      "years": "2022–2024",
+      "years": "2022–2026",
       "award": "Outstanding Reviewer 2021"
     },
     {
       "short": "NeurIPS",
       "full": "Conference on Neural Information Processing Systems",
-      "years": "2021–2024"
+      "years": "2021–2026"
     },
     {
       "short": "ICML",
       "full": "International Conference on Machine Learning",
-      "years": "2021–2024"
+      "years": "2021–2026"
     },
     {
       "short": "AAAI",
       "full": "The AAAI Conference on Artificial Intelligence",
-      "years": "2020–2024"
+      "years": "2020–2026"
     },
     {
       "short": "IJCAI",
       "full": "International Joint Conference on Artificial Intelligence",
-      "years": "2020–2024"
+      "years": "2020–2026"
     }
   ]
 }
