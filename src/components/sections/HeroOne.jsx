@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 import Data from "@data/sections/hero-1.json";
 import AboutData from "@data/sections/about.json";
 import { useLanguage } from "@library/LanguageContext";
@@ -52,22 +53,25 @@ const HeroOne = () => {
 
     /* ── Popover state ────────────────────────────────────────────────────── */
     const [popState, setPopState] = useState('closed'); // 'closed' | 'open' | 'closing'
-    const [popPos,   setPopPos]   = useState({ top: 0, left: 0 });
+    const [popPos,   setPopPos]   = useState({ top: 0, right: 0 });
     const iconRef  = useRef(null);
     const popupRef = useRef(null);
     const closeTimer = useRef(null);
 
+    const calcPos = () => {
+        if (iconRef.current) {
+            const r = iconRef.current.getBoundingClientRect();
+            setPopPos({ top: r.bottom + 10, right: window.innerWidth - r.right });
+        }
+    };
+
     const openPop = useCallback(() => {
         if (popState === 'open') {
-            // close with animation
             setPopState('closing');
             closeTimer.current = setTimeout(() => setPopState('closed'), 180);
             return;
         }
-        if (iconRef.current) {
-            const r = iconRef.current.getBoundingClientRect();
-            setPopPos({ top: r.bottom + 10, left: r.left });
-        }
+        calcPos();
         clearTimeout(closeTimer.current);
         setPopState('open');
     }, [popState]);
@@ -88,16 +92,11 @@ const HeroOne = () => {
         return () => document.removeEventListener('mousedown', handleOutside);
     }, [popState]);
 
-    // recalc position on resize so it stays anchored
+    // recalc on resize
     useEffect(() => {
-        const recalc = () => {
-            if (popState === 'open' && iconRef.current) {
-                const r = iconRef.current.getBoundingClientRect();
-                setPopPos({ top: r.bottom + 10, left: r.left });
-            }
-        };
-        window.addEventListener('resize', recalc);
-        return () => window.removeEventListener('resize', recalc);
+        if (popState !== 'open') return;
+        window.addEventListener('resize', calcPos);
+        return () => window.removeEventListener('resize', calcPos);
     }, [popState]);
 
     return (
@@ -122,17 +121,17 @@ const HeroOne = () => {
                             <i className="fas fa-info-circle" style={{ fontSize: '9px', lineHeight: 1 }}></i>
                         </span>
                     </h1>
-
-                    {/* Pronunciation popover — fixed, never clips */}
-                    {popState !== 'closed' && (
+                    {/* Portal: rendered at body level — escapes all stacking contexts */}
+                    {popState !== 'closed' && typeof document !== 'undefined' && createPortal(
                         <div
                             ref={popupRef}
                             className={`name-tooltip-popup${popState === 'open' ? ' is-open' : ' is-closing'}`}
-                            style={{ top: popPos.top, left: popPos.left }}
+                            style={{ top: popPos.top, right: popPos.right }}
                             role="tooltip"
                         >
                             {tooltipText}
-                        </div>
+                        </div>,
+                        document.body
                     )}
 
                     {/* Glassmorphism card wrapping bio + interests */}

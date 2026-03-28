@@ -14,7 +14,7 @@
     position: absolute;
     left: auto;
     right: 24px;
-    top: calc(50vh - 260px);
+    top: 110px;
     transform: none;
     height: auto !important;
     width: auto !important;
@@ -543,18 +543,18 @@
     /* hidden state */
     pointer-events: none;
     opacity: 0;
-    transform-origin: top left;
+    transform-origin: top right;
     transform: scale(0.91) translateY(-8px);
     transition:
         opacity   0.18s ease,
         transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
 
-    /* upward caret — outer (border colour) */
+    /* upward caret — outer (border colour), aligned to icon */
     &::before {
         content: '';
         position: absolute;
         bottom: 100%;
-        left: 8px;
+        right: 4px;
         border: 7px solid transparent;
         border-bottom-color: rgba(37, 99, 235, 0.16);
     }
@@ -564,7 +564,7 @@
         content: '';
         position: absolute;
         bottom: 100%;
-        left: 9px;
+        right: 5px;
         border: 6px solid transparent;
         border-bottom-color: rgba(255, 255, 255, 0.97);
     }
