@@ -114,6 +114,7 @@
 /* ─── Chinese nav: center items ─────────────────────────────────────────────── */
 .mil-navigation.mil-nav-zh { flex: 1 !important; }
 .mil-navigation.mil-nav-zh nav ul { justify-content: center !important; }
+.mil-navigation.mil-nav-zh ul li > a { font-size: 18px !important; }
 
 /* ─── Desktop submenu dropdown ───────────────────────────────────────────────── */
 .mil-top-panel .mil-navigation ul li.mil-has-children ul {
