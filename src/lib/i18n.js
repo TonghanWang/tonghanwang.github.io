@@ -166,6 +166,7 @@ export const translations = {
     sectionTeaching: { en: 'Teaching',           zh: '教学' },
     sectionService:  { en: 'Academic Service',   zh: '学术服务' },
     reviewer:        { en: 'Reviewer',           zh: '审稿人' },
+    areaChair:       { en: 'Area Chair',         zh: '领域主席' },
     roles: {
       'Teaching Fellow':    { en: 'Teaching Fellow',    zh: '助教' },
       'Teaching Assistant': { en: 'Teaching Assistant', zh: '助教' },

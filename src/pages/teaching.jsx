@@ -76,6 +76,11 @@ const Teaching = () => {
                                         {/* Venue short names stay in English */}
                                         <span className="role-badge">{item.short}</span>
                                         <span className="role-badge">{pick(t.reviewer, lang)}</span>
+                                        {item.areaChair && (
+                                            <span className="area-chair-badge">
+                                                {pick(t.areaChair, lang)}
+                                            </span>
+                                        )}
                                         {item.award && (
                                             <span className="pub-award-badge">
                                                 <StarIcon />
