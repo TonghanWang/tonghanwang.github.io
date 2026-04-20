@@ -5,6 +5,20 @@
       "title": "Preprint Papers",
       "papers": [
         {
+          "title": "Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models",
+          "authors": "Jiayuan Liu, Barry Wang, Jiarui Gan, Tonghan Wang, Leon Xie, Mingyu Guo, Vincent Conitzer",
+          "year": 2026,
+          "venueShort": "arXiv",
+          "venueFull": "arXiv preprint",
+          "venueColor": "#6b7280",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2604.06263" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{liu2026incentive,\n  title={Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models},\n  author={Liu, Jiayuan and Wang, Barry and Gan, Jiarui and Wang, Tonghan and Xie, Leon and Guo, Mingyu and Conitzer, Vincent},\n  journal={arXiv preprint arXiv:2604.06263},\n  year={2026}\n}"
+        },
+        {
           "title": "LLM Active Alignment: A Nash Equilibrium Perspective",
           "authors": "Tonghan Wang*, Yuqi Pan*, Xinyi Yang*, Yanchen Jiang, Milind Tambe, David C. Parkes",
           "year": 2026,
