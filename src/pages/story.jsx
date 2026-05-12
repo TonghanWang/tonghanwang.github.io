@@ -28,8 +28,18 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
     const [showAbstract, setShowAbstract] = useState(false);
     const t = translations.publications;
 
+    const primaryField = (paper.fields || [])[0];
+    const fieldRgb = primaryField ? (FIELD_COLORS[primaryField] || '107, 114, 128') : null;
+
     return (
-        <li className="mil-up pub-paper-item">
+        <li
+            className={`mil-up pub-paper-item${primaryField ? ' pub-paper-item--fielded' : ''}`}
+            style={fieldRgb ? { '--field-rgb': fieldRgb } : {}}
+        >
+            {/* ── Field corner label ───────────────────────────────────── */}
+            {primaryField && (
+                <span className="pub-field-corner">{primaryField}</span>
+            )}
 
             {/* ── Title row — paper titles stay in English ────────────── */}
             <div className="pub-year-group">
@@ -45,15 +55,6 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
                 <span className="pub-venue-badge" title={paper.venueFull}>
                     {paper.venueShort}
                 </span>
-                {(paper.fields || []).map((field, i) => (
-                    <span
-                        key={i}
-                        className="pub-field-badge"
-                        style={{ '--field-rgb': FIELD_COLORS[field] || '107, 114, 128' }}
-                    >
-                        {field}
-                    </span>
-                ))}
                 {paper.awards.map((award, i) => (
                     <span key={i} className="pub-award-badge">
                         <StarIcon />

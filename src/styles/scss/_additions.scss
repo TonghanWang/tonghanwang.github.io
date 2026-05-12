@@ -1038,26 +1038,40 @@
     display: inline-block;
 }
 
-.pub-field-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    padding: 3px 10px;
-    border-radius: 999px;
-    background: rgba(var(--field-rgb), 0.07);
-    color: rgb(var(--field-rgb));
+/* Field: left accent bar on the paper item */
+.pub-paper-item--fielded {
+    position: relative;
+    border-left: 3px solid rgba(var(--field-rgb), 0.55);
+    padding-left: 16px;
+    background: linear-gradient(
+        to right,
+        rgba(var(--field-rgb), 0.04) 0%,
+        transparent 38%
+    );
+}
+
+/* Field: corner label — floated top-right, outside badge row */
+.pub-field-corner {
+    float: right;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(var(--field-rgb), 0.9);
+    line-height: 1;
+    margin-top: 4px;
 
     &::before {
         content: '';
         display: inline-block;
-        width: 6px;
-        height: 6px;
+        width: 5px;
+        height: 5px;
         border-radius: 50%;
-        background: rgb(var(--field-rgb));
-        flex-shrink: 0;
+        background: rgba(var(--field-rgb), 0.9);
+        margin-right: 5px;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
     }
 }
 
