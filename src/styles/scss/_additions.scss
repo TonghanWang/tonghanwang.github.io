@@ -1038,28 +1038,44 @@
     display: inline-block;
 }
 
-/* Field: left accent bar on the paper item */
+/* Field: color the timeline bullet to match the field */
 .pub-paper-item--fielded {
     position: relative;
-    border-left: 3px solid rgba(var(--field-rgb), 0.55);
-    padding-left: 16px;
     background: linear-gradient(
         to right,
         rgba(var(--field-rgb), 0.04) 0%,
         transparent 38%
     );
+
+    &::after {
+        background-color: rgb(var(--field-rgb)) !important;
+    }
+
+    &::before {
+        background-color: rgba(var(--field-rgb), 0.35) !important;
+    }
 }
 
-/* Field: corner label — floated top-right, outside badge row */
+/* Field: bar starting below the bullet, down to the item bottom */
+.pub-field-bar {
+    position: absolute;
+    left: -2px;        // bullet center: -4 + 7/2 = -0.5px; bar center: -2 + 2/2 = -1px ≈ aligned
+    top: 22px;         // bullet is top: 7px, height: 7px — start 8px below
+    bottom: 14px;      // matches item's bottom padding
+    width: 2px;        // thin taper from the 7px bullet
+    background: rgba(var(--field-rgb), 0.45);
+    border-radius: 0 0 2px 2px;
+}
+
+/* Field: corner label — last item in pub-year-group flex row */
 .pub-field-corner {
-    float: right;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     color: rgba(var(--field-rgb), 0.9);
-    line-height: 1;
-    margin-top: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
 
     &::before {
         content: '';
@@ -1073,6 +1089,11 @@
         position: relative;
         top: -1px;
     }
+}
+
+/* Make title grow so year + field corner stay right-aligned */
+.pub-year-group .pub-title {
+    flex: 1;
 }
 
 /* ─── Project detail page ───────────────────────────────────────────────────── */

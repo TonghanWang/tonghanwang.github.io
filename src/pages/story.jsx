@@ -36,15 +36,16 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
             className={`mil-up pub-paper-item${primaryField ? ' pub-paper-item--fielded' : ''}`}
             style={fieldRgb ? { '--field-rgb': fieldRgb } : {}}
         >
-            {/* ── Field corner label ───────────────────────────────────── */}
-            {primaryField && (
-                <span className="pub-field-corner">{primaryField}</span>
-            )}
+            {/* ── Field bar — positioned below the timeline bullet ─────── */}
+            {primaryField && <div className="pub-field-bar" />}
 
             {/* ── Title row — paper titles stay in English ────────────── */}
             <div className="pub-year-group">
                 <p className="pub-title">{paper.title}</p>
                 <span className="pub-year-badge">{paper.year}</span>
+                {primaryField && (
+                    <span className="pub-field-corner">{primaryField}</span>
+                )}
             </div>
 
             {/* ── Authors stay in English ──────────────────────────────── */}
