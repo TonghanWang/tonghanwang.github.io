@@ -135,15 +135,15 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
                     )}
                 </div>
 
-                <p style={{ fontSize: '16px', fontWeight: '700', color: '#1a1a1a', lineHeight: '1.4', margin: '0 0 6px' }}>
+                <p style={{ fontSize: '18px', fontWeight: '500', color: '#1a1a1a', lineHeight: '1.4', margin: '0 0 6px' }}>
                     {highlightPhrase(displayName, displayHighlight)}
                 </p>
-                <p style={{ fontSize: '14px', color: '#555', lineHeight: '1.6', margin: '0 0 6px' }}>
+                <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.6', margin: '0 0 6px' }}>
                     {displayText}
                 </p>
                 {item.link && (
                     <a href={item.link.href} target="_blank" rel="noopener noreferrer"
-                       style={{ fontSize: '13px', fontWeight: '600', color: color, textDecoration: 'none',
+                       style={{ fontSize: '14px', fontWeight: '600', color: color, textDecoration: 'none',
                                 borderBottom: '1px solid transparent', transition: 'border-color 0.15s' }}
                        onMouseEnter={e => e.currentTarget.style.borderBottomColor = color}
                        onMouseLeave={e => e.currentTarget.style.borderBottomColor = 'transparent'}>
