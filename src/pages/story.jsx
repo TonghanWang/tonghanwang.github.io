@@ -13,6 +13,16 @@ const StarIcon = () => (
     </svg>
 );
 
+// ── Field tag colors ──────────────────────────────────────────────────────────
+const FIELD_COLORS = {
+    "LLM Advertising":  "249, 115, 22",   // orange
+    "Mechanism Design": "139, 92, 246",   // violet
+    "Multi-Agent RL":   "14, 165, 233",   // sky
+    "Diffusion / Flow": "6, 182, 212",    // cyan
+    "Game Theory":      "236, 72, 153",   // pink
+    "Public Health AI": "16, 185, 129",   // emerald
+};
+
 // ── Single paper row ──────────────────────────────────────────────────────────
 const PaperItem = ({ paper, catId, idx, lang }) => {
     const [showAbstract, setShowAbstract] = useState(false);
@@ -35,6 +45,15 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
                 <span className="pub-venue-badge" title={paper.venueFull}>
                     {paper.venueShort}
                 </span>
+                {(paper.fields || []).map((field, i) => (
+                    <span
+                        key={i}
+                        className="pub-field-badge"
+                        style={{ '--field-rgb': FIELD_COLORS[field] || '107, 114, 128' }}
+                    >
+                        {field}
+                    </span>
+                ))}
                 {paper.awards.map((award, i) => (
                     <span key={i} className="pub-award-badge">
                         <StarIcon />

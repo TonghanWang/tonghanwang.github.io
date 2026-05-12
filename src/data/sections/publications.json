@@ -5,12 +5,71 @@
       "title": "Preprint Papers",
       "papers": [
         {
+          "title": "LLM Advertisement based on Neuron Auctions",
+          "authors": "Peiran Yun, Wenxin Xu, Jiayuan Liu, Yihang Zhang, Liang Zeng, Lingkai Kong, Tonghan Wang",
+          "year": 2026,
+          "venueShort": "arXiv",
+          "venueFull": "arXiv preprint",
+          "venueColor": "#6b7280",
+          "fields": ["LLM Advertising"],
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2605.08326" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{yun2026llmad,\n  title={LLM Advertisement based on Neuron Auctions},\n  author={Yun, Peiran and Xu, Wenxin and Liu, Jiayuan and Zhang, Yihang and Zeng, Liang and Kong, Lingkai and Wang, Tonghan},\n  journal={arXiv preprint arXiv:2605.08326},\n  year={2026}\n}"
+        },
+        {
+          "title": "NaiAD: Initiate Data-Driven Research for LLM Advertising",
+          "authors": "Yihang Zhang, Zimeng Huang, Ren Zhai, Yipeng Kang, Tonghan Wang",
+          "year": 2026,
+          "venueShort": "arXiv",
+          "venueFull": "arXiv preprint",
+          "venueColor": "#6b7280",
+          "fields": ["LLM Advertising"],
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2605.09918" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{zhang2026naiad,\n  title={NaiAD: Initiate Data-Driven Research for LLM Advertising},\n  author={Zhang, Yihang and Huang, Zimeng and Zhai, Ren and Kang, Yipeng and Wang, Tonghan},\n  journal={arXiv preprint arXiv:2605.09918},\n  year={2026}\n}"
+        },
+        {
+          "title": "How LLMs Are Persuaded: A Few Attention Heads, Rerouted",
+          "authors": "Xiangkun Sun, Lingkai Kong, Aoqi Zhang, Liang Zeng, Tonghan Wang",
+          "year": 2026,
+          "venueShort": "arXiv",
+          "venueFull": "arXiv preprint",
+          "venueColor": "#6b7280",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2605.09314" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{sun2026persuaded,\n  title={How LLMs Are Persuaded: A Few Attention Heads, Rerouted},\n  author={Sun, Xiangkun and Kong, Lingkai and Zhang, Aoqi and Zeng, Liang and Wang, Tonghan},\n  journal={arXiv preprint arXiv:2605.09314},\n  year={2026}\n}"
+        },
+        {
+          "title": "The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents",
+          "authors": "Jiayuan Liu, Tianqin Li, Shiyi Du, Xin Luo, Haoxuan Zeng, Emanuel Tewolde, Tai Sing Lee, Tonghan Wang, Carl Kingsford, Vincent Conitzer",
+          "year": 2026,
+          "venueShort": "arXiv",
+          "venueFull": "arXiv preprint",
+          "venueColor": "#6b7280",
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2605.08060" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{liu2026memorycurse,\n  title={The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents},\n  author={Liu, Jiayuan and Li, Tianqin and Du, Shiyi and Luo, Xin and Zeng, Haoxuan and Tewolde, Emanuel and Lee, Tai Sing and Wang, Tonghan and Kingsford, Carl and Conitzer, Vincent},\n  journal={arXiv preprint arXiv:2605.08060},\n  year={2026}\n}"
+        },
+        {
           "title": "Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models",
           "authors": "Jiayuan Liu, Barry Wang, Jiarui Gan, Tonghan Wang, Leon Xie, Mingyu Guo, Vincent Conitzer",
           "year": 2026,
           "venueShort": "arXiv",
           "venueFull": "arXiv preprint",
           "venueColor": "#6b7280",
+          "fields": ["LLM Advertising"],
           "awards": [],
           "links": [
             { "text": "PDF", "href": "https://arxiv.org/abs/2604.06263" }
