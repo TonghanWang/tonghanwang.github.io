@@ -42,10 +42,10 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
             {/* ── Title row — paper titles stay in English ────────────── */}
             <div className="pub-year-group">
                 <p className="pub-title">{paper.title}</p>
-                <span className="pub-year-badge">{paper.year}</span>
                 {primaryField && (
                     <span className="pub-field-corner">{primaryField}</span>
                 )}
+                <span className="pub-year-badge">{paper.year}</span>
             </div>
 
             {/* ── Authors stay in English ──────────────────────────────── */}
