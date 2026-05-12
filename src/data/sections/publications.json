@@ -41,7 +41,7 @@
           "venueShort": "arXiv",
           "venueFull": "arXiv preprint",
           "venueColor": "#6b7280",
-          "fields": ["AI Safety"],
+          "fields": ["LLM"],
           "awards": [],
           "links": [
             { "text": "PDF", "href": "https://arxiv.org/abs/2605.09314" }

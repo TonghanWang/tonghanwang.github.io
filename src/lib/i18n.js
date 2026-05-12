@@ -161,7 +161,7 @@ export const translations = {
     fields: {
       'LLM Advertising':  { en: 'LLM Advertising',  zh: 'LLM 广告' },
       'LLM Agents':       { en: 'LLM Agents',       zh: 'LLM 智能体' },
-      'AI Safety':        { en: 'AI Safety',         zh: 'AI 安全' },
+      'LLM':              { en: 'LLM',                zh: 'LLM' },
       'Mechanism Design': { en: 'Mechanism Design',  zh: '机制设计' },
       'Multi-Agent RL':   { en: 'Multi-Agent RL',    zh: '多智能体强化学习' },
       'Diffusion / Flow': { en: 'Diffusion / Flow',  zh: '扩散/流匹配' },

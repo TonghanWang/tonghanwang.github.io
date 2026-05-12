@@ -17,7 +17,7 @@ const StarIcon = () => (
 const FIELD_COLORS = {
     "LLM Advertising":  "249, 115, 22",   // orange
     "LLM Agents":       "99, 102, 241",   // indigo
-    "AI Safety":        "220, 38, 38",    // red
+    "LLM":              "220, 38, 38",    // red
     "Mechanism Design": "139, 92, 246",   // violet
     "Multi-Agent RL":   "14, 165, 233",   // sky
     "Diffusion / Flow": "6, 182, 212",    // cyan
