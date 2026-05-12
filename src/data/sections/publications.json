@@ -41,6 +41,7 @@
           "venueShort": "arXiv",
           "venueFull": "arXiv preprint",
           "venueColor": "#6b7280",
+          "fields": ["AI Safety"],
           "awards": [],
           "links": [
             { "text": "PDF", "href": "https://arxiv.org/abs/2605.09314" }
@@ -55,6 +56,7 @@
           "venueShort": "arXiv",
           "venueFull": "arXiv preprint",
           "venueColor": "#6b7280",
+          "fields": ["LLM Agents"],
           "awards": [],
           "links": [
             { "text": "PDF", "href": "https://arxiv.org/abs/2605.08060" }
@@ -84,6 +86,7 @@
           "venueShort": "arXiv",
           "venueFull": "arXiv preprint",
           "venueColor": "#6b7280",
+          "fields": ["LLM Agents"],
           "awards": [],
           "links": [
             { "text": "PDF", "href": "https://arxiv.org/abs/2602.06836" }

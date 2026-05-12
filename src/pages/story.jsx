@@ -16,6 +16,8 @@ const StarIcon = () => (
 // ── Field tag colors ──────────────────────────────────────────────────────────
 const FIELD_COLORS = {
     "LLM Advertising":  "249, 115, 22",   // orange
+    "LLM Agents":       "99, 102, 241",   // indigo
+    "AI Safety":        "220, 38, 38",    // red
     "Mechanism Design": "139, 92, 246",   // violet
     "Multi-Agent RL":   "14, 165, 233",   // sky
     "Diffusion / Flow": "6, 182, 212",    // cyan
@@ -43,7 +45,9 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
             <div className="pub-year-group">
                 <p className="pub-title">{paper.title}</p>
                 {primaryField && (
-                    <span className="pub-field-corner">{primaryField}</span>
+                    <span className="pub-field-corner">
+                        {pick(t.fields[primaryField], lang) ?? primaryField}
+                    </span>
                 )}
                 <span className="pub-year-badge">{paper.year}</span>
             </div>

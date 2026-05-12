@@ -158,6 +158,16 @@ export const translations = {
       journal:    { en: 'Journal Papers',    zh: '期刊论文' },
       workshop:   { en: 'Workshop Papers',   zh: '研讨会论文' },
     },
+    fields: {
+      'LLM Advertising':  { en: 'LLM Advertising',  zh: 'LLM 广告' },
+      'LLM Agents':       { en: 'LLM Agents',       zh: 'LLM 智能体' },
+      'AI Safety':        { en: 'AI Safety',         zh: 'AI 安全' },
+      'Mechanism Design': { en: 'Mechanism Design',  zh: '机制设计' },
+      'Multi-Agent RL':   { en: 'Multi-Agent RL',    zh: '多智能体强化学习' },
+      'Diffusion / Flow': { en: 'Diffusion / Flow',  zh: '扩散/流匹配' },
+      'Game Theory':      { en: 'Game Theory',       zh: '博弈论' },
+      'Public Health AI': { en: 'Public Health AI',  zh: '公共健康AI' },
+    },
   },
 
   // ── Teaching & Service page ──────────────────────────────────────────────────
