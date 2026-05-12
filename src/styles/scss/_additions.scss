@@ -1069,10 +1069,10 @@
 
 /* Field: corner label — last item in pub-year-group flex row */
 .pub-field-corner {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
+    letter-spacing: 0;
+    text-transform: none;
     color: rgba(var(--field-rgb), 0.9);
     white-space: nowrap;
     flex-shrink: 0;
