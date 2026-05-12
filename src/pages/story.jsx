@@ -53,9 +53,11 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
 
             {/* ── Venue + award badges + links — all stay in English ────── */}
             <div className="pub-links" style={{ flexWrap: 'wrap', gap: '6px' }}>
-                <span className="pub-venue-badge" title={paper.venueFull}>
-                    {paper.venueShort}
-                </span>
+                {paper.venueShort !== 'arXiv' && (
+                    <span className="pub-venue-badge" title={paper.venueFull}>
+                        {paper.venueShort}
+                    </span>
+                )}
                 {paper.awards.map((award, i) => (
                     <span key={i} className="pub-award-badge">
                         <StarIcon />
