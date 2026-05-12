@@ -91,6 +91,7 @@ export async function getStaticProps() {
 <ul>
   <li>PhD from Harvard University, advised by Prof. David C. Parkes and Prof. Milind Tambe</li>
   <li>Master's from the Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University</li>
+  <li>Victor Lesser Distinguished Dissertation Award, 2025</li>
   <li>Best Paper Award at ACM EC 2024 (AI Track); multiple Spotlight/Oral recognitions at NeurIPS, ICLR, AAAI, and other top venues</li>
 </ul>
     `.trim();

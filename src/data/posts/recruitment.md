@@ -61,4 +61,5 @@ additional:
 
 - 博士毕业于哈佛大学，师从 Prof. David C. Parkes 与 Prof. Milind Tambe
 - 硕士毕业于清华大学交叉信息研究院
+- 获 2025 年 Victor Lesser 杰出博士论文奖
 - 获 ACM EC 2024最佳论文奖 (AI Track)，并在 NeurIPS / ICLR / AAAI 等会议多次获 Spotlight / Oral 等荣誉
