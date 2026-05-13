@@ -61,14 +61,14 @@ export const translations = {
     // Research interest items
     problems: {
       en: [
-        'Economics of generative models--for example, how LLMs sell advertisements and how tokens are priced.',
-        'Agentic intelligence, especially systems involving multiple agents.',
+        'Agentic AI: how agents collaborate, spawn and orchestrate other agents, and evolve their own capabilities to tackle increasingly complex tasks.',
+        'Economics of generative models--for example, how to natively and optimally integrate advertisements into LLM responses, and how tokens are priced.',
         'Principled deep learning methods for solving fundamental problems in microeconomics.',
         'Modular control of a robot, treating each joint as an agent.',
       ],
       zh: [
-        '生成模型的经济学——例如，大语言模型如何投放广告、词元如何定价。',
-        '智能体，尤其是涉及多个智能体协作与交互的场景。',
+        '智能体AI：智能体如何协作、生成并调度其他智能体，并持续进化自身能力以应对日益复杂的任务。',
+        '生成模型的经济学——例如，如何将广告原生且最优地融入大语言模型的回复中，以及词元如何定价。',
         '有理论保证的深度学习方法，用于解决微观经济学中的基础性问题。',
         '将机器人的每个关节视为一个独立智能体，实现模块化控制。',
       ],
