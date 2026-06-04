@@ -62,13 +62,13 @@ export const translations = {
     problems: {
       en: [
         'Agentic AI: how agents collaborate, spawn and orchestrate other agents, and evolve their own capabilities to tackle increasingly complex tasks.',
-        'Economics of generative models--for example, how to natively and optimally integrate advertisements into LLM responses, and how tokens are priced.',
+        'Economics of generative models--for example, how to natively and optimally integrate advertisements into (multimodal) LLM responses, and how tokens are priced.',
         'Principled deep learning methods for solving fundamental problems in microeconomics.',
         'Modular control of a robot, treating each joint as an agent.',
       ],
       zh: [
         '智能体AI：智能体如何协作、生成并调度其他智能体，并持续进化自身能力以应对日益复杂的任务。',
-        '生成模型的经济学——例如，如何将广告原生且最优地融入大语言模型的回复中，以及词元如何定价。',
+        '生成模型的经济学——例如，如何将广告原生且最优地融入（多模态）大语言模型的回复中，以及词元如何定价。',
         '有理论保证的深度学习方法，用于解决微观经济学中的基础性问题。',
         '将机器人的每个关节视为一个独立智能体，实现模块化控制。',
       ],
@@ -92,8 +92,8 @@ export const translations = {
         },
         highlight: { en: 'Victor Lesser Distinguished Dissertation Award', zh: 'Victor Lesser 杰出博士论文奖' },
         text: {
-          en: "For my dissertation 'Advancing Deep Learning for Multi-agent AI: Mechanisms, Organizations, and Dynamics'.",
-          zh: "获奖论文：《Advancing Deep Learning for Multi-agent AI: Mechanisms, Organizations, and Dynamics》。",
+          en: "Awarded annually to a single doctoral graduate worldwide for outstanding dissertation research in agent and multi-agent systems. My dissertation: 'Advancing Deep Learning for Multi-agent AI: Mechanisms, Organizations, and Dynamics'.",
+          zh: "该奖项每年在全球范围内评选一位在智能体与多智能体系统领域做出杰出博士论文贡献的研究者。获奖论文：《Advancing Deep Learning for Multi-agent AI: Mechanisms, Organizations, and Dynamics》。",
         },
         date: { en: 'Mar 2026', zh: '2026年3月' },
       },
@@ -199,8 +199,8 @@ export const translations = {
     // Keyed by awards-1.md list item label; labels themselves stay in English.
     values: {
       'Victor Lesser Distinguished Dissertation Award': {
-        en: '<p>Autonomous Agents and Multiagent Systems (AAMAS)</p><p> <br/> </p>',
-        zh: '<p>多智能体系统国际会议（AAMAS）颁发</p><p> <br/> </p>',
+        en: '<p>Autonomous Agents and Multiagent Systems (AAMAS). Awarded annually to a single doctoral graduate worldwide for outstanding dissertation research in agent and multi-agent systems.</p><p> <br/> </p>',
+        zh: '<p>多智能体系统国际会议（AAMAS）颁发。该奖项每年在全球范围内评选一位在智能体与多智能体系统领域做出杰出博士论文贡献的研究者。</p><p> <br/> </p>',
       },
       'NeurIPS 2025 Spotlight': {
         en: '<p>Spotlight paper, Conference on Neural Information Processing Systems, 2025</p><p> <br/> </p>',
