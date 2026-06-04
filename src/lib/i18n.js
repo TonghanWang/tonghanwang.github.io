@@ -93,7 +93,11 @@ export const translations = {
         highlight: { en: 'Victor Lesser Distinguished Dissertation Award', zh: 'Victor Lesser 杰出博士论文奖' },
         text: {
           en: "Awarded annually to a single doctoral graduate worldwide for outstanding dissertation research in agent and multi-agent systems. My dissertation: 'Advancing Deep Learning for Multi-agent AI: Mechanisms, Organizations, and Dynamics'.",
-          zh: "该奖项每年在全球范围内评选一位在智能体与多智能体系统领域做出杰出博士论文贡献的研究者。获奖论文：《Advancing Deep Learning for Multi-agent AI: Mechanisms, Organizations, and Dynamics》。",
+          zh: "该奖项每年在全球仅授予一位博士毕业生，以表彰其在智能体与多智能体系统领域的杰出论文研究。获奖论文：《Advancing Deep Learning for Multi-agent AI: Mechanisms, Organizations, and Dynamics》。",
+        },
+        textHighlights: {
+          en: ['single doctoral graduate worldwide', 'agent and multi-agent systems'],
+          zh: ['全球仅授予一位博士毕业生', '智能体与多智能体系统'],
         },
         date: { en: 'Mar 2026', zh: '2026年3月' },
       },
@@ -199,8 +203,8 @@ export const translations = {
     // Keyed by awards-1.md list item label; labels themselves stay in English.
     values: {
       'Victor Lesser Distinguished Dissertation Award': {
-        en: '<p>Autonomous Agents and Multiagent Systems (AAMAS). Awarded annually to a single doctoral graduate worldwide for outstanding dissertation research in agent and multi-agent systems.</p><p> <br/> </p>',
-        zh: '<p>多智能体系统国际会议（AAMAS）颁发。该奖项每年在全球范围内评选一位在智能体与多智能体系统领域做出杰出博士论文贡献的研究者。</p><p> <br/> </p>',
+        en: '<p>Autonomous Agents and Multiagent Systems (AAMAS). Awarded annually to a <strong>single doctoral graduate worldwide</strong> for outstanding dissertation research in <strong>agent and multi-agent systems</strong>.</p><p> <br/> </p>',
+        zh: '<p>多智能体系统国际会议（AAMAS）颁发。该奖项每年在<strong>全球仅授予一位博士毕业生</strong>，以表彰其在<strong>智能体与多智能体系统</strong>领域的杰出论文研究。</p><p> <br/> </p>',
       },
       'NeurIPS 2025 Spotlight': {
         en: '<p>Spotlight paper, Conference on Neural Information Processing Systems, 2025</p><p> <br/> </p>',

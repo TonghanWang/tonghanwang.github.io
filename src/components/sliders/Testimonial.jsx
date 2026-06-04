@@ -30,11 +30,13 @@ const PaperIcon = () => (
 );
 
 // ── Highlight helper ──────────────────────────────────────────────────────────
-function highlightPhrase(text, phrase, lang) {
-    if (!phrase) return text;
-    const parts = text.split(new RegExp(`(${phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'));
+function highlightPhrases(text, phrases, lang) {
+    if (!phrases || !phrases.length) return text;
+    const list = Array.isArray(phrases) ? phrases : [phrases];
+    const escaped = list.map(p => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const parts = text.split(new RegExp(`(${escaped.join('|')})`, 'gi'));
     return parts.map((part, i) =>
-        part.toLowerCase() === phrase.toLowerCase()
+        list.some(p => part.toLowerCase() === p.toLowerCase())
             ? <span key={i} style={{
                 color: ACCENT,
                 fontWeight: '700',
@@ -84,9 +86,10 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
     };
 
     // Use translated strings when available, fall back to raw data
-    const displayName      = i18nItem ? pick(i18nItem.name, lang) : item.name;
-    const displayHighlight = i18nItem?.highlight ? pick(i18nItem.highlight, lang) : item.highlight;
-    const displayText = i18nItem ? pick(i18nItem.text, lang) : item.text;
+    const displayName           = i18nItem ? pick(i18nItem.name, lang) : item.name;
+    const displayHighlight      = i18nItem?.highlight ? pick(i18nItem.highlight, lang) : item.highlight;
+    const displayText           = i18nItem ? pick(i18nItem.text, lang) : item.text;
+    const displayTextHighlights = i18nItem?.textHighlights ? pick(i18nItem.textHighlights, lang) : null;
     const displayDate = i18nItem ? pick(i18nItem.date, lang) : item.date;
     const displayLinkText = (i18nItem?.link && item.link)
         ? pick(i18nItem.link, lang)
@@ -141,10 +144,10 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
                 </div>
 
                 <p style={{ fontSize: lang === 'zh' ? '19px' : '18px', fontWeight: '500', color: '#1a1a1a', lineHeight: '1.4', margin: '0 0 6px' }}>
-                    {highlightPhrase(displayName, displayHighlight, lang)}
+                    {highlightPhrases(displayName, displayHighlight, lang)}
                 </p>
                 <p style={{ fontSize: lang === 'zh' ? '16px' : '15px', color: '#555', lineHeight: '1.6', margin: '0 0 6px' }}>
-                    {displayText}
+                    {displayTextHighlights ? highlightPhrases(displayText, displayTextHighlights, lang) : displayText}
                 </p>
                 {item.link && (
                     <a href={item.link.href} target="_blank" rel="noopener noreferrer"
