@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import { scrollAnimation } from "../common/scrollAnims";
-import { countersAnimation } from "../common/counters";
-import { parallaxAnimation } from "../common/parallax";
 import { anchorSscroll } from "../common/utilits";
 
 import Footer from "./footers/Index";
@@ -38,8 +36,6 @@ const Layouts = ({
 
   useEffect(() => {
     scrollAnimation();
-    countersAnimation();
-    parallaxAnimation();
     anchorSscroll();
 
     if ( document != undefined && bodyClass ) {

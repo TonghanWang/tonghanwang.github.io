@@ -33,7 +33,7 @@ function highlightText(text, { links = {}, highlights = [], linkColor } = {}) {
         }
         const isHighlight = highlights.some(h => part.toLowerCase() === h.toLowerCase());
         if (isHighlight) return <span key={i} style={{ color: ACCENT }}>{part}</span>;
-        return <>{part}</>;
+        return <span key={i}>{part}</span>;
     });
 }
 
@@ -109,7 +109,7 @@ const HeroOne = () => {
 
                     {/* Name */}
                     <h1 className="mil-up" style={{ marginBottom: '16px' }}>
-                        <span style={{ fontSize: '45px', ...(lang === 'zh' && { fontFamily: "'KaiTi', 'STKaiti', '楷体', serif" }) }}>{title}</span>
+                        <span style={{ fontSize: '58px', ...(lang === 'zh' && { fontFamily: "'KaiTi', 'STKaiti', '楷体', serif" }) }}>{title}</span>
                         <span
                             ref={iconRef}
                             className={`name-info-btn${popState === 'open' ? ' is-open' : ''}`}
@@ -169,7 +169,7 @@ const HeroOne = () => {
                                         <li
                                             key={idx}
                                             className="academic-font"
-                                            style={{ fontSize: '16px', textAlign: 'left' }}
+                                            style={{ fontSize: '18px', textAlign: 'left' }}
                                         >
                                             {item}
                                         </li>
@@ -179,6 +179,15 @@ const HeroOne = () => {
                         )}
                     </div>
 
+                </div>
+
+                {/* ── Photo square ────────────────────────────────────────── */}
+                <div className="hero-photo-wrap">
+                    <img
+                        src="/img/person/avatar5.jpg"
+                        alt="Tonghan Wang"
+                        className="hero-photo"
+                    />
                 </div>
 
             </section>

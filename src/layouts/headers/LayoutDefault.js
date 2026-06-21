@@ -11,7 +11,26 @@ const DefaultHeader = ({ extraClass }) => {
   const [dragging, setDragging] = useState(false);
   const { lang, setLang } = useLanguage();
   const [pos, setPos] = useState(null); // null = use CSS default position
+  const [activeSection, setActiveSection] = useState('');
   const dragRef = useRef(null);
+
+  // Scroll-spy: highlight nav item for the section currently in view
+  useEffect(() => {
+    const ids = ['awards', 'publications', 'teaching', 'service', 'contact'];
+    const update = () => {
+      let current = '';
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.35) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+    return () => window.removeEventListener('scroll', update);
+  }, []);
 
   // Restore position from sessionStorage on mount (survives navigation, cleared on refresh)
   useEffect(() => {
@@ -31,7 +50,9 @@ const DefaultHeader = ({ extraClass }) => {
     if ( item.children != 0 ) {
       s_class1 = 'mil-has-children';
     }
-    if ( ( asPath.indexOf( item.link ) != -1 && item.link != '/' ) || asPath == item.link ) {
+    const hashMatch = item.link.startsWith('/#') && item.link === `/#${activeSection}`;
+    const pathMatch = ( asPath.indexOf( item.link ) != -1 && item.link != '/' ) || asPath == item.link;
+    if ( hashMatch || (!activeSection && pathMatch) ) {
       s_class1 += ' mil-active';
     }
     let newobj = Object.assign({}, item, { "classes" :  s_class1 });

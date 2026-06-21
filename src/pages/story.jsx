@@ -1,154 +1,20 @@
-import { useState } from "react";
-import Layouts from "@layouts/Layouts";
-import PageBanner from "@components/PageBanner";
-import PubData from "@data/sections/publications.json";
-import { useLanguage } from "@library/LanguageContext";
-import { translations, pick } from "@library/i18n";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
-// ── Award badge icon ──────────────────────────────────────────────────────────
-const StarIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"
-         fill="currentColor" stroke="none">
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-    </svg>
-);
+// Publications now lives on the home page as a section — keep this route alive
+// as a redirect so old links and bookmarks still land in the right place.
+const StoryRedirect = () => {
+  const router = useRouter();
 
-// ── Field tag colors ──────────────────────────────────────────────────────────
-const FIELD_COLORS = {
-    "LLM Advertising":  "249, 115, 22",   // orange
-    "LLM Agents":       "99, 102, 241",   // indigo
-    "LLM":              "220, 38, 38",    // red
-    "Mechanism Design": "139, 92, 246",   // violet
-    "Multi-Agent RL":   "14, 165, 233",   // sky
-    "Diffusion / Flow": "6, 182, 212",    // cyan
-    "Game Theory":      "236, 72, 153",   // pink
-    "Public Health AI": "16, 185, 129",   // emerald
+  useEffect(() => {
+    router.replace("/#publications");
+  }, [router]);
+
+  return null;
 };
 
-// ── Single paper row ──────────────────────────────────────────────────────────
-const PaperItem = ({ paper, catId, idx, lang }) => {
-    const [showAbstract, setShowAbstract] = useState(false);
-    const t = translations.publications;
-
-    const primaryField = (paper.fields || [])[0];
-    const fieldRgb = primaryField ? (FIELD_COLORS[primaryField] || '107, 114, 128') : null;
-
-    return (
-        <li
-            className={`mil-up pub-paper-item${primaryField ? ' pub-paper-item--fielded' : ''}`}
-            style={fieldRgb ? { '--field-rgb': fieldRgb } : {}}
-        >
-            {/* ── Field bar — positioned below the timeline bullet ─────── */}
-            {primaryField && <div className="pub-field-bar" />}
-
-            {/* ── Title row — paper titles stay in English ────────────── */}
-            <div className="pub-year-group">
-                <p className="pub-title">{paper.title}</p>
-                {primaryField && (
-                    <span className="pub-field-corner">
-                        {pick(t.fields[primaryField], lang) ?? primaryField}
-                    </span>
-                )}
-                <span className="pub-year-badge">{paper.year}</span>
-            </div>
-
-            {/* ── Authors stay in English ──────────────────────────────── */}
-            <p className="pub-authors">{paper.authors}</p>
-
-            {/* ── Venue + award badges + links — all stay in English ────── */}
-            <div className="pub-links" style={{ flexWrap: 'wrap', gap: '6px' }}>
-                {paper.venueShort !== 'arXiv' && (
-                    <span className="pub-venue-badge" title={paper.venueFull}>
-                        {paper.venueShort}
-                    </span>
-                )}
-                {paper.awards.map((award, i) => (
-                    <span key={i} className="pub-award-badge">
-                        <StarIcon />
-                        {award}
-                    </span>
-                ))}
-                {paper.links.map((l, i) => (
-                    <a key={i} href={l.href} target="_blank" rel="noopener noreferrer" className="pub-link">
-                        {l.text}
-                    </a>
-                ))}
-            </div>
-
-            {/* ── Toggle buttons ───────────────────────────────────────── */}
-            {paper.abstract && (
-                <div>
-                    <button
-                        className={`pub-toggle-btn${showAbstract ? ' active' : ''}`}
-                        onClick={() => setShowAbstract(v => !v)}
-                    >
-                        {showAbstract ? pick(t.abstractClose, lang) : pick(t.abstractOpen, lang)}
-                    </button>
-                </div>
-            )}
-
-            {/* ── Abstract panel ───────────────────────────────────────── */}
-            {showAbstract && paper.abstract && (
-                <div className="pub-abstract-box">{paper.abstract}</div>
-            )}
-        </li>
-    );
-};
-
-// ── Page ──────────────────────────────────────────────────────────────────────
-const Story = () => {
-    const { lang } = useLanguage();
-    const t = translations.publications;
-
-    return (
-        <Layouts fullWidth={true} showProgressBar={true}>
-            <PageBanner pageTitle={pick(t.banner, lang)} />
-
-            <section style={{ paddingBottom: '60px' }}>
-                <div className="row">
-                    <div className="col-xl-12">
-                        {PubData.categories.map(cat => (
-                            <div key={cat.id}>
-
-                                {/* Section header — translated */}
-                                <div className="mil-section-title mil-up mil-left mil-mb-90"
-                                     style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                                    <div>
-                                        <div className="mil-divider"></div>
-                                        <h3 style={{ display: 'inline', ...(lang === 'zh' ? { fontFamily: "STKaiti, KaiTi, 'AR PL UKai CN', 'Ma Shan Zheng', serif", fontWeight: 400 } : {}) }}>
-                                            {pick(t.categories[cat.id], lang) ?? cat.title}
-                                        </h3>
-                                    </div>
-                                    <span className="pub-section-count">{cat.papers.length}</span>
-                                </div>
-
-                                {/* Papers */}
-                                <div className="mil-timeline mil-mb-90" style={{ marginBottom: '40px' }}>
-                                    <div className="mil-timeline-track"></div>
-                                    <ul style={{ paddingLeft: 0 }}>
-                                        {cat.papers.map((paper, idx) => (
-                                            <PaperItem
-                                                key={`${cat.id}-${idx}`}
-                                                paper={paper}
-                                                catId={cat.id}
-                                                idx={idx}
-                                                lang={lang}
-                                            />
-                                        ))}
-                                    </ul>
-                                </div>
-
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-        </Layouts>
-    );
-};
-
-export default Story;
+export default StoryRedirect;
 
 export async function getStaticProps() {
-    return { props: {} };
+  return { props: {} };
 }

@@ -23,22 +23,27 @@
       },
       {
         "label": "Publications",
-        "link": "/story",
+        "link": "/#publications",
         "children": 0
       },
       {
         "label": "Awards",
-        "link": "/awards",
+        "link": "/#awards",
         "children": 0
       },
       {
-        "label": "Teaching & Service",
-        "link": "/teaching",
+        "label": "Teaching",
+        "link": "/#teaching",
+        "children": 0
+      },
+      {
+        "label": "Academic Service",
+        "link": "/#service",
         "children": 0
       },
       {
         "label": "Join Us",
-        "link": "/contact",
+        "link": "/#contact",
         "children": 0
       }
     ]

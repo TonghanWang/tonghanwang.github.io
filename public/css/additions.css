@@ -1,6 +1,10 @@
 /* ─── Scroll progress bar: theme color ──────────────────────────────────────── */
 .mil-progress-track .mil-progress { background-color: #2563eb !important; }
 
+/* ─── Section title size ─────────────────────────────────────────────────────── */
+.mil-banner-sm h1 { font-size: 42px !important; }
+
+
 /* ─── Chinese homepage: Kaiti font ──────────────────────────────────────────── */
 .zh-kaiti, .zh-kaiti * {
     font-family: STKaiti, KaiTi, 'AR PL UKai CN', 'Ma Shan Zheng', serif !important;
@@ -8,6 +12,36 @@
 .zh-kaiti i[class*="fa"] {
     font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands" !important;
 }
+
+/* ─── Bold: award titles, paper titles, conference names ────────────────────── */
+.mil-accordion-menu p { font-weight: 700 !important; }
+
+/* ─── Chinese bold: stroke to thicken KaiTi (no native bold variant) ─────────── */
+.zh-kaiti .mil-accordion-menu p,
+.zh-kaiti .pub-title,
+.zh-kaiti .pub-venue-badge {
+    -webkit-text-stroke: 0.4px currentColor;
+    text-stroke: 0.4px currentColor;
+}
+
+/* ─── Chinese: larger font sizes for all content (h1 section banners excluded) ── */
+.zh-kaiti .hero-glass-panel .mil-wide.mil-dark   { font-size: 19px !important; }
+.zh-kaiti .academic-font                          { font-size: 22px !important; }
+.zh-kaiti .mil-accordion-menu .mil-wide.mil-dark  { font-size: 22px !important; }
+.zh-kaiti .mil-accordion-content                  { font-size: 17px !important; }
+.zh-kaiti .mil-text-xl                            { font-size: 23px !important; }
+.zh-kaiti .mil-text-lg                            { font-size: 21px !important; }
+.zh-kaiti .pub-title                              { font-size: 22px !important; }
+.zh-kaiti .pub-authors                            { font-size: 19px !important; }
+.zh-kaiti .pub-year-badge                         { font-size: 15px !important; }
+.zh-kaiti .pub-section-count                      { font-size: 15px !important; }
+.zh-kaiti .pub-venue-badge                        { font-size: 13px !important; }
+.zh-kaiti .pub-award-badge                        { font-size: 13px !important; }
+.zh-kaiti .pub-link                               { font-size: 14px !important; }
+.zh-kaiti .pub-abstract-box                       { font-size: 17px !important; }
+.zh-kaiti .pub-field-corner                       { font-size: 15px !important; }
+.zh-kaiti .role-badge                             { font-size: 13px !important; }
+.zh-kaiti .area-chair-badge                       { font-size: 13px !important; }
 
 /* ─── Accent color overrides (blue) ─────────────────────────────────────────── */
 .mil-social-icons li a:hover { color: #2563eb !important; }

@@ -3,6 +3,15 @@
     "items": [
         {
             "type": "award",
+            "date": "Jun 2026",
+            "name": "Giving a talk at ACM EC 2026 in Rome!",
+            "highlight": "ACM EC 2026",
+            "image": "",
+            "role": "ACM EC 2026 · Rome",
+            "text": "Oral presentation: 'Duality for Optimal Multi-Item, Multi-Bidder Auction Design: Revenue Certificates through Deep Learning', with Yancheng Jiang and David C. Parkes."
+        },
+        {
+            "type": "award",
             "date": "Mar 2026",
             "name": "Honored to receive the 2025 Victor Lesser Distinguished Dissertation Award!",
             "highlight": "Victor Lesser Distinguished Dissertation Award",

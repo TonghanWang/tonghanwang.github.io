@@ -101,6 +101,19 @@
       "title": "Conference Papers",
       "papers": [
         {
+          "title": "Duality for Optimal Multi-Item, Multi-Bidder Auction Design: Revenue Certificates through Deep Learning",
+          "authors": "Yancheng Jiang, David C. Parkes, Tonghan Wang",
+          "year": 2026,
+          "venueShort": "ACM EC",
+          "venueFull": "ACM Conference on Economics and Computation (EC)",
+          "venueColor": "#dc2626",
+          "fields": ["Mechanism Design"],
+          "awards": ["Oral"],
+          "links": [],
+          "abstract": "",
+          "bibtex": "@inproceedings{jiang2026duality,\n  title={Duality for Optimal Multi-Item, Multi-Bidder Auction Design: Revenue Certificates through Deep Learning},\n  author={Jiang, Yancheng and Parkes, David C. and Wang, Tonghan},\n  booktitle={Proceedings of the ACM Conference on Economics and Computation},\n  year={2026}\n}"
+        },
+        {
           "title": "Policy-to-Language: Train LLMs to Explain Decisions with Flow-Matching Generated Rewards",
           "authors": "Xinyi Yang, Liang Zeng, Heng Dong, Chao Yu, Xiaoran Wu, Huazhong Yang, Yu Wang, Milind Tambe, Tonghan Wang",
           "year": 2026,

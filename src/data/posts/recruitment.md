@@ -32,14 +32,14 @@ additional:
   "
 ---
 
-大家好，我是王同翰（[主页](/story)），我将于2026年加入清华大学人工智能学院担任助理教授。
+大家好，我是王同翰，我将于2026年加入清华大学人工智能学院担任助理教授。
 
 **研究兴趣**
 
 正在进行的具体项目有： 
 
+- Agentic AI
 - 有经济学理论支持的生成模型 advertising 和 market design
-- 侧重安全的AI博弈论 
 - 肌群协同的具身学习 
 - 生成模型的多智能体问题
 
@@ -62,4 +62,4 @@ additional:
 - 博士毕业于哈佛大学，师从 Prof. David C. Parkes 与 Prof. Milind Tambe
 - 硕士毕业于清华大学交叉信息研究院
 - 获 2025 年 Victor Lesser 杰出博士论文奖
-- 获 ACM EC 2024最佳论文奖 (AI Track)，并在 NeurIPS / ICLR / AAAI 等会议多次获 Spotlight / Oral 等荣誉
+- 获 ACM EC 2024最佳论文奖 (AI Track)，ACM EC 2026 Oral，并在 NeurIPS / ICLR / AAAI 等会议多次获 Spotlight / Oral 等荣誉

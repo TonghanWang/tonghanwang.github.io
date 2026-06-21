@@ -1,17 +1,30 @@
+// Distance to keep between the fixed nav pill and the top of a scrolled-to section.
+const ANCHOR_SCROLL_OFFSET = 110;
+
 export const anchorSscroll = () => {
-    // anchor scroll
-    const links = document.querySelectorAll('a[href^="#"]');
+    // Smoothly slide to in-page anchor targets (e.g. "#publications" or "/#awards").
+    const links = document.querySelectorAll('a[href*="#"]');
 
     links.forEach((link) => {
       link.addEventListener("click", (e) => {
-        event.preventDefault();
+        const href = link.getAttribute('href');
+        const hashIndex = href.indexOf('#');
+        if (hashIndex === -1) return;
 
-        var target = document.querySelector(link.getAttribute('href'));
-        var offset = 90;
-  
+        const hash = href.slice(hashIndex);
+        if (hash.length < 2) return;
+
+        const pathPart = href.slice(0, hashIndex);
+        const samePage = pathPart === '' || pathPart === window.location.pathname;
+        if (!samePage) return; // let the browser navigate there, then jump to the anchor
+
+        const target = document.querySelector(hash);
+        if (!target) return;
+
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.pageYOffset - ANCHOR_SCROLL_OFFSET;
         window.scrollTo({
-            // top: target.offsetTop - offset,
-            top: 600,
+            top: Math.max(top, 0),
             behavior: "smooth"
         });
       });

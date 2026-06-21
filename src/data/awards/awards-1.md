@@ -10,6 +10,9 @@ subtitle: "What is UI/UX Design"
 list:
   heading: ""
   items:
+    - label: "EC 2026 Oral"
+      value: "<p>Oral presentation, ACM Conference on Economics and Computation, 2026</p>
+      <p> </br> </p>"
     - label: "Victor Lesser Distinguished Dissertation Award"
       trophy: true
       value: "<p>Autonomous Agents and Multiagent Systems (AAMAS)</p>
@@ -41,17 +44,5 @@ list:
       <p> </br> </p>"
     - label: "ICLR 2020 Spotlight"
       value: "<p>Spotlight paper, International Conference on Learning Representations, 2020</p>
-      <p> </br> </p>"
-    - label: "Outstanding Undergraduates at Shandong University"
-      value: "<p>Awarded to top 10 (0.05%) students at Shandong University</p>
-      <p> </br> </p>"
-    - label: "National Scholarship at Shandong University"
-      value: "<p>Awarded to top 1% students at Shandong University</p>
-      <p> </br> </p>"
-    - label: "Principal Scholarship"
-      value: "<p>Awarded to top 18 of 40000 (0.05%) students at Shandong University</p>
-      <p> </br> </p>"
-    - label: "First Class Scholarship 2015-2017"
-      value: "<p>Top 1 student at Taishan Academy, a special honors program at Shandong University</p>
       <p> </br> </p>"
 ---

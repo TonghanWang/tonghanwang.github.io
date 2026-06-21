@@ -11,7 +11,8 @@ export const translations = {
     'Publications':      { en: 'Publications',      zh: '论文' },
     'Awards':            { en: 'Awards',            zh: '荣誉' },
     'Projects':          { en: 'Projects',          zh: '项目' },
-    'Teaching & Service':{ en: 'Teaching & Service',zh: '教学与服务' },
+    'Teaching':          { en: 'Teaching',           zh: '教学' },
+    'Academic Service':  { en: 'Academic Service',   zh: '学术服务' },
     'Join Us':           { en: 'Join Us',           zh: '加入我们' },
   },
 
@@ -85,6 +86,18 @@ export const translations = {
     heading: { en: 'News', zh: '动态' },
     // Indexed to match testimonial.json items array order
     items: [
+      {
+        name: {
+          en: 'Giving a talk at ACM EC 2026 in Rome!',
+          zh: '将在罗马 ACM EC 2026 发表口头报告！',
+        },
+        highlight: { en: 'ACM EC 2026', zh: 'ACM EC 2026' },
+        text: {
+          en: "Oral presentation: 'Duality for Optimal Multi-Item, Multi-Bidder Auction Design: Revenue Certificates through Deep Learning', with Yancheng Jiang and David C. Parkes.",
+          zh: "口头报告论文：《Duality for Optimal Multi-Item, Multi-Bidder Auction Design: Revenue Certificates through Deep Learning》，与 Yancheng Jiang 和 David C. Parkes 合作。",
+        },
+        date: { en: 'Jun 2026', zh: '2026年6月' },
+      },
       {
         name: {
           en: 'Honored to receive the 2025 Victor Lesser Distinguished Dissertation Award!',
@@ -174,9 +187,8 @@ export const translations = {
     },
   },
 
-  // ── Teaching & Service page ──────────────────────────────────────────────────
+  // ── Teaching & Service sections ──────────────────────────────────────────────
   teaching: {
-    banner:          { en: 'Teaching & Service', zh: '教学与服务' },
     sectionTeaching: { en: 'Teaching',           zh: '教学' },
     sectionService:  { en: 'Academic Service',   zh: '学术服务' },
     reviewer:        { en: 'Reviewer',           zh: '审稿人' },
@@ -266,7 +278,7 @@ export const translations = {
     banner:  { en: 'Join Us',           zh: '加入我们' },
     write:   { en: 'Write: ',           zh: '邮件：' },
     dropIn:  { en: 'Drop in: ',         zh: '办公室：' },
-    address: { en: 'Office 5.421, 150 Western Ave, Allston', zh: '哈佛大学，150 Western Ave，5.421 室，Allston' },
+    address: { en: 'F509, Zhongguancun Zhizao Street, Haidian, Beijing', zh: '北京市海淀区中关村智造大街F座509' },
   },
 
   // ── Call-to-action ───────────────────────────────────────────────────────────
