@@ -65,21 +65,6 @@
           "bibtex": "@article{liu2026memorycurse,\n  title={The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents},\n  author={Liu, Jiayuan and Li, Tianqin and Du, Shiyi and Luo, Xin and Zeng, Haoxuan and Tewolde, Emanuel and Lee, Tai Sing and Wang, Tonghan and Kingsford, Carl and Conitzer, Vincent},\n  journal={arXiv preprint arXiv:2605.08060},\n  year={2026}\n}"
         },
         {
-          "title": "Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models",
-          "authors": "Jiayuan Liu, Barry Wang, Jiarui Gan, Tonghan Wang, Leon Xie, Mingyu Guo, Vincent Conitzer",
-          "year": 2026,
-          "venueShort": "arXiv",
-          "venueFull": "arXiv preprint",
-          "venueColor": "#6b7280",
-          "fields": ["LLM Advertising"],
-          "awards": [],
-          "links": [
-            { "text": "PDF", "href": "https://arxiv.org/abs/2604.06263" }
-          ],
-          "abstract": "",
-          "bibtex": "@article{liu2026incentive,\n  title={Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models},\n  author={Liu, Jiayuan and Wang, Barry and Gan, Jiarui and Wang, Tonghan and Xie, Leon and Guo, Mingyu and Conitzer, Vincent},\n  journal={arXiv preprint arXiv:2604.06263},\n  year={2026}\n}"
-        },
-        {
           "title": "LLM Active Alignment: A Nash Equilibrium Perspective",
           "authors": "Tonghan Wang*, Yuqi Pan*, Xinyi Yang*, Yanchen Jiang, Milind Tambe, David C. Parkes",
           "year": 2026,
@@ -100,6 +85,21 @@
       "id": "conference",
       "title": "Conference Papers",
       "papers": [
+        {
+          "title": "Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models",
+          "authors": "Jiayuan Liu, Barry Wang, Jiarui Gan, Tonghan Wang, Leon Xie, Mingyu Guo, Vincent Conitzer",
+          "year": 2026,
+          "venueShort": "COLM",
+          "venueFull": "Conference on Language Modeling (COLM)",
+          "venueColor": "#be185d",
+          "fields": ["LLM Advertising"],
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2604.06263" }
+          ],
+          "abstract": "",
+          "bibtex": "@inproceedings{liu2026incentive,\n  title={Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models},\n  author={Liu, Jiayuan and Wang, Barry and Gan, Jiarui and Wang, Tonghan and Xie, Leon and Guo, Mingyu and Conitzer, Vincent},\n  booktitle={Conference on Language Modeling},\n  year={2026}\n}"
+        },
         {
           "title": "Duality for Optimal Multi-Item, Multi-Bidder Auction Design: Revenue Certificates through Deep Learning",
           "authors": "Yancheng Jiang, David C. Parkes, Tonghan Wang",
