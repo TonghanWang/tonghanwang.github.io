@@ -20,6 +20,10 @@
 }
 
 /* ─── Chinese homepage: Kaiti font (CJK only, Latin stays Outfit) ───────────── */
+/* Fallback woff2 is a subset of "AR PL UKai CN" (Arphic Public License,
+   see /fonts/kaiti-cjk/LICENSE.txt), a genuine Kaishu-style Kaiti font —
+   not a modern reinterpretation — so non-macOS/Windows visitors still see
+   real Kaiti strokes instead of a look-alike. */
 @font-face {
     font-family: 'KaitiCJK';
     src: local('STKaiti'), local('KaiTi'), local('AR PL UKai CN'),
