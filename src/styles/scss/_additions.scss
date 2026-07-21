@@ -22,8 +22,10 @@
 /* ─── Chinese homepage: Kaiti font (CJK only, Latin stays Outfit) ───────────── */
 @font-face {
     font-family: 'KaitiCJK';
-    src: local('STKaiti'), local('KaiTi'), local('AR PL UKai CN');
+    src: local('STKaiti'), local('KaiTi'), local('AR PL UKai CN'),
+         url('/fonts/kaiti-cjk/KaitiCJK-subset.woff2') format('woff2');
     unicode-range: #{"U+4E00-U+9FFF, U+3400-U+4DBF, U+20000-U+2A6DF, U+F900-U+FAFF, U+3000-U+303F, U+FF00-U+FFEF"};
+    font-display: swap;
 }
 .zh-kaiti, .zh-kaiti * {
     font-family: 'KaitiCJK', 'Outfit', sans-serif !important;
