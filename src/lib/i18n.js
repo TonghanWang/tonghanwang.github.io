@@ -21,8 +21,8 @@ export const translations = {
     title: { en: 'Tonghan Wang', zh: '王同翰' },
     // Subtitle below the name (hero-1.json description)
     description: {
-      en: '(王同翰) Incoming Tenure-Track Assistant Professor at the College of AI, Tsinghua University.',
-      zh: '（Tonghan Wang）清华大学人工智能学院长聘教轨助理教授（即将入职）。',
+      en: '(王同翰) Tenure-Track Assistant Professor at the College of AI, Tsinghua University.',
+      zh: '（Tonghan Wang）清华大学人工智能学院长聘教轨助理教授。',
     },
     descriptionLinks: {
       en: {
