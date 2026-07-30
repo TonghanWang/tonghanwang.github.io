@@ -66,7 +66,7 @@ export async function getStaticProps() {
   const recruitmentHtmlZh = recruitmentPostData.contentHtml;
 
   const recruitmentHtmlEn = `
-<p>Hi, I'm <a href="/#publications">Tonghan Wang</a>. I am an Assistant Professor at the Institute for AI, Tsinghua University.</p>
+<p>Hi, I'm <a href="/#publications">Tonghan Wang</a>. I am an Assistant Professor at the College of AI, Tsinghua University.</p>
 
 <h2>Research Interests</h2>
 
