@@ -50,6 +50,7 @@ const HeroOne = () => {
     const problems      = t.problems[lang] ?? t.problems.en;
     const tooltipText   = pick(t.tooltip, lang);
     const showCNLink    = t.showChineseProfileLink[lang] ?? true;
+    const tooltipId     = 'name-pronunciation-tooltip';
 
     /* ── Popover state ────────────────────────────────────────────────────── */
     const [popState, setPopState] = useState('closed'); // 'closed' | 'open' | 'closing'
@@ -92,6 +93,18 @@ const HeroOne = () => {
         return () => document.removeEventListener('mousedown', handleOutside);
     }, [popState]);
 
+    // Escape should dismiss the pronunciation popover and return focus.
+    useEffect(() => {
+        if (popState !== 'open') return;
+        const handleEscape = (e) => {
+            if (e.key !== 'Escape') return;
+            setPopState('closed');
+            iconRef.current?.focus();
+        };
+        document.addEventListener('keydown', handleEscape);
+        return () => document.removeEventListener('keydown', handleEscape);
+    }, [popState]);
+
     // recalc on resize
     useEffect(() => {
         if (popState !== 'open') return;
@@ -108,22 +121,24 @@ const HeroOne = () => {
                 <div className="mil-banner-title left-align">
 
                     {/* Name */}
-                    <h1 className="mil-up" style={{ marginBottom: '16px' }}>
-                        <span style={{ fontSize: '58px', ...(lang === 'zh' && { fontFamily: "'KaiTi', 'STKaiti', '楷体', serif" }) }}>{title}</span>
-                        <span
+                    <h1 className="mil-up hero-name-row">
+                        <span className="hero-name" style={lang === 'zh' ? { fontFamily: "'KaiTi', 'STKaiti', '楷体', serif" } : {}}>{title}</span>
+                        <button
+                            type="button"
                             ref={iconRef}
                             className={`name-info-btn${popState === 'open' ? ' is-open' : ''}`}
                             onClick={openPop}
-                            role="button"
-                            aria-label="Name pronunciation guide"
+                            aria-label={lang === 'zh' ? '姓名发音说明' : 'Name pronunciation guide'}
                             aria-expanded={popState === 'open'}
+                            aria-controls={tooltipId}
                         >
                             <i className="fas fa-info-circle" style={{ fontSize: '9px', lineHeight: 1 }}></i>
-                        </span>
+                        </button>
                     </h1>
                     {/* Portal: rendered at body level — escapes all stacking contexts */}
                     {popState !== 'closed' && typeof document !== 'undefined' && createPortal(
                         <div
+                            id={tooltipId}
                             ref={popupRef}
                             className={`name-tooltip-popup${popState === 'open' ? ' is-open' : ' is-closing'}`}
                             style={{ top: popPos.top, right: popPos.right }}
@@ -138,38 +153,40 @@ const HeroOne = () => {
                     <div className="mil-up hero-glass-panel">
 
                         {/* Short intro */}
-                        <p className="mil-wide mil-dark" style={{ fontSize: '15px', marginBottom: '4px' }}>
+                        <p className="mil-wide mil-dark hero-role">
                             {highlightText(description, { links: descLinks, linkColor: 'inherit' })}
                         </p>
 
-                        <p className="academic-font" style={{ fontSize: '18px', textAlign: 'left', marginTop: '10px' }}>
+                        <p className="academic-font hero-bio">
                             {highlightText(bio, { links: bioLinks, linkColor: 'inherit' })}
                         </p>
 
                         {showCNLink && (
-                            <p className="academic-font" style={{ fontSize: '18px', textAlign: 'left', marginTop: '6px' }}>
+                            <p className="academic-font hero-profile-link">
                                 {highlightText(AboutData.description3, { links: AboutData.link3, linkColor: 'inherit' })}
                             </p>
                         )}
 
+                        <div className="hero-actions" aria-label={lang === 'zh' ? '快速链接' : 'Quick links'}>
+                            <a className="hero-action hero-action-primary" href="#publications">
+                                {pick(t.actions.publications, lang)}
+                            </a>
+                            <a className="hero-action hero-action-secondary" href="#contact">
+                                {pick(t.actions.join, lang)}
+                            </a>
+                        </div>
+
                         {/* Research interests block */}
                         {problems.length > 0 && (
-                            <div style={{
-                                borderLeft: '4px solid #2563eb',
-                                borderRadius: '0 10px 10px 0',
-                                padding: '12px 18px',
-                                marginTop: '14px',
-                                background: 'rgba(37, 99, 235, 0.04)',
-                            }}>
-                                <p className="academic-font" style={{ fontSize: '16px', textAlign: 'left', marginBottom: '8px', fontWeight: '600', color: '#1a1a1a' }}>
+                            <div className="hero-research">
+                                <p className="academic-font hero-research-intro">
                                     {recruiting}
                                 </p>
-                                <ol style={{ paddingLeft: '1.25rem', listStyleType: 'decimal', display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: 0 }}>
+                                <ol className="hero-research-list">
                                     {problems.map((item, idx) => (
                                         <li
                                             key={idx}
                                             className="academic-font"
-                                            style={{ fontSize: '18px', textAlign: 'left' }}
                                         >
                                             {item}
                                         </li>
@@ -182,13 +199,14 @@ const HeroOne = () => {
                 </div>
 
                 {/* ── Photo square ────────────────────────────────────────── */}
-                <div className="hero-photo-wrap">
+                <figure className="hero-photo-wrap">
                     <img
                         src="/img/person/avatar5.jpg"
                         alt="Tonghan Wang"
                         className="hero-photo"
                     />
-                </div>
+                    <span className="hero-photo-accent" aria-hidden="true" />
+                </figure>
 
             </section>
             {/* banner end */}

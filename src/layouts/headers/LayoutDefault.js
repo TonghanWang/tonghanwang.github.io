@@ -134,7 +134,12 @@ const DefaultHeader = ({ extraClass }) => {
                 <ul>
                     {navItems.map((item, key) => (
                     <li className={item.classes} key={`header-menu-item-${key}`}>
-                        <a href={item.link}>{translations.nav[item.label]?.[lang] ?? item.label}</a>
+                        <a
+                          href={item.link}
+                          aria-current={item.classes.includes('mil-active') ? 'page' : undefined}
+                        >
+                          {translations.nav[item.label]?.[lang] ?? item.label}
+                        </a>
                         {item.children != 0 &&
                         <ul>
                             {item.children.map((subitem, key2) => (
@@ -149,12 +154,16 @@ const DefaultHeader = ({ extraClass }) => {
         </div>
 
         <div className="mil-top-panel-btns">
-            <div
+            <button
+              type="button"
               className={`mil-menu-btn ${toggle ? "mil-active" : ""}`}
               onClick={() => setToggle(!toggle)}
+              aria-label={lang === 'zh' ? '切换导航菜单' : 'Toggle navigation menu'}
+              aria-expanded={toggle}
+              aria-controls="swupMenu"
             >
                 <span />
-            </div>
+            </button>
         </div>
 
       </div>

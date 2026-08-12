@@ -5,6 +5,51 @@
       "title": "Preprint Papers",
       "papers": [
         {
+          "title": "Every Cache Entry Earns Its Place: Global Allocation of Resolution and Coverage for KV Cache Compression",
+          "authors": "Haolin Tian, Yuzhe Liu, Tonghan Wang",
+          "year": 2026,
+          "venueShort": "arXiv",
+          "venueFull": "arXiv preprint",
+          "venueColor": "#6b7280",
+          "fields": ["LLM"],
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2608.07001" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{tian2026gracekv,\n  title={Every Cache Entry Earns Its Place: Global Allocation of Resolution and Coverage for KV Cache Compression},\n  author={Tian, Haolin and Liu, Yuzhe and Wang, Tonghan},\n  journal={arXiv preprint arXiv:2608.07001},\n  year={2026}\n}"
+        },
+        {
+          "title": "Evaluating and Pricing Advertisements in AI-Generated Responses",
+          "authors": "John L. Turner-Smith, Zimeng Huang, Yuhan Fu, Yihang Zhang, Tonghan Wang",
+          "year": 2026,
+          "venueShort": "arXiv",
+          "venueFull": "arXiv preprint",
+          "venueColor": "#6b7280",
+          "fields": ["LLM Advertising"],
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2607.27686" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{turnersmith2026evaluating,\n  title={Evaluating and Pricing Advertisements in AI-Generated Responses},\n  author={Turner-Smith, John L. and Huang, Zimeng and Fu, Yuhan and Zhang, Yihang and Wang, Tonghan},\n  journal={arXiv preprint arXiv:2607.27686},\n  year={2026}\n}"
+        },
+        {
+          "title": "PILA: Plug-and-Play Insertion for LLM-native Advertising",
+          "authors": "Zhaowei Zhang, Yuhan Fu, Yihang Zhang, Xiaohan Liu, Ceyao Zhang, Xiaoyuan Zhang, Yipeng Kang, Tonghan Wang, Yaodong Yang",
+          "year": 2026,
+          "venueShort": "arXiv",
+          "venueFull": "arXiv preprint",
+          "venueColor": "#6b7280",
+          "fields": ["LLM Advertising"],
+          "awards": [],
+          "links": [
+            { "text": "PDF", "href": "https://arxiv.org/abs/2607.25590" }
+          ],
+          "abstract": "",
+          "bibtex": "@article{zhang2026pila,\n  title={PILA: Plug-and-Play Insertion for LLM-native Advertising},\n  author={Zhang, Zhaowei and Fu, Yuhan and Zhang, Yihang and Liu, Xiaohan and Zhang, Ceyao and Zhang, Xiaoyuan and Kang, Yipeng and Wang, Tonghan and Yang, Yaodong},\n  journal={arXiv preprint arXiv:2607.25590},\n  year={2026}\n}"
+        },
+        {
           "title": "LLM Advertisement based on Neuron Auctions",
           "authors": "Peiran Yun, Wenxin Xu, Jiayuan Liu, Yihang Zhang, Liang Zeng, Lingkai Kong, Tonghan Wang",
           "year": 2026,

@@ -10,6 +10,10 @@ export function LanguageProvider({ children }) {
         if (saved === 'zh') setLangState('zh');
     }, []);
 
+    useEffect(() => {
+        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    }, [lang]);
+
     const setLang = (l) => {
         setLangState(l);
         localStorage.setItem('site-lang', l);

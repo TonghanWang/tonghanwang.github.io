@@ -24,7 +24,6 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="/css/plugins/bootstrap-grid.css" />
           <link rel="stylesheet" href="/css/plugins/font-awesome.min.css" />
           <link rel="stylesheet" href="/css/plugins/swiper.min.css" />
-          <link rel="stylesheet" href="/css/additions.css" />
           {/* public assets end */}
         </Head>
         <body>

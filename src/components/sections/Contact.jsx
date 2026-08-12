@@ -19,7 +19,9 @@ const ContactSection = ({ recruitmentHtmlZh, recruitmentHtmlEn }) => {
                         <ul className="mil-puplication-details mil-up mil-mb-90">
                             <li>
                                 <span className="mil-upper mil-accent">{pick(t.write, lang)}</span>&nbsp;&nbsp;
-                                <span className="mil-upper mil-dark">twang1@g.harvard.edu</span>
+                                <a className="mil-upper mil-dark" href="mailto:thw@mail.tsinghua.edu.cn">
+                                    thw@mail.tsinghua.edu.cn
+                                </a>
                             </li>
                             <li>
                                 <span className="mil-upper mil-accent">{pick(t.dropIn, lang)}</span>&nbsp;&nbsp;
@@ -36,6 +38,7 @@ const ContactSection = ({ recruitmentHtmlZh, recruitmentHtmlEn }) => {
                     {/* map */}
                     <div className="mil-map mil-mb-90">
                         <iframe
+                          title={lang === 'zh' ? '办公室位置地图' : 'Map showing the office location'}
                           src="https://maps.google.com/maps?q=北京市海淀区中关村智造大街F座&t=m&z=16&ie=UTF8&output=embed"
                           style={{"border": "0"}}
                           allowFullScreen

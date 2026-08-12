@@ -53,38 +53,6 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
     const color   = isAward ? ACCENT : TEAL;
     const colorBg = isAward ? ACCENT_BG : TEAL_BG;
 
-    const cardStyle = isAward ? {
-        display: 'flex',
-        alignItems: 'flex-start',
-        gap: '20px',
-        padding: '14px 20px',
-        borderRadius: '0 12px 12px 0',
-        borderLeft: `4px solid ${color}`,
-        background: 'rgba(255, 255, 255, 0.12)',
-        backdropFilter: 'blur(4px) saturate(1.4)',
-        WebkitBackdropFilter: 'blur(4px) saturate(1.4)',
-        border: `1px solid rgba(255, 255, 255, 0.55)`,
-        borderLeft: `4px solid ${color}`,
-        boxShadow: '0 4px 24px rgba(37,99,235,0.08), inset 0 1px 0 rgba(255,255,255,0.7)',
-        transition: 'box-shadow 0.2s ease, transform 0.2s ease',
-        animationDelay: `${index * 0.1}s`,
-    } : {
-        display: 'flex',
-        alignItems: 'flex-start',
-        gap: '20px',
-        padding: '14px 20px',
-        borderRadius: '0 12px 12px 0',
-        borderLeft: `4px solid ${color}`,
-        background: 'rgba(255, 255, 255, 0.10)',
-        backdropFilter: 'blur(4px) saturate(1.4)',
-        WebkitBackdropFilter: 'blur(4px) saturate(1.4)',
-        border: `1px solid rgba(255, 255, 255, 0.50)`,
-        borderLeft: `4px solid ${color}`,
-        boxShadow: '0 4px 24px rgba(13,148,136,0.08), inset 0 1px 0 rgba(255,255,255,0.65)',
-        transition: 'box-shadow 0.2s ease, transform 0.2s ease',
-        animationDelay: `${index * 0.1}s`,
-    };
-
     // Use translated strings when available, fall back to raw data
     const displayName           = i18nItem ? pick(i18nItem.name, lang) : item.name;
     const displayHighlight      = i18nItem?.highlight ? pick(i18nItem.highlight, lang) : item.highlight;
@@ -97,34 +65,11 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
 
     return (
         <div
-            className="news-card"
-            style={cardStyle}
-            onMouseEnter={e => {
-                e.currentTarget.style.boxShadow = isAward
-                    ? '0 8px 32px rgba(37,99,235,0.13), inset 0 1px 0 rgba(255,255,255,0.9)'
-                    : '0 8px 32px rgba(13,148,136,0.10), inset 0 1px 0 rgba(255,255,255,0.9)';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-            }}
-            onMouseLeave={e => {
-                e.currentTarget.style.boxShadow = isAward
-                    ? '0 2px 16px rgba(37,99,235,0.06), inset 0 1px 0 rgba(255,255,255,0.85)'
-                    : '0 2px 16px rgba(13,148,136,0.06), inset 0 1px 0 rgba(255,255,255,0.85)';
-                e.currentTarget.style.transform = 'translateY(0)';
-            }}
+            className={`news-card news-card--${isAward ? 'award' : 'paper'}`}
+            style={{ '--news-accent': color, '--news-accent-bg': colorBg, animationDelay: `${index * 0.08}s` }}
         >
             {/* Icon */}
-            <div style={{
-                flexShrink: 0,
-                width: '42px',
-                height: '42px',
-                borderRadius: '50%',
-                background: colorBg,
-                color: color,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginTop: '2px',
-            }}>
+            <div className="news-card-icon">
                 {isAward ? <TrophyIcon /> : <PaperIcon />}
             </div>
 
@@ -132,10 +77,7 @@ const NewsCard = ({ item, index, i18nItem, lang }) => {
             <div style={{ flex: 1 }}>
                 {/* Badge row — role and venue names stay in English */}
                 <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '4px', marginBottom: '6px' }}>
-                    <span className="news-badge" style={{
-                        color: '#374151',
-                        background: 'rgba(0, 0, 0, 0.05)',
-                    }}>
+                    <span className="news-badge">
                         {item.role}
                     </span>
                     {displayDate && (
@@ -169,8 +111,8 @@ const TestimonialSlider = () => {
     const i18nItems = translations.news.items;
 
     return (
-    <section id="news" style={{ padding: '36px 0 60px' }}>
-        <div className="mil-up" style={{ marginBottom: '10px' }}>
+    <section id="news" className="news-section">
+        <div className="mil-up news-section-heading">
             <span className="hero-tagline">
                 {lang !== 'zh' && <span className="hero-tagline-dot" />}
                 {pick(translations.news.heading, lang)}

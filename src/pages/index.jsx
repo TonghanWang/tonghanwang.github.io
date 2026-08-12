@@ -19,7 +19,7 @@ const Home1 = ({ posts, recruitmentHtmlZh, recruitmentHtmlEn }) => {
   const { lang } = useLanguage();
   return (
     <Layouts fullWidth={true} showProgressBar={true}>
-      <div className={lang === 'zh' ? 'zh-kaiti' : ''}>
+      <div className={`home-page${lang === 'zh' ? ' zh-kaiti' : ''}`}>
         <HeroOneSection />
         <TestimonialSlider />
 
@@ -85,7 +85,7 @@ export async function getStaticProps() {
 
 <p><strong>Undergraduate interns:</strong> Students at any stage of undergraduate study are welcome. We can tailor a research plan to your background and future goals.</p>
 
-<p>If you are excited about our research directions, please send your CV and transcripts to <strong>twang1@g.harvard.edu</strong>, along with a brief description (one or two sentences) of a research problem you have worked on and what specific questions you find most interesting.</p>
+<p>If you are excited about our research directions, please send your CV and transcripts to <strong>thw@mail.tsinghua.edu.cn</strong>, along with a brief description (one or two sentences) of a research problem you have worked on and what specific questions you find most interesting.</p>
 
 <h2>Mentoring Style</h2>
 

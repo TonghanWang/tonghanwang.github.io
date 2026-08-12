@@ -54,6 +54,10 @@ export const translations = {
     },
     // "中文简介" link — hide in zh mode; show as "中文简介" only in en mode
     showChineseProfileLink: { en: true, zh: false },
+    actions: {
+      publications: { en: 'View publications', zh: '查看论文' },
+      join:         { en: 'Join my group',      zh: '加入课题组' },
+    },
     // Recruiting sentence (intro to research interests)
     recruiting: {
       en: "I am recruiting highly motivated (undergrad and graduate) students. Contact me by email if you're interested in the following questions:",

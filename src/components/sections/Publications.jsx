@@ -31,6 +31,7 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
 
     const primaryField = (paper.fields || [])[0];
     const fieldRgb = primaryField ? (FIELD_COLORS[primaryField] || '107, 114, 128') : null;
+    const abstractId = `paper-abstract-${catId}-${idx}`;
 
     return (
         <li
@@ -78,8 +79,11 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
             {paper.abstract && (
                 <div>
                     <button
+                        type="button"
                         className={`pub-toggle-btn${showAbstract ? ' active' : ''}`}
                         onClick={() => setShowAbstract(v => !v)}
+                        aria-expanded={showAbstract}
+                        aria-controls={abstractId}
                     >
                         {showAbstract ? pick(t.abstractClose, lang) : pick(t.abstractOpen, lang)}
                     </button>
@@ -88,7 +92,7 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
 
             {/* ── Abstract panel ───────────────────────────────────────── */}
             {showAbstract && paper.abstract && (
-                <div className="pub-abstract-box">{paper.abstract}</div>
+                <div id={abstractId} className="pub-abstract-box" role="region">{paper.abstract}</div>
             )}
         </li>
     );
@@ -118,7 +122,6 @@ const PublicationsSection = () => {
                                             {pick(t.categories[cat.id], lang) ?? cat.title}
                                         </h3>
                                     </div>
-                                    <span className="pub-section-count">{cat.papers.length}</span>
                                 </div>
 
                                 {/* Papers */}
