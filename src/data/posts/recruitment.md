@@ -38,7 +38,7 @@ additional:
 
 正在进行的具体项目有： 
 
-- 基础模型（大模型）的革新、泛化能力与测试时训练（test-time training）
+- 基础模型（大模型）的革新、泛化能力、自我进化与测试时训练（test-time training）
 - 有经济学理论支持的生成模型 advertising 和 market design
 - Agentic AI
 - 生成模型的（多）智能体问题
