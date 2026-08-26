@@ -25,7 +25,6 @@
   "problemsTitle": "Problems of interest",
   "problems": [
     "Economics of generative models--for example, how LLMs sell advertisements and how tokens are priced.",
-    "Principled deep learning methods for solving fundamental problems in microeconomics.",
-    "Modular control of a robot, treating each joint as an agent."
+    "Foundation model innovation, generalization, and test-time training."
   ]
 }

@@ -75,11 +75,9 @@ export async function getStaticProps() {
 <ul>
   <li>Advertising and market design for generative models, grounded in economic theory</li>
   <li>AI game theory with an emphasis on safety</li>
-  <li>Embodied learning with coordinated muscle-group control</li>
-  <li>Multi-agent problems in generative models</li>
+  <li>Foundation model innovation, generalization, and test-time training</li>
+  <li>(Multi-)agent problems in generative models</li>
 </ul>
-
-<p>As the world moves toward human–agent coexistence, all questions about the relationship between humans and AI are within scope.</p>
 
 <p>I am continuously looking for passionate PhD students and undergraduate research interns. I admit two PhD students per year; PhD admissions are currently open for students entering in 2027 or later (including the 2026 early-admission cycle). I encourage prospective students to first connect through a research internship or collaborative project — this also helps you assess whether my group is the right fit for you.</p>
 
