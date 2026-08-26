@@ -66,14 +66,14 @@ export const translations = {
     // Research interest items
     problems: {
       en: [
-        'Agentic AI: how agents collaborate, spawn and orchestrate other agents, and evolve their own capabilities to tackle increasingly complex tasks.',
-        'Economics of generative models--for example, how to natively and optimally integrate advertisements into (multimodal) LLM responses, and how tokens are priced.',
         'Foundation model innovation, generalization, and test-time training.',
+        'Economics of generative models--for example, how to natively and optimally integrate advertisements into (multimodal) LLM responses, and how tokens are priced.',
+        'Agentic AI: how agents collaborate, spawn and orchestrate other agents, and evolve their own capabilities to tackle increasingly complex tasks.',
       ],
       zh: [
-        '智能体AI：智能体如何协作、生成并调度其他智能体，并持续进化自身能力以应对日益复杂的任务。',
+        '基础模型（大模型）的革新、泛化能力与测试时训练（test-time training）。',
         '生成模型的经济学——例如，如何将广告原生且最优地融入（多模态）大语言模型的回复中，以及词元如何定价。',
-        '基础模型革新，泛化与Test-time training。',
+        '智能体AI：智能体如何协作、生成并调度其他智能体，并持续进化自身能力以应对日益复杂的任务。',
       ],
     },
     // Tooltip on the name
