@@ -73,9 +73,9 @@ export async function getStaticProps() {
 <p>Current ongoing projects include:</p>
 
 <ul>
+  <li>Foundation model innovation, generalization, and test-time training</li>
   <li>Advertising and market design for generative models, grounded in economic theory</li>
   <li>AI game theory with an emphasis on safety</li>
-  <li>Foundation model innovation, generalization, and test-time training</li>
   <li>(Multi-)agent problems in generative models</li>
 </ul>
 
