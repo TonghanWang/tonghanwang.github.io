@@ -79,7 +79,7 @@ export async function getStaticProps() {
   <li>(Multi-)agent problems in generative models</li>
 </ul>
 
-<p>I am continuously looking for passionate PhD students and undergraduate research interns. I admit two PhD students per year; PhD admissions are currently open for students entering in 2027 or later (including the 2026 early-admission cycle). I encourage prospective students to first connect through a research internship or collaborative project — this also helps you assess whether my group is the right fit for you.</p>
+<p>I am continuously looking for passionate PhD students and undergraduate research interns. I admit two PhD students per year; PhD admissions are currently open for students entering in 2028 or later (including the 2027 early-admission cycle). I encourage prospective students to first connect through a research internship or collaborative project — this also helps you assess whether my group is the right fit for you.</p>
 
 <p><strong>Undergraduate interns:</strong> Students at any stage of undergraduate study are welcome. We can tailor a research plan to your background and future goals.</p>
 
