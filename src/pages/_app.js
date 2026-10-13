@@ -24,7 +24,7 @@ function SiteMetadata() {
     const canonicalUrl = `${siteUrl}${path === '/' ? '' : path}`;
     const title = lang === 'zh'
         ? '王同翰 | 清华大学人工智能学院'
-        : 'Tonghan Wang | Agentic AI, Multi-Agent Systems & Mechanism Design';
+        : 'Tonghan Wang | Foundation Models and Agents';
     const description = SITE_DESCRIPTIONS[lang] ?? SITE_DESCRIPTIONS.en;
     const imageUrl = `${siteUrl}/img/person/avatar5.jpg`;
     const structuredData = {
