@@ -1499,6 +1499,45 @@
     }
 }
 
+/* Topic tabs (multi-label publications) */
+.pub-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 48px;
+}
+
+.pub-tab {
+    background: none;
+    border: 1px solid var(--site-border, rgba(0, 0, 0, 0.15));
+    color: var(--site-muted);
+    font-family: $font-1;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background $t-sm, border-color $t-sm, color $t-sm;
+
+    &:hover {
+        border-color: #2563eb;
+        color: #2563eb;
+    }
+
+    &.active {
+        background: #2563eb;
+        border-color: #2563eb;
+        color: #fff;
+    }
+}
+
+.pub-topic-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 2px 12px;
+}
+
 /* Make title grow so year + field corner stay right-aligned */
 .pub-year-group .pub-title {
     flex: 1;

@@ -71,7 +71,7 @@ export const translations = {
         'Agentic AI: how agents collaborate, spawn and orchestrate other agents, and evolve their own capabilities to tackle increasingly complex tasks.',
       ],
       zh: [
-        '基础模型（大模型）的革新、泛化能力、自我进化与测试时训练（test-time training）。',
+        '大模型的革新、泛化能力、自我进化与测试时训练（test-time training）。',
         '生成模型的经济学——例如，如何将广告原生且最优地融入（多模态）大语言模型的回复中，以及词元如何定价。',
         '智能体AI：智能体如何协作、生成并调度其他智能体，并持续进化自身能力以应对日益复杂的任务。',
       ],
@@ -90,8 +90,8 @@ export const translations = {
     items: [
       {
         name: {
-          en: 'Giving a talk at ACM EC 2026 in Rome!',
-          zh: '将在罗马 ACM EC 2026 发表口头报告！',
+          en: 'Giving a talk at ACM EC 2026 in Rome',
+          zh: '将在罗马 ACM EC 2026 发表口头报告',
         },
         highlight: { en: 'ACM EC 2026', zh: 'ACM EC 2026' },
         text: {
@@ -102,8 +102,8 @@ export const translations = {
       },
       {
         name: {
-          en: 'Honored to receive the 2025 Victor Lesser Distinguished Dissertation Award!',
-          zh: '荣获 2025 年 Victor Lesser 杰出博士论文奖！',
+          en: 'Honored to receive the 2025 Victor Lesser Distinguished Dissertation Award',
+          zh: '荣获 2025 年 Victor Lesser 杰出博士论文奖',
         },
         highlight: { en: 'Victor Lesser Distinguished Dissertation Award', zh: 'Victor Lesser 杰出博士论文奖' },
         text: {
@@ -118,8 +118,8 @@ export const translations = {
       },
       {
         name: {
-          en: 'Our paper received a Spotlight at NeurIPS 2025!',
-          zh: '论文获 NeurIPS 2025 Spotlight！',
+          en: 'Our paper received a Spotlight at NeurIPS 2025',
+          zh: '论文获 NeurIPS 2025 Spotlight',
         },
         text: {
           en: "Spotlight paper: 'Composite Flow Matching for Reinforcement Learning with Shifted-Dynamics Data', with Lingkai Kong, Haichuan Wang, Guojun Xiong, and Milind Tambe.",
@@ -129,8 +129,8 @@ export const translations = {
       },
       {
         name: {
-          en: 'Our paper received an Oral presentation at AAAI 2025!',
-          zh: '论文在 AAAI 2025 获口头报告（Oral）！',
+          en: 'Our paper received an Oral presentation at AAAI 2025',
+          zh: '论文在 AAAI 2025 获口头报告（Oral）',
         },
         text: {
           en: "Oral paper: 'The Bandit Whisperer: Communication Learning for Restless Bandits', with Yunfan Zhao, Dheeraj Mysore Nagaraj, Aparna Taneja, and Milind Tambe.",
@@ -140,8 +140,8 @@ export const translations = {
       },
       {
         name: {
-          en: "Honored to announce that our paper has been awarded the 'Best Paper in AI Track' at ACM EC 2024!",
-          zh: '荣获 ACM EC 2024 AI Track 最佳论文奖！',
+          en: "Honored to announce that our paper has been awarded the 'Best Paper in AI Track' at ACM EC 2024",
+          zh: '荣获 ACM EC 2024 AI Track 最佳论文奖',
         },
         highlight: { en: 'Best Paper in AI Track', zh: 'ACM EC 2024 AI Track 最佳论文奖' },
         text: {
@@ -153,8 +153,8 @@ export const translations = {
       },
       {
         name: {
-          en: 'Discontinuous deep learning is gaining attention!',
-          zh: '非连续深度学习正受到广泛关注！',
+          en: 'Discontinuous deep learning is gaining attention',
+          zh: '非连续深度学习正受到广泛关注',
         },
         text: {
           en: "Our new paper is accepted by ICML 2024. In this paper, we extend discontinuous networks to handle discontinuous, piecewise non-linear utility functions in Bayesian persuasion problem.",
@@ -170,22 +170,20 @@ export const translations = {
     banner:        { en: 'Publications',     zh: '论文' },
     abstractOpen:  { en: '+ Abstract',       zh: '+ 摘要' },
     abstractClose: { en: '− Abstract',       zh: '− 摘要' },
-    // Keyed by publications.json category id
-    categories: {
+    // Keyed by publications.json topic id
+    all:           { en: 'All',              zh: '全部' },
+    // Keyed by publications.json paper type (used in the "All" tab)
+    types: {
       preprint:   { en: 'Preprint Papers',   zh: '预印本' },
       conference: { en: 'Conference Papers', zh: '会议论文' },
       journal:    { en: 'Journal Papers',    zh: '期刊论文' },
       workshop:   { en: 'Workshop Papers',   zh: '研讨会论文' },
     },
-    fields: {
-      'LLM Advertising':  { en: 'LLM Advertising',  zh: 'LLM 广告' },
-      'LLM Agents':       { en: 'LLM Agents',       zh: 'LLM 智能体' },
-      'LLM':              { en: 'LLM',                zh: 'LLM' },
-      'Mechanism Design': { en: 'Mechanism Design',  zh: '机制设计' },
-      'Multi-Agent RL':   { en: 'Multi-Agent RL',    zh: '多智能体强化学习' },
-      'Diffusion / Flow': { en: 'Diffusion / Flow',  zh: '扩散/流匹配' },
-      'Game Theory':      { en: 'Game Theory',       zh: '博弈论' },
-      'Public Health AI': { en: 'Public Health AI',  zh: '公共健康AI' },
+    categories: {
+      'recent-highlights':     { en: 'Recent Highlights',           zh: '近期亮点' },
+      'foundation-models':     { en: 'Foundation Models',           zh: '基础模型' },
+      'agents':                { en: 'Agents',                      zh: '智能体' },
+      'game-theory-economics': { en: 'Game Theory and Economics',   zh: '博弈论与经济学' },
     },
   },
 

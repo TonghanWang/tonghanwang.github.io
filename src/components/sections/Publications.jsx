@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import PageBanner from "@components/PageBanner";
 import PubData from "@data/sections/publications.json";
 import { useLanguage } from "@library/LanguageContext";
@@ -12,43 +13,41 @@ const StarIcon = () => (
     </svg>
 );
 
-// ── Field tag colors ──────────────────────────────────────────────────────────
-const FIELD_COLORS = {
-    "LLM Advertising":  "249, 115, 22",   // orange
-    "LLM Agents":       "99, 102, 241",   // indigo
-    "LLM":              "220, 38, 38",    // red
-    "Mechanism Design": "139, 92, 246",   // violet
-    "Multi-Agent RL":   "14, 165, 233",   // sky
-    "Diffusion / Flow": "6, 182, 212",    // cyan
-    "Game Theory":      "236, 72, 153",   // pink
-    "Public Health AI": "16, 185, 129",   // emerald
+// ── Topic accent colors (keyed by category id) ───────────────────────────────
+const TOPIC_COLORS = {
+    "recent-highlights":     "245, 158, 11",   // amber
+    "foundation-models":     "220, 38, 38",    // red
+    "agents":                "14, 165, 233",   // sky
+    "game-theory-economics": "139, 92, 246",   // violet
 };
 
 // ── Single paper row ──────────────────────────────────────────────────────────
-const PaperItem = ({ paper, catId, idx, lang }) => {
+const PaperItem = ({ paper, idx, lang }) => {
     const [showAbstract, setShowAbstract] = useState(false);
     const t = translations.publications;
 
-    const primaryField = (paper.fields || [])[0];
-    const fieldRgb = primaryField ? (FIELD_COLORS[primaryField] || '107, 114, 128') : null;
-    const abstractId = `paper-abstract-${catId}-${idx}`;
+    const fieldRgb = TOPIC_COLORS[paper.topics[0]] || '107, 114, 128';
+    const abstractId = `paper-abstract-${idx}`;
 
     return (
         <li
-            className={`mil-up pub-paper-item${primaryField ? ' pub-paper-item--fielded' : ''}`}
-            style={fieldRgb ? { '--field-rgb': fieldRgb } : {}}
+            className="mil-up pub-paper-item pub-paper-item--fielded"
+            style={{ '--field-rgb': fieldRgb }}
         >
             {/* ── Field bar — positioned below the timeline bullet ─────── */}
-            {primaryField && <div className="pub-field-bar" />}
+            <div className="pub-field-bar" />
 
             {/* ── Title row — paper titles stay in English ────────────── */}
             <div className="pub-year-group">
                 <p className="pub-title">{paper.title}</p>
-                {primaryField && (
-                    <span className="pub-field-corner">
-                        {pick(t.fields[primaryField], lang) ?? primaryField}
-                    </span>
-                )}
+                <span className="pub-topic-tags">
+                    {paper.topics.filter(id => id !== 'recent-highlights').map(id => (
+                        <span key={id} className="pub-field-corner"
+                              style={{ '--field-rgb': TOPIC_COLORS[id] }}>
+                            {pick(t.categories[id], lang)}
+                        </span>
+                    ))}
+                </span>
                 <span className="pub-year-badge">{paper.year}</span>
             </div>
 
@@ -57,11 +56,9 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
 
             {/* ── Venue + award badges + links — all stay in English ────── */}
             <div className="pub-links" style={{ flexWrap: 'wrap', gap: '6px' }}>
-                {paper.venueShort !== 'arXiv' && (
-                    <span className="pub-venue-badge" title={paper.venueFull}>
-                        {paper.venueShort}
-                    </span>
-                )}
+                <span className="pub-venue-badge" title={paper.venueFull}>
+                    {paper.venueShort}
+                </span>
                 {paper.awards.map((award, i) => (
                     <span key={i} className="pub-award-badge">
                         <StarIcon />
@@ -98,10 +95,36 @@ const PaperItem = ({ paper, catId, idx, lang }) => {
     );
 };
 
+const TYPE_ORDER = ['preprint', 'conference', 'journal', 'workshop'];
+
 // ── Section ───────────────────────────────────────────────────────────────────
 const PublicationsSection = () => {
     const { lang } = useLanguage();
     const t = translations.publications;
+    const [active, setActive] = useState(PubData.topics[0].id);
+
+    // The list height changes per tab; re-measure scroll triggers so the
+    // sections below (Teaching, Service, ...) are revealed at the right position.
+    useEffect(() => {
+        const id = requestAnimationFrame(() => ScrollTrigger.refresh());
+        return () => cancelAnimationFrame(id);
+    }, [active]);
+
+    const papers = active === 'all'
+        ? PubData.papers
+        : PubData.papers.filter(p => p.topics.includes(active));
+    const tabs = [
+        ...PubData.topics.map(tp => ({
+            id: tp.id,
+            label: pick(t.categories[tp.id], lang) ?? tp.title,
+        })),
+        { id: 'all', label: pick(t.all, lang) },
+    ];
+    // "All" tab: group by publication type (preprint / conference / ...)
+    const groups = active === 'all'
+        ? TYPE_ORDER.map(id => ({ id, papers: papers.filter(p => p.type === id) }))
+                    .filter(g => g.papers.length)
+        : [{ id: null, papers }];
 
     return (
         <>
@@ -110,36 +133,47 @@ const PublicationsSection = () => {
             <section style={{ paddingBottom: '60px' }}>
                 <div className="row">
                     <div className="col-xl-12">
-                        {PubData.categories.map(cat => (
-                            <div key={cat.id}>
+                        <div className="pub-tabs" role="tablist">
+                            {tabs.map(tab => (
+                                <button
+                                    key={tab.id}
+                                    type="button"
+                                    role="tab"
+                                    aria-selected={active === tab.id}
+                                    className={`pub-tab${active === tab.id ? ' active' : ''}`}
+                                    onClick={() => setActive(tab.id)}
+                                >
+                                    {tab.label}
+                                </button>
+                            ))}
+                        </div>
 
-                                {/* Section header — translated */}
-                                <div className="mil-section-title mil-up mil-left mil-mb-90"
-                                     style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                                    <div>
-                                        <div className="mil-divider"></div>
-                                        <h3 style={{ display: 'inline' }}>
-                                            {pick(t.categories[cat.id], lang) ?? cat.title}
-                                        </h3>
+                        {groups.map(group => (
+                            <div key={group.id || 'topic'}>
+                                {group.id && (
+                                    <div className="mil-section-title mil-up mil-left mil-mb-90"
+                                         style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                                        <div>
+                                            <div className="mil-divider"></div>
+                                            <h3 style={{ display: 'inline' }}>
+                                                {pick(t.types[group.id], lang)}
+                                            </h3>
+                                        </div>
                                     </div>
-                                </div>
-
-                                {/* Papers */}
+                                )}
                                 <div className="mil-timeline mil-mb-90" style={{ marginBottom: '40px' }}>
                                     <div className="mil-timeline-track"></div>
                                     <ul style={{ paddingLeft: 0 }}>
-                                        {cat.papers.map((paper, idx) => (
+                                        {group.papers.map((paper, idx) => (
                                             <PaperItem
-                                                key={`${cat.id}-${idx}`}
+                                                key={`${paper.title}-${paper.venueShort}-${paper.year}`}
                                                 paper={paper}
-                                                catId={cat.id}
                                                 idx={idx}
                                                 lang={lang}
                                             />
                                         ))}
                                     </ul>
                                 </div>
-
                             </div>
                         ))}
                     </div>
